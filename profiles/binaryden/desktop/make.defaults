@@ -1,0 +1,2 @@
+USE="a52 aac alsa apng branding cairo cdda cdr colord cups dts dvd exif flac fontconfig gif glamor gstreamer gtk gtk2 gtk3 hidpi jpeg kdrive lcms libnotify mng mp3 mp4 mpeg opengl ogg pdf png policykit pulseaudio -qt4 qt5 sdl svg tiff truetype vorbis wxwidgets X x264 xcb xinerama xv xvid xvmc"
+

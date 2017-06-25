@@ -1,0 +1,15 @@
+# portage options
+EMERGE_DEFAULT_OPTS="--quiet-build=y"
+FEATURES="splitdebug clean-logs"
+PORTAGE_TMPDIR="/tmp"
+PORT_LOGDIR="/var/log/portage"
+
+# USE flags
+USE="acl acpi bzip2 dbus -gnome gdbm gpm -gtk -gtk3 icu ipv6 -kde ldap nls ncurses -qt3support -qt4 -qt5 systemd udev udisks unicode usb vim-syntax -webkit -X xml"
+
+L10N="-* en-us en"
+LINGUAS="-* en_US en"
+PYTHON_SINGLE_TARGET="-* python2_7"
+PYTHON_TARGETS="-* python2_7 python3_4"
+RUBY_TARGETS="-* ruby22"
+

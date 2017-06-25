@@ -1,0 +1,5 @@
+app-text/xmlto		text
+dev-lang/python		sqlite
+dev-libs/libxml2	python
+net-nds/openldap	minimal
+
