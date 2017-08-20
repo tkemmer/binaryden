@@ -73,8 +73,6 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/autoconf-archive
 "
 src_prepare() {
-	# make some panels optional
-	eapply "${FILESDIR}"/${PN}-2.8.0-optional.patch
 	eautoreconf
 	gnome2_src_prepare
 }
