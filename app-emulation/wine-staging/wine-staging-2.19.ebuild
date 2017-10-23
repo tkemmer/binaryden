@@ -352,11 +352,8 @@ src_prepare() {
 		"${PATCHDIR}/patches/${MY_PN}-1.9.5-multilib-portage.patch" #395615
 		"${PATCHDIR}/patches/${MY_PN}-1.6-memset-O3.patch" #480508
 		"${PATCHDIR}/patches/${MY_PN}-2.0-multislot-apploader.patch"
-		"${PATCHDIR}/patches/freetype-2.8.1-segfault.patch" #631676
-		"${PATCHDIR}/patches/freetype-2.8.1-drop-glyphs.patch" #631376
 	)
 	local PATCHES_BIN=(
-		"${PATCHDIR}/patches/freetype-2.8.1-patch-fonts.patch" #631376
 	)
 	if use staging; then
 		ewarn "Applying the Wine-Staging patchset. Any bug reports to the"
