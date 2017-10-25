@@ -82,6 +82,7 @@ src_configure() {
 	gnome2_src_configure \
 		--disable-static \
 		--enable-documentation \
+		--disable-onlineaccounts \
 		$(use_enable colord color) \
 		$(use_enable cups) \
 		$(usex debug --enable-debug=yes ' ') \
