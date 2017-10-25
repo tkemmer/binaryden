@@ -148,7 +148,7 @@ src_prepare() {
 	eapply "${FILESDIR}"/${PN}-2.2.6-automagic-gnome-bluetooth.patch
 
 	# Optional NetworkManager, bug #488684
-	eapply "${FILESDIR}"/${PN}-2.6.7-optional-networkmanager.patch
+	eapply "${FILESDIR}"/${PN}-3.6.0-optional-networkmanager.patch
 
 	# Use wheel group instead of sudo (from Fedora/Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3576

@@ -17,7 +17,7 @@ index b5668f4..5f600dd 100644
                                 libstartup-notification-1.0 >= $STARTUP_NOTIFICATION_MIN_VERSION
                                 gobject-introspection-1.0 >= $GOBJECT_INTROSPECTION_MIN_VERSION
                                 polkit-agent-1 >= $POLKIT_MIN_VERSION xfixes
--                               libnm-glib libnm-util gnome-keyring-1 atk-bridge-2.0)
+-                               libnm-glib libnm-util atk-bridge-2.0)
 +                               atk-bridge-2.0)
 +
 +##########################
