@@ -152,7 +152,7 @@ src_prepare() {
 
 	# Use wheel group instead of sudo (from Fedora/Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3576
-	eapply "${FILESDIR}"/${PN}-2.8.3-set-wheel.patch
+	eapply "${FILESDIR}"/${PN}-3.6.2-set-wheel.patch
 
 	# Use pkexec instead of gksu (from Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3565
