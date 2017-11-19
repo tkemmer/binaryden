@@ -1,0 +1,14 @@
+# Optional dependencies for BALL core
+# https://github.com/ball-project/ball
+
+app-doc/doxygen
+dev-cpp/tbb
+dev-lang/python:2.7
+dev-python/sip[python_targets_python2_7]
+sci-chemistry/openbabel
+sci-libs/fftw
+sci-libs/libsvm
+sci-mathematics/lpsolve
+sys-cluster/openmpi
+virtual/latex-base
+

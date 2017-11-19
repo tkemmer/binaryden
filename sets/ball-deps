@@ -1,0 +1,12 @@
+# Minimal dependencies for BALL core
+# https://github.com/ball-project/ball
+
+dev-cpp/eigen:3
+dev-qt/qtcore:5
+dev-qt/qtnetwork:5
+dev-qt/qtxml:5
+dev-util/boost
+dev-util/cmake
+sys-devel/bison
+sys-devel/flex
+

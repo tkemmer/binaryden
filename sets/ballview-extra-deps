@@ -1,0 +1,7 @@
+# Optional dependencies for BALLView
+# https://github.com/ball-project/ball
+
+dev-qt/linguist-tools:5
+dev-qt/qtwebchannel:5
+dev-qt/qtwebengine:5[widgets]
+
