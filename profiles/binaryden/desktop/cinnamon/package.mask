@@ -1,0 +1,4 @@
+# Thomas Kemmer <thomas@binaryden.de> (28 Nov 2017)
+# Ebuild fails with linking error
+=gnome-extra/cinnamon-session-3.6.1-r1
+
