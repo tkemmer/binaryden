@@ -1,6 +1,0 @@
-# Thomas Kemmer <thomas@binaryden.de> (25 Jun 2017)
-# Tabs span whole screen width, rendering them nigh unusable on common screen resolutions
-# https://github.com/Guake/guake/issues/962
-=x11-terms/guake-0.8.9
-=x11-terms/guake-0.8.10
-
