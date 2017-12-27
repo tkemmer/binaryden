@@ -1,1 +1,2 @@
+gnome-base/gvfs              fuse http mtp nfs samba
 media-libs/gst-plugins-bad   egl
