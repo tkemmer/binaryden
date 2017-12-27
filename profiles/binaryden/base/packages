@@ -1,0 +1,9 @@
+app-admin/logrotate
+app-admin/sudo
+app-editors/vim
+app-misc/byobu
+app-portage/eix
+app-portage/gentoolkit
+sys-apps/pciutils
+sys-apps/the_silver_searcher
+sys-process/htop
