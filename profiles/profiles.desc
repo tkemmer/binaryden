@@ -1,4 +1,3 @@
-amd64	binaryden/base				dev
-amd64	binaryden/desktop			dev
-amd64	binaryden/desktop/cinnamon	dev
-
+amd64   binaryden/base               dev
+amd64   binaryden/desktop            dev
+amd64   binaryden/desktop/cinnamon   dev
