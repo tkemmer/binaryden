@@ -1,3 +1,8 @@
-app-admin/sudo      offensive
+# profile
+app-admin/sudo   offensive
+
+# net-analyzer/fail2ban
+dev-lang/python   sqlite
+
+# sys-kernel/dracut
 app-text/asciidoc   python_single_target_python2_7
-dev-lang/python     sqlite
