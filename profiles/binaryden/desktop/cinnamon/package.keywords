@@ -14,4 +14,6 @@ dev-lang/spidermonkey:38                    amd64
 <gnome-extra/cjs-3.7                        amd64
 <gnome-extra/nemo-3.7                       amd64
 <x11-libs/xapps-1.1                         amd64
+<x11-misc/lightdm-1.25                      amd64
+<x11-misc/slick-greeter-1.2                 amd64
 <x11-wm/muffin-3.7                          amd64
