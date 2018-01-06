@@ -1,5 +1,6 @@
 # profile
-gnome-base/gvfs   fuse http mtp nfs
+gnome-base/gvfs                     fuse http mtp nfs
+media-sound/deadbeef-plugins-meta   gnome-mmkeys
 
 # gnome-extra/cinnamon
 media-libs/gst-plugins-bad   egl
