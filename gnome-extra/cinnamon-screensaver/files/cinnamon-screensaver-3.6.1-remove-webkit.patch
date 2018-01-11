@@ -1,0 +1,18 @@
+diff -Naur a/configure.ac b/configure.ac
+--- a/configure.ac	2018-01-11 17:17:52.921508000 +0100
++++ b/configure.ac	2018-01-11 17:21:51.449877708 +0100
+@@ -373,8 +373,6 @@
+ libcscreensaver/cscreensaver-uninstalled.pc
+ po/Makefile.in
+ screensavers/Makefile
+-screensavers/webkit@cinnamon.org/Makefile
+-screensavers/webkit@cinnamon.org/webkit-stars@cinnamon.org/Makefile
+ screensavers/xscreensaver@cinnamon.org/Makefile
+ src/Makefile
+ src/binfiles/Makefile
+diff -Naur a/screensavers/Makefile.am b/screensavers/Makefile.am
+--- a/screensavers/Makefile.am	2018-01-11 17:17:52.930508000 +0100
++++ b/screensavers/Makefile.am	2018-01-11 17:29:44.940137625 +0100
+@@ -1 +1 @@
+-SUBDIRS = webkit@cinnamon.org xscreensaver@cinnamon.org
++SUBDIRS = xscreensaver@cinnamon.org
