@@ -1,0 +1,12 @@
+diff -Nru loudmouth-1.5.3.orig/loudmouth/lm-sasl.c loudmouth-1.5.3/loudmouth/lm-sasl.c
+--- loudmouth-1.5.3.orig/loudmouth/lm-sasl.c	2017-05-15 12:50:10.881308861 +0200
++++ loudmouth-1.5.3/loudmouth/lm-sasl.c	2017-05-15 12:51:09.913177881 +0200
+@@ -529,7 +529,7 @@
+     }
+ 
+     nonce = g_hash_table_lookup (challenge, "nonce");
+-    if (nonce == NULL || nonce == '\0') {
++    if (nonce == NULL || nonce[0] == '\0') {
+         g_log (LM_LOG_DOMAIN, LM_LOG_LEVEL_SASL,
+                "%s: server didn't provide a nonce in the challenge",
+                G_STRFUNC);
