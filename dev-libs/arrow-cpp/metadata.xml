@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>thomas@binaryden.de</email>
+		<name>Thomas Kemmer</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">apache/arrow</remote-id>
+	</upstream>
+	<use>
+		<flag name="brotli">Enable Brotli compression support</flag>
+		<flag name="deprecated">Build Arrow with deprecated API included</flag>
+		<flag name="jemalloc">Build the Arrow jemalloc-based allocator</flag>
+		<flag name="lz4">Enable lz4 compression support</flag>
+		<flag name="snappy">Enable Snappy compression support</flag>
+		<flag name="zstd">Enable zstd compression support</flag>
+	</use>
+</pkgmetadata>
