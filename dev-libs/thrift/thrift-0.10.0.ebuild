@@ -35,6 +35,8 @@ src_configure() {
 		-DBUILD_EXAMPLES=$(usex examples)
 		-DBUILD_TESTING=$(usex test)
 		-DBUILD_TUTORIALS=$(usex examples)
+		-DCMAKE_C_FLAGS="-fPIC"
+		-DCMAKE_CXX_FLAGS="-fPIC"
 		-DWITH_HASKELL=OFF
 		-DWITH_JAVA=OFF
 		-DWITH_OPENSSL=$(usex openssl)
