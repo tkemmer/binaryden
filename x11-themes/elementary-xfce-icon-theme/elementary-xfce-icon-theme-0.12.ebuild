@@ -21,7 +21,7 @@ S="${WORKDIR}/${MY_PN}-${MY_PN}-${PV}"
 
 src_install() {
 	insinto /usr/share/icons/
-	dodoc README
+	dodoc README.md
 	for shade in elementary-xfce*; do
 		for doc in {AUTHORS,CONTRIBUTORS,LICENSE}; do
 			if [[ -f ${shade}/${doc} ]]; then
