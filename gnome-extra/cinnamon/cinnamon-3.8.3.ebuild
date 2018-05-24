@@ -176,11 +176,8 @@ src_prepare() {
 src_configure() {
 	gnome2_src_configure \
 		--libdir="${EPREFIX}/usr/$(get_libdir)" \
-		--disable-jhbuild-wrapper-script \
-		$(use_enable networkmanager) \
 		--with-ca-certificates="${EPREFIX}/etc/ssl/certs/ca-certificates.crt" \
-		BROWSER_PLUGIN_DIR="${EPREFIX}/usr/$(get_libdir)/nsbrowser/plugins" \
-		--without-bluetooth
+		BROWSER_PLUGIN_DIR="${EPREFIX}/usr/$(get_libdir)/nsbrowser/plugins"
 }
 
 src_install() {
