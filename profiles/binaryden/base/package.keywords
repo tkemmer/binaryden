@@ -1,10 +1,6 @@
 ##############
 # Python 3.6 #
 ##############
-<dev-libs/glib-2.53                           amd64
-<dev-libs/gobject-introspection-1.53          amd64
-<dev-libs/gobject-introspection-common-1.53   amd64
-<dev-util/gdbus-codegen-2.53                  amd64
 <net-analyzer/fail2ban-0.11                   amd64
 <sys-devel/gdb-8.1                            amd64
 
