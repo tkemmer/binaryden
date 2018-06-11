@@ -54,9 +54,7 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.35
 	virtual/pkgconfig
 	test? ( app-text/docbook-xml-dtd:4.5 )
-	xinerama? ( x11-proto/xineramaproto )
-	x11-proto/xextproto
-	x11-proto/xproto
+	x11-base/xorg-proto
 "
 RDEPEND="${COMMON_DEPEND}
 	!x11-misc/expocity
