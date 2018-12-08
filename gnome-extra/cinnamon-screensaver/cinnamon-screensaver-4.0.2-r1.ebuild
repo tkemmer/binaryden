@@ -24,8 +24,6 @@ COMMON_DEPEND="
 	>=gnome-base/libgnomekbd-3.6
 	>=dev-libs/dbus-glib-0.78
 
-	net-libs/webkit-gtk:4[introspection]
-
 	sys-apps/dbus
 	x11-libs/libxklavier
 	x11-libs/libX11
