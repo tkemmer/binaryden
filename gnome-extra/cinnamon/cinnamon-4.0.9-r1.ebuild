@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -78,7 +78,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/dconf-0.4.1
 	>=gnome-base/libgnomekbd-2.91.4[introspection]
-	|| ( sys-power/upower[introspection] sys-power/upower-pm-utils[introspection] )
+	sys-power/upower[introspection]
 
 	>=gnome-extra/cinnamon-session-4.0
 	>=gnome-extra/cinnamon-settings-daemon-4.0
