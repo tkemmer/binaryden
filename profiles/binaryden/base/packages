@@ -2,6 +2,7 @@ app-admin/logrotate
 app-admin/sudo
 app-editors/vim
 app-misc/byobu
+app-misc/icdiff
 app-portage/eix
 app-portage/gentoolkit
 sys-apps/pciutils

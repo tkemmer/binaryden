@@ -4,3 +4,4 @@
 <net-analyzer/fail2ban-0.11                   amd64
 <sys-devel/gdb-8.1                            amd64
 
+<app-misc/icdiff-2                            amd64
