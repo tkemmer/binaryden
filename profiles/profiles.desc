@@ -1,3 +1,6 @@
-amd64   binaryden/base               dev
-amd64   binaryden/desktop            dev
-amd64   binaryden/desktop/cinnamon   dev
+amd64   binaryden/17.0/base               dev
+amd64   binaryden/17.0/desktop            dev
+amd64   binaryden/17.0/desktop/cinnamon   dev
+amd64   binaryden/base                    exp
+amd64   binaryden/desktop                 exp
+amd64   binaryden/desktop/cinnamon        exp
