@@ -1,1 +1,1 @@
-USE="cinnamon -geolocation gnome-keyring -gnome-online-accounts -gnome-shell introspection -nautilus -tracker -zeitgeist"
+USE="cinnamon -geolocation gnome-keyring -gnome-online-accounts -gnome-shell introspection -nautilus -tracker"
