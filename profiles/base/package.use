@@ -1,7 +1,5 @@
 # profile
 app-admin/sudo   offensive
-
-# net-analyzer/fail2ban
 dev-lang/python   sqlite
 
 # sys-kernel/dracut

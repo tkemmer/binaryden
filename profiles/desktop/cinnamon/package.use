@@ -2,12 +2,5 @@
 gnome-base/gvfs                       fuse http mtp nfs
 media-plugins/deadbeef-plugins-meta   gnome-mmkeys
 
-# gnome-extra/cinnamon
-media-libs/gst-plugins-bad   egl
-
 # x11-misc/slick-greeter
 x11-misc/lightdm   vala
-
-# x11-terms/guake
-dev-libs/keybinder   python
-x11-libs/vte         python
