@@ -5,7 +5,7 @@ PORTAGE_TMPDIR="/tmp"
 PORT_LOGDIR="/var/log/portage"
 
 # USE flags
-USE="acl acpi bzip2 -gnome gdbm -gtk -gtk3 ipv6 -kde nls ncurses -qt5 systemd udev udisks unicode vim-syntax -webkit -X"
+USE="acl acpi bzip2 -gnome gdbm -gtk -gtk3 ipv6 -kde nls ncurses -qt5 udisks unicode vim-syntax -webkit -X"
 
 L10N="-* en-US en"
 PYTHON_SINGLE_TARGET="-* python3_6"
