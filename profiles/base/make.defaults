@@ -10,4 +10,3 @@ USE="acl acpi bzip2 -gnome gdbm -gtk -gtk3 ipv6 -kde nls ncurses -qt5 udisks uni
 L10N="-* en-US en"
 PYTHON_SINGLE_TARGET="-* python3_6"
 PYTHON_TARGETS="-* python2_7 python3_6"
-RUBY_TARGETS="-* ruby23"
