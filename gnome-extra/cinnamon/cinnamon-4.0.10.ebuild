@@ -121,8 +121,6 @@ DEPEND="${COMMON_DEPEND}
 # libmozjs.so is picked up from /usr/lib while compiling, so block at build-time
 # https://bugs.gentoo.org/show_bug.cgi?id=360413
 
-S="${WORKDIR}/Cinnamon-${PV}"
-
 pkg_setup() {
 	python_setup
 }
