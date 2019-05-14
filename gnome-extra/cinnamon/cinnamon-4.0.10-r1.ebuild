@@ -96,7 +96,7 @@ RDEPEND="${COMMON_DEPEND}
 	$(python_gen_cond_dep 'dev-python/pycairo[${PYTHON_USEDEP}]' 'python2*')
 	$(python_gen_cond_dep 'dev-python/pyinotify[${PYTHON_USEDEP}]' 'python2*')
 	$(python_gen_cond_dep 'dev-python/pypam[${PYTHON_USEDEP}]' 'python2*')
-	$(python_gen_cond_dep 'dev-python/pillow[${PYTHON_USEDEP}]' 'python2*')
+	$(python_gen_cond_dep '<dev-python/pillow-6[${PYTHON_USEDEP}]' 'python2*')
 
 	x11-themes/gnome-themes-standard
 	x11-themes/adwaita-icon-theme
