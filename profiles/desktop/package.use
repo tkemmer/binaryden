@@ -1,5 +1,4 @@
 # profile
-app-admin/conky                       lua-cairo
 app-text/xmlto                        text
 dev-libs/libxml2                      python
 dev-vcs/git                           tk
