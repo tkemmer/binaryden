@@ -96,7 +96,7 @@ RDEPEND="${COMMON_DEPEND}
 	$(python_gen_cond_dep 'dev-python/pycairo[${PYTHON_USEDEP}]' 'python2*')
 	$(python_gen_cond_dep 'dev-python/pyinotify[${PYTHON_USEDEP}]' 'python2*')
 	$(python_gen_cond_dep 'dev-python/pypam[${PYTHON_USEDEP}]' 'python2*')
-	$(python_gen_cond_dep '<dev-python/pillow-6[${PYTHON_USEDEP}]' 'python2*')
+	$(python_gen_cond_dep 'dev-python/pillow[${PYTHON_USEDEP}]' 'python2*')
 
 	x11-themes/gnome-themes-standard
 	x11-themes/adwaita-icon-theme
@@ -133,6 +133,9 @@ src_prepare() {
 	# Use wheel group instead of sudo (from Fedora/Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3576
 	eapply "${FILESDIR}"/${PN}-3.6.6-wheel-sudo.patch
+
+	# Fix >=dev-python/pillow-6
+	eapply "${FILESDIR}"/${PN}-4.0.10-pillow-version.patch
 
 	# Use pkexec instead of gksu (from Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3565
