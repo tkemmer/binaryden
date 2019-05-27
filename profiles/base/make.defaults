@@ -4,6 +4,9 @@ FEATURES="splitdebug clean-logs"
 PORTAGE_TMPDIR="/tmp"
 PORT_LOGDIR="/var/log/portage"
 
+# Licenses
+ACCEPT_LICENSE="* -@EULA"
+
 # USE flags
 USE="acl acpi bzip2 -gnome gdbm -gtk -gtk3 ipv6 -kde nls ncurses -qt5 udisks unicode vim-syntax -webkit -X"
 
