@@ -1,5 +1,5 @@
 # portage options
-EMERGE_DEFAULT_OPTS="--quiet-build=y --read-news=y --newrepo"
+EMERGE_DEFAULT_OPTS="--quiet-build=y --read-news=y"
 FEATURES="splitdebug clean-logs"
 PORTAGE_TMPDIR="/tmp"
 PORT_LOGDIR="/var/log/portage"
