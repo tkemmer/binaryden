@@ -12,3 +12,4 @@ media-sound/pulseaudio
 media-video/vlc
 x11-base/xorg-server
 x11-misc/albert
+x11-misc/lightdm
