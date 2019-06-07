@@ -10,6 +10,7 @@ media-fonts/ubuntu-font-family
 media-sound/alsa-utils
 media-sound/pulseaudio
 media-video/vlc
+www-client/google-chrome
 x11-base/xorg-server
 x11-misc/albert
 x11-misc/lightdm
