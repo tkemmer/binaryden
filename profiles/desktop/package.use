@@ -16,3 +16,7 @@ dev-libs/xmlsec   nss
 
 # dev-qt/qtcore
 dev-libs/libpcre   pcre16
+
+# media-video/vlc
+media-libs/freetype   harfbuzz
+sys-libs/zlib         minizip
