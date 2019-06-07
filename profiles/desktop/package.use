@@ -8,6 +8,7 @@ media-sound/deadbeef                  cover curl lastfm
 media-video/vlc                       bidi ffmpeg flac libass live lua matroska theora
 net-nds/openldap                      minimal
 net-print/cups                        -usb
+net-print/hplip                       snmp
 sys-block/gparted                     fat ntfs
 
 # dev-qt/qtcore
