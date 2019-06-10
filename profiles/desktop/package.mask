@@ -1,0 +1,4 @@
+# Thomas Kemmer <thomas@binaryden.de> (10 Jun 2019)
+# Still not usable by app-office/libreoffice-bin (required by @profile).
+# Masked for now to avoid downgrade suggestions to masked icu:0/58.2.
+=dev-libs/icu-64.2
