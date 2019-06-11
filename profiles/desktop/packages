@@ -5,6 +5,7 @@ app-office/libreoffice-bin
 app-text/mupdf
 mail-client/thunderbird-bin
 media-fonts/droid
+media-fonts/noto
 media-fonts/open-sans
 media-fonts/ubuntu-font-family
 media-sound/alsa-utils
