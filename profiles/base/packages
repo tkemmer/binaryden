@@ -5,6 +5,9 @@ app-misc/byobu
 app-misc/icdiff
 app-portage/eix
 app-portage/gentoolkit
+app-shells/gentoo-zsh-completions
+app-shells/zsh
+app-shells/zsh-completions
 sys-apps/pciutils
 sys-apps/the_silver_searcher
 sys-process/htop
