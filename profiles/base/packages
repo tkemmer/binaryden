@@ -11,3 +11,4 @@ app-shells/zsh-completions
 sys-apps/pciutils
 sys-apps/the_silver_searcher
 sys-process/htop
+sys-process/lsof
