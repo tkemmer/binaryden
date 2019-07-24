@@ -3,7 +3,7 @@
 
 EAPI=6
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} )
+PYTHON_COMPAT=( python3_{5,6} )
 PYTHON_REQ_USE="xml"
 
 inherit autotools eutils flag-o-matic gnome2 multilib pax-utils python-r1
@@ -21,11 +21,7 @@ SLOT="0"
 
 IUSE="+nls"
 
-# We need *both* python 2.x and 3.x
-REQUIRED_USE="${PYTHON_REQUIRED_USE}
-	|| ( $(python_gen_useflags 'python2*') )
-	|| ( $(python_gen_useflags 'python3*') )
-"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 KEYWORDS="~amd64 ~x86"
 
@@ -90,14 +86,12 @@ RDEPEND="${COMMON_DEPEND}
 
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
-	$(python_gen_cond_dep 'dev-python/gconf-python:2[${PYTHON_USEDEP}]' 'python2*')
-	$(python_gen_cond_dep 'dev-python/lxml[${PYTHON_USEDEP}]' 'python2*')
-	$(python_gen_cond_dep 'dev-python/pexpect[${PYTHON_USEDEP}]' 'python2*')
-	$(python_gen_cond_dep 'dev-python/pycairo[${PYTHON_USEDEP}]' 'python2*')
-	$(python_gen_cond_dep 'dev-python/pyinotify[${PYTHON_USEDEP}]' 'python2*')
-	$(python_gen_cond_dep 'dev-python/pypam[${PYTHON_USEDEP}]' 'python2*')
-	$(python_gen_cond_dep 'dev-python/pillow[${PYTHON_USEDEP}]' 'python2*')
-	$(python_gen_cond_dep 'dev-python/tinycss[${PYTHON_USEDEP}]' 'python2*')
+	dev-python/pexpect[${PYTHON_USEDEP}]
+	dev-python/pycairo[${PYTHON_USEDEP}]
+	dev-python/pyinotify[${PYTHON_USEDEP}]
+	dev-python/pypam[${PYTHON_USEDEP}]
+	dev-python/pillow[${PYTHON_USEDEP}]
+	dev-python/tinycss[${PYTHON_USEDEP}]
 
 	x11-themes/gnome-themes-standard
 	x11-themes/adwaita-icon-theme
@@ -111,7 +105,7 @@ RDEPEND="${COMMON_DEPEND}
 	nls? ( >=gnome-extra/cinnamon-translations-4.2 )
 "
 DEPEND="${COMMON_DEPEND}
-	$(python_gen_cond_dep 'dev-python/polib[${PYTHON_USEDEP}]' 'python2*')
+	dev-python/polib[${PYTHON_USEDEP}]
 	dev-util/gtk-doc
 	>=dev-util/intltool-0.4
 	>=sys-devel/gettext-0.17
@@ -144,15 +138,10 @@ src_prepare() {
 	sed -i 's/RequiredComponents=\(.*\)$/RequiredComponents=\1polkit-gnome-authentication-agent-1;/' \
 		files/usr/share/cinnamon-session/sessions/cinnamon*.session || die
 
-	# python 2-and-3 shebang fixing craziness
+	# python shebang fixing craziness
 	local p
 	python_setup 'python3*'
 	for p in $(grep -rl '#!.*python3'); do
-		python_fix_shebang "${p}"
-	done
-
-	python_setup 'python2*'
-	for p in $(grep -rl '#!.*python[^3]'); do
 		python_fix_shebang "${p}"
 	done
 
