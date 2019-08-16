@@ -1,3 +1,5 @@
 # profile
-app-admin/sudo   offensive
+app-admin/sudo    offensive
 dev-lang/python   sqlite
+sys-apps/lshw     -gtk
+

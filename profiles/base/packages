@@ -9,6 +9,7 @@ app-shells/gentoo-zsh-completions
 app-shells/zsh
 app-shells/zsh-completions
 dev-vcs/tig
+sys-apps/lshw
 sys-apps/pciutils
 sys-apps/the_silver_searcher
 sys-process/htop
