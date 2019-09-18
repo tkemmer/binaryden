@@ -6,6 +6,7 @@ bumps and patches for several other Gentoo packages.
 ## Notable additions to ::gentoo
  * `app-editors/atom-bin`
  * `dev-libs/parquet-cpp`
+ *  sys-apps/piper
  * `x11-misc/slick-greeter`
 
 ## Installation using layman
