@@ -11,7 +11,7 @@ bumps and patches for several other Gentoo packages.
  * [`sys-apps/piper`](https://github.com/libratbag/piper):
    GTK application to configure gaming mice
  * [`x11-misc/slick-greeter`](https://github.com/linuxmint/slick-greeter):
-   A slick-loocking LightDM greeter
+   A slick-looking LightDM greeter
 
 ## Installation using layman
 First, make this overlay available to layman by adding the following line to the `overlays`
