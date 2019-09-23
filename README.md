@@ -4,10 +4,14 @@ the [**Cinnamon**](https://github.com/linuxmint) desktop environment as well as 
 bumps and patches for several other Gentoo packages.
 
 ## Notable additions to ::gentoo
- * `app-editors/atom-bin`
- * `dev-libs/parquet-cpp`
- * `sys-apps/piper`
- * `x11-misc/slick-greeter`
+ * [`app-editors/atom-bin`](https://github.com/atom/atom):
+   The hackable text editor
+ * [`dev-libs/parquet-cpp`](https://github.com/apache/parquet-cpp):
+   Apache Parquet for C++
+ * [`sys-apps/piper`](https://github.com/libratbag/piper):
+   GTK application to configure gaming mice
+ * [`x11-misc/slick-greeter`](https://github.com/linuxmint/slick-greeter):
+   A slick-loocking LightDM greeter
 
 ## Installation using layman
 First, make this overlay available to layman by adding the following line to the `overlays`
