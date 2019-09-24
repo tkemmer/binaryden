@@ -23,7 +23,7 @@ COMMON_DEPEND="
 	app-text/poppler:=[cairo]
 	dev-cpp/cairomm
 	dev-cpp/glibmm
-	dev-cpp/gtkmm:3
+	dev-cpp/gtkmm:3.0
 	dev-libs/boehm-gc
 	dev-libs/boost:=
 	dev-libs/double-conversion:=
