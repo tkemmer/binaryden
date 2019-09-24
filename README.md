@@ -6,6 +6,8 @@ bumps and patches for several other Gentoo packages.
 ## Notable additions to ::gentoo
  * [`app-editors/atom-bin`](https://github.com/atom/atom):
    The hackable text editor
+ * [`dev-cpp/clipp`](https://github.com/muellan/clipp):
+   Expressive command line argument parsing for modern C++
  * [`dev-libs/parquet-cpp`](https://github.com/apache/parquet-cpp):
    Apache Parquet for C++
  * [`sys-apps/piper`](https://github.com/libratbag/piper):
