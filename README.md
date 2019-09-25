@@ -8,8 +8,8 @@ bumps and patches for several other Gentoo packages.
    The hackable text editor
  * [`dev-cpp/clipp`](https://github.com/muellan/clipp):
    Expressive command line argument parsing for modern C++
- * [`dev-libs/parquet-cpp`](https://github.com/apache/parquet-cpp):
-   Apache Parquet for C++
+ * [`dev-libs/arrow-cpp`](https://github.com/apache/arrow):
+   Apache Arrow/Parquet for C++
  * [`sys-apps/piper`](https://github.com/libratbag/piper):
    GTK application to configure gaming mice
  * [`x11-misc/slick-greeter`](https://github.com/linuxmint/slick-greeter):
