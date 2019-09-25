@@ -10,6 +10,8 @@ bumps and patches for several other Gentoo packages.
    Apache Arrow/Parquet for C++
  * [`dev-cpp/clipp`](https://github.com/muellan/clipp):
    Expressive command line argument parsing for modern C++
+ * [`dev-libs/thrift`](https://github.com/apache/thrift)
+   Apache Thrift
  * [`sys-apps/piper`](https://github.com/libratbag/piper):
    GTK application to configure gaming mice
  * [`x11-misc/slick-greeter`](https://github.com/linuxmint/slick-greeter):
