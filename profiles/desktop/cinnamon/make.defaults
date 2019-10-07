@@ -1,1 +1,4 @@
 USE="cinnamon -geolocation gnome-keyring -gnome-online-accounts -gnome-shell introspection -nautilus -tracker"
+
+# Add python2 support for cinnamon profile (incremental variable)
+PYTHON_TARGETS="python2_7"
