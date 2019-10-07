@@ -1,20 +1,22 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
-
+EAPI=7
 WX_GTK_VER="3.0"
 
-inherit cmake-utils eutils wxwidgets
+inherit cmake-utils desktop eutils wxwidgets
 
 DESCRIPTION="Interconverts file formats used in molecular modeling"
-HOMEPAGE="http://openbabel.sourceforge.net/"
-SRC_URI="mirror://sourceforge/openbabel/${P}.tar.gz"
+HOMEPAGE="http://openbabel.org/wiki/Main_Page"
+SRC_URI="
+	mirror://sourceforge/openbabel/${P}.tar.gz
+	https://openbabel.org/docs/dev/_static/babel130.png -> ${PN}.png
+"
 
 # See src/CMakeLists.txt for LIBRARY_VERSION
 SLOT="0/5.0.0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc openmp test wxwidgets"
 
 RDEPEND="
@@ -22,10 +24,13 @@ RDEPEND="
 	dev-libs/libxml2:2
 	sci-libs/inchi
 	sys-libs/zlib
-	wxwidgets? ( x11-libs/wxGTK:${WX_GTK_VER}[X] )"
-DEPEND="${RDEPEND}
+	wxwidgets? ( x11-libs/wxGTK:${WX_GTK_VER}[X] )
+"
+DEPEND="${RDEPEND}"
+BDEPEND="
 	>=dev-util/cmake-2.4.8
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )
+"
 
 DOCS=( AUTHORS NEWS.md README.md THANKS doc/dioxin.{inc,mol2} doc/README.{dioxin.pov,povray} )
 
@@ -51,10 +56,10 @@ src_prepare() {
 }
 
 src_configure() {
-	use wxwidgets && need-wxwidgets unicode
+	use wxwidgets && setup-wxwidgets
 	local mycmakeargs=(
 		-DOPENBABEL_USE_SYSTEM_INCHI=ON
-		-DOPENMP=$(usex openmp)
+		-DENABLE_OPENMP=$(usex openmp)
 		-DBUILD_GUI=$(usex wxwidgets)
 	)
 
@@ -68,6 +73,9 @@ src_install() {
 		docinto html/API
 		dodoc -r doc/API/html/*
 	fi
+
+	make_desktop_entry obgui "Open Babel" "${PN}"
+	doicon "${DISTDIR}/${PN}.png"
 
 	cmake-utils_src_install
 }
