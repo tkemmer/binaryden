@@ -1,4 +1,10 @@
+# profile
 <app-misc/byobu-5.130              amd64
 <app-misc/icdiff-2                 amd64
 <app-shells/zsh-5.8                amd64
 <app-shells/zsh-completions-0.32   amd64
+<sys-apps/exa-0.10                 amd64
+
+# sys-apps/exa
+<dev-lang/rust-bin-1.37   amd64
+<virtual/cargo-1.37       amd64
