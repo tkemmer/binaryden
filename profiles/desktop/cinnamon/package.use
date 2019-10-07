@@ -9,3 +9,14 @@ virtual/imagemagick-tools   perl
 
 # x11-misc/slick-greeter
 x11-misc/lightdm   vala
+
+
+### py2 support ###
+
+# py2-only packages
+app-text/gnome-doc-utils   python_targets_python2_7
+dev-util/gtk-doc           python_targets_python2_7
+gnome-base/gconf           python_targets_python2_7
+
+# app-text/gnome-doc-utils
+dev-libs/libxml2   python_targets_python2_7
