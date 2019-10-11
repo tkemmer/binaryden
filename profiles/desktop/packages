@@ -6,6 +6,7 @@ app-text/mupdf
 dev-tex/latex-beamer
 dev-texlive/texlive-langenglish
 dev-texlive/texlive-langgerman
+dev-texlive/texlive-mathscience
 dev-texlive/texlive-publishers
 mail-client/thunderbird-bin
 media-fonts/droid
