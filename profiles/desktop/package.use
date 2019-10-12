@@ -10,6 +10,9 @@ net-print/hplip                       snmp
 sys-apps/lshw                         -gtk
 sys-block/gparted                     fat ntfs
 
+# py2-only
+dev-python/matplotlib   -wxwidgets
+
 # app-office/libreoffice{,-bin}
 dev-libs/xmlsec   nss
 
