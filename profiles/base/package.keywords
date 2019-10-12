@@ -5,6 +5,22 @@
 <app-shells/zsh-completions-0.32   amd64
 <sys-apps/exa-0.10                 amd64
 
+# dev-python/ipython-7
+<dev-python/backcall-0.2          amd64
+<dev-python/ipykernel-5.2         amd64
+<dev-python/ipyparallel-6.3       amd64
+<dev-python/ipython-7.6           amd64
+<dev-python/jupyter_client-5.3    amd64
+<dev-python/jupyter_console-6.1   amd64
+<dev-python/jupyter_core-4.5      amd64
+<dev-python/nbconvert-5.6         amd64
+<dev-python/nbformat-5.4          amd64
+<dev-python/notebook-5.8          amd64
+<dev-python/prompt_toolkit-2.1    amd64
+<dev-python/pyzmq-17.2            amd64
+<dev-python/strict-rfc3339-0.8    amd64
+<dev-python/terminado-0.9         amd64
+
 # sys-apps/exa
 <dev-lang/rust-bin-1.37   amd64
 <virtual/cargo-1.37       amd64
