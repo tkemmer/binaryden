@@ -10,7 +10,7 @@ HOMEPAGE="https://arrow.apache.org/"
 SRC_URI="https://github.com/apache/arrow/archive/apache-arrow-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
-SLOT="0"
+SLOT="0/14"
 KEYWORDS="~amd64"
 
 IUSE="brotli ccache deprecated glog lz4 openssl parquet +snappy static-libs +zlib zstd"
@@ -19,14 +19,14 @@ S="${WORKDIR}/arrow-apache-arrow-${PV}/cpp"
 CMAKE_BUILD_TYPE="release"
 
 COMMON_DEPEND="
-	dev-cpp/gflags
-	dev-libs/boost
-	dev-libs/double-conversion
+	dev-cpp/gflags:=
+	dev-libs/boost:=
+	dev-libs/double-conversion:=
 	dev-libs/rapidjson
-	dev-libs/thrift
+	dev-libs/thrift:=
 	ccache? ( dev-util/ccache )
 	glog? ( dev-cpp/glog )
-	openssl? ( dev-libs/openssl )
+	openssl? ( dev-libs/openssl:= )
 "
 RDEPEND="${COMMON_DEPEND}"
 DEPEND="${COMMON_DEPEND}"
