@@ -18,13 +18,13 @@ REQUIRED_USE=""
 
 COMMON_DEPEND="
 	dev-libs/glib:2
-	libevent? ( dev-libs/libevent )
-	openssl? ( dev-libs/openssl:0 )
+	libevent? ( dev-libs/libevent:= )
+	openssl? ( dev-libs/openssl:= )
 	qt5? (
-		dev-qt/qtcore:5
-		dev-qt/qtnetwork:5
+		dev-qt/qtcore:5=
+		dev-qt/qtnetwork:5=
 	)
-	zlib? ( sys-libs/zlib )
+	zlib? ( sys-libs/zlib:= )
 "
 RDEPEND="${COMMON_DEPEND}"
 DEPEND="${COMMON_DEPEND}"
