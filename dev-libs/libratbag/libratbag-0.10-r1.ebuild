@@ -12,13 +12,13 @@ HOMEPAGE="https://github.com/libratbag/libratbag"
 SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
-SLOT="0"
+SLOT="0/3"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc elogind systemd test"
 
 DEPEND="
 	dev-lang/swig
-	dev-libs/libunistring
+	dev-libs/libunistring:=
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 	test? (
@@ -30,9 +30,9 @@ RDEPEND="
 	dev-libs/glib:2
 	dev-libs/json-glib
 	dev-libs/libevdev
-	virtual/libudev
+	virtual/libudev:=
 	elogind? ( sys-auth/elogind )
-	!elogind? ( sys-apps/systemd )
+	!elogind? ( sys-apps/systemd:= )
 "
 
 pkg_setup() {
