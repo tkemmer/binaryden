@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	>=dev-libs/libratbag-0.10
+	>=dev-libs/libratbag-0.10:=
 	virtual/pkgconfig
 "
 RDEPEND="
