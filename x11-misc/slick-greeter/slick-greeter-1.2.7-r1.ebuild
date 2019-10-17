@@ -15,7 +15,7 @@ KEYWORDS="~amd64"
 
 COMMON_DEPEND="
 	dev-libs/glib:2
-	media-libs/freetype
+	media-libs/freetype:=
 	media-libs/libcanberra
 	x11-libs/cairo
 	x11-libs/gtk+:3[X]
