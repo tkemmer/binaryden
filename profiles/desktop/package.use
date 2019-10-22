@@ -1,9 +1,8 @@
 # profile
 dev-vcs/git                           tk
-media-libs/gst-plugins-base           theora
 media-plugins/deadbeef-plugins-meta   mpris
 media-sound/deadbeef                  cover curl lastfm
-media-video/vlc                       bidi ffmpeg flac libass live lua matroska theora
+media-video/vlc                       bidi ffmpeg libass live lua matroska 
 net-nds/openldap                      minimal
 net-print/cups                        -usb
 net-print/hplip                       snmp
