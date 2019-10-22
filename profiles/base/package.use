@@ -1,7 +1,6 @@
 # profile
 app-admin/sudo    offensive
 dev-lang/python   sqlite
-sys-apps/lshw     -gtk
 
 # py2-only flags
 dev-python/matplotlib   -wxwidgets
