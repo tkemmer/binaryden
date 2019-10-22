@@ -7,7 +7,6 @@ media-video/vlc                       bidi ffmpeg flac libass live lua matroska 
 net-nds/openldap                      minimal
 net-print/cups                        -usb
 net-print/hplip                       snmp
-sys-apps/lshw                         -gtk
 sys-block/gparted                     fat ntfs
 
 # py2-only

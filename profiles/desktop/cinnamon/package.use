@@ -2,6 +2,7 @@
 gnome-base/gvfs                       fuse http mtp nfs
 media-plugins/deadbeef-plugins-meta   gnome-mmkeys
 net-misc/networkmanager               -wext
+sys-apps/lshw                         -gtk
 x11-misc/shutter                      drawing
 
 # x11-misc/shutter
