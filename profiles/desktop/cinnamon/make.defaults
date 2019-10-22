@@ -1,2 +1,2 @@
-USE="cinnamon gnome-keyring -gnome-online-accounts -gnome-shell gtk gtk3 introspection -nautilus -tracker"
+USE="cinnamon gnome-keyring -gnome-online-accounts -gnome-shell gtk gtk3 introspection -nautilus nemo -tracker"
 
