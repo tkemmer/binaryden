@@ -1,3 +1,6 @@
+# profile
+<x11-misc/albert-0.17   amd64
+
 # enable py3 support
 <media-libs/aubio-0.5      amd64
 =net-im/pidgin-2.13.0-r1   amd64
