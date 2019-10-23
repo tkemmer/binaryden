@@ -10,7 +10,6 @@ app-shells/gentoo-zsh-completions
 app-shells/zsh
 app-shells/zsh-completions
 dev-vcs/tig
-sys-apps/bat
 sys-apps/exa
 sys-apps/lshw
 sys-apps/pciutils
