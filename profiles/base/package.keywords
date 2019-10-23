@@ -3,6 +3,7 @@
 <app-misc/icdiff-2                 amd64
 <app-shells/zsh-5.8                amd64
 <app-shells/zsh-completions-0.32   amd64
+<dev-vcs/tig-2.5                   amd64
 <sys-apps/bat-0.13                 amd64
 <sys-apps/exa-0.10                 amd64
 
