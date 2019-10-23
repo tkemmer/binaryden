@@ -6,7 +6,6 @@
 <dev-vcs/tig-2.5                   amd64
 <sys-apps/bat-0.13                 amd64
 <sys-apps/exa-0.10                 amd64
-<x11-terms/guake-3.7               amd64
 
 # dev-python/ipython-7
 <dev-python/backcall-0.2          amd64
