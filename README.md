@@ -16,6 +16,8 @@ bumps and patches for several other Gentoo packages.
    GTK application to configure gaming mice
  * [`x11-misc/slick-greeter`](https://github.com/linuxmint/slick-greeter):
    A slick-looking LightDM greeter
+ * [`x11-themes/flat-remix`](https://github.com/daniruiz/flat-remix):
+   Pretty simple Linux icon theme inspired by material design
 
 ## Installation using layman
 First, make this overlay available to layman by adding the following line to the `overlays`
