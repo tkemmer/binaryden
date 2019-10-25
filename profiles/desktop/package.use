@@ -7,6 +7,7 @@ net-nds/openldap                      minimal
 net-print/cups                        -usb
 net-print/hplip                       snmp
 sys-block/gparted                     fat ntfs
+x11-themes/flat-remix                 -blue -red -yellow
 
 # py2-only
 dev-python/matplotlib   -wxwidgets

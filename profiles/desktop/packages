@@ -21,3 +21,4 @@ www-client/google-chrome
 x11-base/xorg-server
 x11-misc/albert
 x11-misc/lightdm
+x11-themes/flat-remix
