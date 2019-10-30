@@ -7,3 +7,6 @@ x11-themes/flat-remix   amd64
 =net-im/pidgin-2.13.0-r1   amd64
 =x11-misc/arandr-0.1.10    amd64
 
+#x11-misc/albert
+<dev-qt/qtcharts-5.13   amd64
+
