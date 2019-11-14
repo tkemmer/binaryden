@@ -3,11 +3,6 @@ gnome-base/gvfs                       fuse http mtp nfs
 media-plugins/deadbeef-plugins-meta   gnome-mmkeys
 net-misc/networkmanager               -wext
 sys-apps/lshw                         -gtk
-x11-misc/shutter                      drawing
-
-# x11-misc/shutter
-media-gfx/imagemagick       perl
-virtual/imagemagick-tools   perl
 
 # x11-misc/slick-greeter
 x11-misc/lightdm   vala
