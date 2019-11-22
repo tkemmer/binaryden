@@ -16,6 +16,7 @@
 <x11-wm/muffin-4.3                          amd64
 
 <app-editors/gummi-0.8.1                    amd64
+<dev-util/itstool-2.1                       amd64
 <x11-misc/slick-greeter-1.3                 amd64
 <x11-terms/guake-3.7                        amd64
 <x11-themes/elementary-xfce-icon-theme-1    amd64
