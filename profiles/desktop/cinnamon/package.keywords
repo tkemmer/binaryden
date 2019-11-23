@@ -1,19 +1,20 @@
 ################
-# Cinnamon 4.2 #
+# Cinnamon 4.4 #
 ################
-<dev-python/xapp-1.7                        amd64
-<gnome-extra/cinnamon-4.3                   amd64
-<gnome-extra/cinnamon-control-center-4.3    amd64
-<gnome-extra/cinnamon-desktop-4.3           amd64
-<gnome-extra/cinnamon-menus-4.3             amd64
-<gnome-extra/cinnamon-screensaver-4.3       amd64
-<gnome-extra/cinnamon-session-4.3           amd64
-<gnome-extra/cinnamon-settings-daemon-4.3   amd64
-<gnome-extra/cinnamon-translations-4.3      amd64
-<gnome-extra/cjs-4.3                        amd64
-<gnome-extra/nemo-4.3                       amd64
-<x11-libs/xapps-1.5                         amd64
-<x11-wm/muffin-4.3                          amd64
+<dev-python/xapp-1.9                        amd64
+<gnome-extra/cinnamon-4.5                   amd64
+<gnome-extra/cinnamon-control-center-4.5    amd64
+<gnome-extra/cinnamon-desktop-4.5           amd64
+<gnome-extra/cinnamon-menus-4.5             amd64
+<gnome-extra/cinnamon-screensaver-4.5       amd64
+<gnome-extra/cinnamon-session-4.5           amd64
+<gnome-extra/cinnamon-settings-daemon-4.5   amd64
+<gnome-extra/cinnamon-translations-4.5      amd64
+<gnome-extra/cjs-4.5                        amd64
+<gnome-extra/nemo-4.5                       amd64
+<gnome-extra/timezonemap-0.5                amd64
+<x11-libs/xapps-1.7                         amd64
+<x11-wm/muffin-4.5                          amd64
 
 <app-editors/gummi-0.8.1                    amd64
 <dev-util/itstool-2.1                       amd64
