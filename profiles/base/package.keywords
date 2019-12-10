@@ -21,5 +21,3 @@
 <dev-python/pyzmq-17.2            amd64
 <dev-python/terminado-0.9         amd64
 
-# sys-apps/exa
-<virtual/cargo-1.37       amd64
