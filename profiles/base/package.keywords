@@ -2,7 +2,7 @@
 <app-misc/byobu-5.130               amd64
 <app-misc/icdiff-2                  amd64
 <app-shells/zsh-5.8                 amd64
-<dev-vcs/tig-2.5                    amd64
+<dev-vcs/tig-2.6                    amd64
 <sys-apps/exa-0.10                  amd64
 <sys-apps/the_silver_searcher-2.3   amd64
 
