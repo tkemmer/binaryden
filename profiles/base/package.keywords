@@ -19,7 +19,6 @@
 <dev-python/notebook-5.8          amd64
 <dev-python/prompt_toolkit-2.1    amd64
 <dev-python/pyzmq-17.2            amd64
-<dev-python/strict-rfc3339-0.8    amd64
 <dev-python/terminado-0.9         amd64
 
 # sys-apps/exa
