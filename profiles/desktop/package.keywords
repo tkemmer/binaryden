@@ -7,5 +7,5 @@ x11-themes/flat-remix   amd64
 =x11-misc/arandr-0.1.10    amd64
 
 #x11-misc/albert
-<dev-qt/qtcharts-5.13   amd64
+<dev-qt/qtcharts-5.14   amd64
 
