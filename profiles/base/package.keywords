@@ -21,3 +21,6 @@
 <dev-python/pyzmq-17.2            amd64
 <dev-python/terminado-0.9         amd64
 
+# Fix for https://bugs.gentoo.org/630294
+<sci-libs/scikits_learn-0.21      amd64
+
