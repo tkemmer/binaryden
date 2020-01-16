@@ -17,11 +17,14 @@
 <x11-wm/muffin-4.5                          amd64
 
 <app-editors/gummi-0.8.1                    amd64
+<x11-misc/slick-greeter-1.4                 amd64
+<x11-terms/guake-3.7                        amd64
+<x11-themes/elementary-xfce-icon-theme-1    amd64
+
+# enable py3 support
+<app-crypt/gcr-3.35                         amd64
 <app-text/gnome-doc-utils-0.21              amd64
 <dev-util/gtk-doc-1.33                      amd64
 <dev-util/gtk-doc-am-1.33                   amd64
 <dev-util/itstool-2.1                       amd64
-<x11-misc/slick-greeter-1.4                 amd64
-<x11-terms/guake-3.7                        amd64
-<x11-themes/elementary-xfce-icon-theme-1    amd64
 
