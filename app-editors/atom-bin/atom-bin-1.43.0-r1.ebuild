@@ -17,7 +17,6 @@ IUSE=""
 DEPEND=""
 RDEPEND="!app-editors/atom
 	dev-vcs/git
-	gnome-base/gconf
 	x11-libs/gtk+:3
 	virtual/libudev
 	dev-libs/libgcrypt
