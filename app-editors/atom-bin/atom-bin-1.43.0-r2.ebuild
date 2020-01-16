@@ -1,9 +1,10 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit unpacker xdg-utils
+PYTHON_COMPAT=( python3_{6,7,8} )
+inherit python-any-r1 unpacker xdg-utils
 
 DESCRIPTION="A hackable text editor for the 21st Century"
 HOMEPAGE="https://atom.io/"
@@ -16,6 +17,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="!app-editors/atom
+	${PYTHON_DEPS}
 	dev-vcs/git
 	x11-libs/gtk+:3
 	virtual/libudev
@@ -23,7 +25,6 @@ RDEPEND="!app-editors/atom
 	x11-libs/libnotify
 	x11-libs/libXtst
 	dev-libs/nss
-	dev-lang/python
 	gnome-base/gvfs
 	x11-misc/xdg-utils
 	sys-libs/libcap
@@ -40,7 +41,7 @@ src_unpack() {
 }
 
 src_install() {
-	mv "${S}/usr/share/doc/atom" "${S}/usr/share/doc/${P}"
+	mv "${S}/usr/share/doc/atom" "${S}/usr/share/doc/${PF}"
 	cp -a "${S}/usr" "${D}/"
 }
 
