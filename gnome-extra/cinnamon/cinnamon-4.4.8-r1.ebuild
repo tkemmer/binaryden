@@ -34,7 +34,6 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	>=dev-libs/json-glib-0.13.2
 	>=dev-libs/libcroco-0.6.2:0.6
 	dev-libs/libxml2:2
-	gnome-base/gconf:2[introspection]
 	gnome-base/librsvg
 	>=gnome-extra/cinnamon-desktop-4.4:0=[introspection]
 	>=gnome-extra/cinnamon-menus-4.4
