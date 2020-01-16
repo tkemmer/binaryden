@@ -59,9 +59,9 @@ src_prepare() {
 
 src_configure() {
 	meson_src_configure \
-		-Dwith-gconf=false \
-		-Dwith-docbook=$(usex doc true false) \
-		-Dwith-ipv6=$(usex ipv6 true false)
+		-Dgconf=false \
+		-Ddocbook=$(usex doc true false) \
+		-Dipv6=$(usex ipv6 true false)
 }
 
 src_install() {
