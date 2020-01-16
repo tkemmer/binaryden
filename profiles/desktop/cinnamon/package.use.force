@@ -1,6 +1,5 @@
 ### py2 support ###
 
 # py2-only packages
-dev-util/gtk-doc           python_single_target_python2_7 python_targets_python2_7
 gnome-base/gconf           python_targets_python2_7
 
