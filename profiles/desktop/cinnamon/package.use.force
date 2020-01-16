@@ -1,5 +1,0 @@
-### py2 support ###
-
-# py2-only packages
-gnome-base/gconf           python_targets_python2_7
-
