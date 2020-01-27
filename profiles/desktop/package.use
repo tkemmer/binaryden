@@ -1,6 +1,5 @@
 # profile
 dev-vcs/git                           tk
-media-libs/libmypaint                 -gegl
 media-plugins/deadbeef-plugins-meta   mpris
 media-sound/deadbeef                  cover curl lastfm
 media-video/vlc                       bidi ffmpeg libass live lua matroska 
