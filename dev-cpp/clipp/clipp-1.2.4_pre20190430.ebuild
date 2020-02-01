@@ -1,10 +1,10 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 COMMIT=2c32b2f1f7cc530b1ec1f62c92f698643bb368db
 
-inherit cmake-utils
+inherit cmake
 
 DESCRIPTION="Easy to use, powerful & expressive command line argument parsing for modern C++"
 HOMEPAGE="https://github.com/muellan/clipp"
@@ -24,5 +24,5 @@ src_configure() {
 	local mycmakeargs=(
 		-DBUILD_TESTING="$(usex test)"
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
