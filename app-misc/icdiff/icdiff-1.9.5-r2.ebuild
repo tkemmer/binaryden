@@ -22,10 +22,16 @@ DOCS=(README.md ChangeLog)
 
 S="${WORKDIR}/${PN}-release-${PV}"
 
-python_test() {
+src_test() {
 	# skip gitdiff-only-newlines test (only works inside icdiff repo)
 	sed -i -e "s/^check_git_diff gitdiff-only-newlines/#&/" test.sh || die
 
+	# use writable temp directory for tests
 	sed -i -e "s|/tmp/|${T}/|" test.sh || die
+
+	distutils-r1_src_test
+}
+
+python_test() {
 	./test.sh "${EPYTHON%.*}" || die "Tests failed"
 }
