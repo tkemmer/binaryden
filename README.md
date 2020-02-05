@@ -20,16 +20,9 @@ bumps and patches for several other Gentoo packages.
    Pretty simple Linux icon theme inspired by material design
 
 ## Installation using layman
-First, make this overlay available to layman by adding the following line to the `overlays`
-setting in your layman configuration file (e.g. `/etc/layman/layman.conf`):
-```
-https://raw.githubusercontent.com/tkemmer/binaryden/master/repositories.xml
-```
-
-Afterwards, you can simply add the overlay via
+This overlay can be added to your system via
 ```sh
-layman -S
-layman -a binaryden
+layman -Sa binaryden
 ```
 Similarly, you can remove this overlay at any time via
 ```sh
