@@ -1,4 +1,5 @@
 # profile
+dev-python/matplotlib                 wxwidgets
 dev-vcs/git                           tk
 media-plugins/deadbeef-plugins-meta   mpris
 media-sound/deadbeef                  cover curl lastfm
@@ -8,9 +9,6 @@ net-print/cups                        -usb
 net-print/hplip                       snmp
 sys-block/gparted                     fat ntfs
 x11-themes/flat-remix                 -blue -red -yellow
-
-# py2-only
-dev-python/matplotlib   -wxwidgets
 
 # app-office/libreoffice{,-bin}
 dev-libs/xmlsec   nss
