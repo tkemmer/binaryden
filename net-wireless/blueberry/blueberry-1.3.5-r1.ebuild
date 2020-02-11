@@ -18,10 +18,10 @@ IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
-	dev-python/dbus-python[${PYTHON_USEDEP}]
-	dev-python/pygobject:3[${PYTHON_USEDEP}]
-	dev-python/setproctitle[${PYTHON_USEDEP}]
-	dev-python/xapp[${PYTHON_USEDEP}]
+	dev-python/dbus-python
+	dev-python/pygobject:3
+	dev-python/setproctitle
+	dev-python/xapp
 	>=net-wireless/gnome-bluetooth-3.14[introspection]
 	net-wireless/bluez[obex]
 	net-wireless/bluez-tools
