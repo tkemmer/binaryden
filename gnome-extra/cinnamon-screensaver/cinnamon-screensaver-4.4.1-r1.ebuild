@@ -45,10 +45,10 @@ COMMON_DEPEND="
 # our cinnamon-1.8 ebuilds installed a cinnamon-screensaver.desktop hack
 RDEPEND="${COMMON_DEPEND}
 	!~gnome-extra/cinnamon-1.8.8.1
-	dev-python/pygobject:3[${PYTHON_USEDEP}]
-	dev-python/setproctitle[${PYTHON_USEDEP}]
-	dev-python/xapp[${PYTHON_USEDEP}]
-	dev-python/psutil[${PYTHON_USEDEP}]
+	dev-python/pygobject:3
+	dev-python/setproctitle
+	dev-python/xapp
+	dev-python/psutil
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.35
