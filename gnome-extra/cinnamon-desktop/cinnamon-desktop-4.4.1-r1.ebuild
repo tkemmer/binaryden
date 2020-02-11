@@ -32,7 +32,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	sys-apps/accountsservice
 "
 RDEPEND="${COMMON_DEPEND}
-	dev-python/pygobject:3[${PYTHON_USEDEP}]
+	dev-python/pygobject:3
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/gtk-doc-am-1.4
