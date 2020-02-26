@@ -102,12 +102,14 @@ src_install() {
 	into ${cudadir}
 
 	# Install binaries separately to make sure the X permission is set
-	local bindirs=( bin nvvm/bin extras/demo_suite )
+	local bindirs=( bin nvvm/bin extras/demo_suite  $(usex profiler "libnsight/nsight") )
 	for i in $(find "${bindirs[@]}" -maxdepth 1 -type f); do
 		exeinto ${cudadir}/${i%/*}
 		doexe ${i}
 		rm ${i} || die
 	done
+	exeinto ${cudadir}/bin
+	doexe "${T}"/cuda-config
 
 	# Install the rest
 	insinto ${cudadir}
@@ -120,7 +122,10 @@ src_install() {
 	EOF
 	doenvd "${T}"/99cuda
 
-	dobin "${T}"/cuda-config
+	#Cuda prepackages libraries, don't revdep-build on them
+	echo "SEARCH_DIRS_MASK=\"${ecudadir}\"" > "${T}/80${PN}" || die
+	insinto "/etc/revdep-rebuild"
+	doins "${T}/80${PN}"
 }
 
 pkg_postinst_check() {
