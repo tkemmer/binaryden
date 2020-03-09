@@ -11,7 +11,7 @@
 <dev-python/ipython-7.6           amd64
 <dev-python/jupyter_client-5.3    amd64
 <dev-python/jupyter_console-6.1   amd64
-<dev-python/jupyter_core-4.5      amd64
+<dev-python/jupyter_core-4.7      amd64
 <dev-python/nbconvert-5.6         amd64
 
 # Fix for https://bugs.gentoo.org/630294
