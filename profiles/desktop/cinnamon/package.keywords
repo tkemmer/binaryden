@@ -16,7 +16,6 @@
 <x11-libs/xapps-1.7                         amd64
 <x11-wm/muffin-4.5                          amd64
 
-<app-editors/gummi-0.8.2                    amd64
 <x11-misc/slick-greeter-1.4                 amd64
 <x11-terms/guake-3.8                        amd64
 <x11-themes/elementary-xfce-icon-theme-1    amd64
