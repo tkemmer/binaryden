@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -47,7 +47,6 @@ COMMON_DEPEND="
 # needs gtk-doc, not just -am, for gtk-doc.make
 DEPEND="${COMMON_DEPEND}
 	${PYTHON_DEPS}
-	>=app-text/gnome-doc-utils-0.8
 	sys-devel/gettext
 	dev-util/gtk-doc
 	dev-util/gtk-doc-am
