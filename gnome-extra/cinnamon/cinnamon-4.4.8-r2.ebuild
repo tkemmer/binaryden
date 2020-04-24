@@ -89,7 +89,7 @@ RDEPEND="${COMMON_DEPEND}
 	dev-python/pexpect[${PYTHON_USEDEP}]
 	dev-python/pycairo[${PYTHON_USEDEP}]
 	dev-python/pyinotify[${PYTHON_USEDEP}]
-	dev-python/pypam[${PYTHON_USEDEP}]
+	dev-python/python-pam[${PYTHON_USEDEP}]
 	dev-python/pytz[${PYTHON_USEDEP}]
 	dev-python/pillow[${PYTHON_USEDEP}]
 	dev-python/tinycss[${PYTHON_USEDEP}]
