@@ -1,6 +1,7 @@
 ################
 # Cinnamon 4.4 #
 ################
+<dev-python/python-pam-1.9                  amd64
 <dev-python/xapp-1.9                        amd64
 <gnome-extra/cinnamon-4.5                   amd64
 <gnome-extra/cinnamon-control-center-4.5    amd64
