@@ -23,6 +23,3 @@
 
 # enable py3 support
 <app-crypt/gcr-3.35                         amd64
-<dev-util/gtk-doc-1.33                      amd64
-<dev-util/gtk-doc-am-1.33                   amd64
-
