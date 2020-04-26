@@ -22,4 +22,4 @@ DEPEND="x11-libs/xapps[introspection]"
 RDEPEND="${DEPEND}
 	dev-python/psutil[${PYTHON_USEDEP}]"
 
-S="${WORKDIR}/python-xapp-${PV}"
+S="${WORKDIR}/python3-xapp-${PV}"
