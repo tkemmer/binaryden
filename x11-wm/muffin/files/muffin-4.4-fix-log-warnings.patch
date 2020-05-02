@@ -1,0 +1,522 @@
+From e0471c5dfaa9e1e5d7b6bc66a73184bab212a2c1 Mon Sep 17 00:00:00 2001
+From: Michael Webster <miketwebster@gmail.com>
+Date: Tue, 14 Jan 2020 12:57:21 -0500
+Subject: [PATCH] all: Don't translate log warnings, remove a couple of
+ remaining gettext defines.
+
+---
+ src/compositor/compositor.c |  2 +-
+ src/core/core.c             |  2 +-
+ src/core/display.c          |  4 ++--
+ src/core/keybindings.c      |  2 +-
+ src/core/main.c             |  2 +-
+ src/core/prefs.c            | 20 ++++++++++----------
+ src/core/screen.c           | 10 +++++-----
+ src/core/session.c          | 32 ++++++++++++++++----------------
+ src/core/util.c             |  8 ++++----
+ src/core/window-props.c     | 10 +++++-----
+ src/core/window.c           |  4 ++--
+ src/core/xprops.c           |  6 +++---
+ src/meta/util.h             |  3 ---
+ src/tools/muffin-message.c  |  4 +---
+ src/ui/theme-viewer.c       |  5 +----
+ 15 files changed, 53 insertions(+), 61 deletions(-)
+
+diff --git a/src/compositor/compositor.c b/src/compositor/compositor.c
+index a8bc6db8..bcdfa67b 100644
+--- a/src/compositor/compositor.c
++++ b/src/compositor/compositor.c
+@@ -553,7 +553,7 @@ redirect_windows (MetaCompositor *compositor,
+         {
+           /* This probably means that a non-WM compositor like xcompmgr is running;
+            * we have no way to get it to exit */
+-          meta_fatal (_("Another compositing manager is already running on screen %i on display \"%s\"."),
++          meta_fatal ("Another compositing manager is already running on screen %i on display \"%s\".",
+                       screen_number, display->name);
+         }
+ 
+diff --git a/src/core/core.c b/src/core/core.c
+index 77228aac..2c851a75 100644
+--- a/src/core/core.c
++++ b/src/core/core.c
+@@ -150,7 +150,7 @@ meta_core_get (Display *xdisplay,
+         break;
+ 
+       default:
+-        meta_warning(_("Unknown window information request: %d"), request);
++        meta_warning("Unknown window information request: %d", request);
+     }
+ 
+     request = va_arg (args, MetaCoreGetType);
+diff --git a/src/core/display.c b/src/core/display.c
+index 6baf2cc2..1b61f407 100644
+--- a/src/core/display.c
++++ b/src/core/display.c
+@@ -433,7 +433,7 @@ enable_compositor (MetaDisplay *display,
+       !META_DISPLAY_HAS_XFIXES (display) ||
+       !META_DISPLAY_HAS_RENDER (display))
+     {
+-      meta_warning (_("Missing %s extension required for compositing"),
++      meta_warning ("Missing %s extension required for compositing",
+                     !META_DISPLAY_HAS_COMPOSITE (display) ? "composite" :
+                     !META_DISPLAY_HAS_DAMAGE (display) ? "damage" :
+                     !META_DISPLAY_HAS_XFIXES (display) ? "xfixes" : "render");
+@@ -500,7 +500,7 @@ meta_display_open (void)
+ 
+   if (xdisplay == NULL)
+     {
+-      meta_warning (_("Failed to open X Window System display '%s'\n"),
++      meta_warning ("Failed to open X Window System display '%s'\n",
+ 		    XDisplayName (NULL));
+       return FALSE;
+     }
+diff --git a/src/core/keybindings.c b/src/core/keybindings.c
+index 50658880..11d4c4ab 100644
+--- a/src/core/keybindings.c
++++ b/src/core/keybindings.c
+@@ -996,7 +996,7 @@ meta_change_keygrab (MetaDisplay *display,
+           if (grab && result != Success)
+             {
+               if (result == BadAccess)
+-                meta_warning (_("Some other program is already using the key %s with modifiers %x as a binding\n"), keysym_name (keysym), modmask | ignored_mask);
++                meta_warning ("Some other program is already using the key %s with modifiers %x as a binding\n", keysym_name (keysym), modmask | ignored_mask);
+ #ifdef WITH_VERBOSE_MODE
+               else
+                 meta_topic (META_DEBUG_KEYBINDINGS,
+diff --git a/src/core/main.c b/src/core/main.c
+index a16bee1e..4e1b11f2 100644
+--- a/src/core/main.c
++++ b/src/core/main.c
+@@ -543,7 +543,7 @@ meta_run (void)
+   if (!meta_ui_have_a_theme ())
+     {
+       meta_ui_set_current_theme ("Default", FALSE);
+-      meta_warning (_("Could not find theme %s. Falling back to default theme."), meta_prefs_get_theme ());
++      meta_warning ("Could not find theme %s. Falling back to default theme.", meta_prefs_get_theme ());
+     }
+ 
+ 
+diff --git a/src/core/prefs.c b/src/core/prefs.c
+index d92826a1..d9d6e319 100644
+--- a/src/core/prefs.c
++++ b/src/core/prefs.c
+@@ -1236,8 +1236,8 @@ maybe_give_disable_workarounds_warning (void)
+     {
+       first_disable = FALSE;
+ 
+-      meta_warning (_("Workarounds for broken applications disabled. "
+-                      "Some applications may not behave properly.\n"));
++      meta_warning ("Workarounds for broken applications disabled. "
++                      "Some applications may not behave properly.\n");
+     }
+ }
+ 
+@@ -1329,8 +1329,8 @@ titlebar_handler (GVariant *value,
+ 
+   if (desc == NULL)
+     {
+-      meta_warning (_("Could not parse font description "
+-                      "\"%s\" from GSettings key %s\n"),
++      meta_warning ("Could not parse font description "
++                      "\"%s\" from GSettings key %s\n",
+                     string_value ? string_value : "(null)",
+                     KEY_TITLEBAR_FONT);
+       return FALSE;
+@@ -1393,8 +1393,8 @@ mouse_button_mods_handler (GVariant *value,
+       meta_topic (META_DEBUG_KEYBINDINGS,
+                   "Failed to parse new GSettings value\n");
+ 
+-      meta_warning (_("\"%s\" found in configuration database is "
+-                      "not a valid value for mouse button modifier\n"),
++      meta_warning ("\"%s\" found in configuration database is "
++                      "not a valid value for mouse button modifier\n",
+                     string_value);
+ 
+       return FALSE;
+@@ -1429,8 +1429,8 @@ mouse_button_zoom_mods_handler (GVariant *value,
+       meta_topic (META_DEBUG_KEYBINDINGS,
+                   "Failed to parse new GSettings value\n");
+ 
+-      meta_warning (_("\"%s\" found in configuration database is "
+-                      "not a valid value for mouse button zoom modifier\n"),
++      meta_warning ("\"%s\" found in configuration database is "
++                      "not a valid value for mouse button zoom modifier\n",
+                     string_value);
+ 
+       return FALSE;
+@@ -2050,7 +2050,7 @@ update_binding (MetaKeyPref *binding,
+         {
+           meta_topic (META_DEBUG_KEYBINDINGS,
+                       "Failed to parse new GSettings value\n");
+-          meta_warning (_("\"%s\" found in configuration database is not a valid value for keybinding \"%s\"\n"),
++          meta_warning ("\"%s\" found in configuration database is not a valid value for keybinding \"%s\"\n",
+                         strokes[i], binding->name);
+ 
+           /* Value is kept and will thus be removed next time we save the key.
+@@ -2156,7 +2156,7 @@ meta_prefs_get_workspace_name (int i)
+       g_strv_length (workspace_names) < (guint)i + 1 ||
+       !*workspace_names[i])
+     {
+-      char *generated_name = g_strdup_printf (_("Workspace %d"), i + 1);
++      char *generated_name = g_strdup_printf ("Workspace %d", i + 1);
+       name = g_intern_string (generated_name);
+       free (generated_name);
+     }
+diff --git a/src/core/screen.c b/src/core/screen.c
+index cdcbcab9..355f583b 100644
+--- a/src/core/screen.c
++++ b/src/core/screen.c
+@@ -826,7 +826,7 @@ meta_screen_new (MetaDisplay *display,
+    */
+   if (xroot == None)
+     {
+-      meta_warning (_("Screen %d on display '%s' is invalid\n"),
++      meta_warning ("Screen %d on display '%s' is invalid\n",
+                     number, display->name);
+       return NULL;
+     }
+@@ -842,7 +842,7 @@ meta_screen_new (MetaDisplay *display,
+ 
+       if (!replace_current_wm)
+         {
+-          meta_warning (_("Screen %d on display \"%s\" already has a window manager; try using the --replace option to replace the current window manager.\n"),
++          meta_warning ("Screen %d on display \"%s\" already has a window manager; try using the --replace option to replace the current window manager.\n",
+                         number, display->name);
+ 
+           return NULL;
+@@ -869,7 +869,7 @@ meta_screen_new (MetaDisplay *display,
+ 
+   if (XGetSelectionOwner (xdisplay, wm_sn_atom) != new_wm_sn_owner)
+     {
+-      meta_warning (_("Could not acquire window manager selection on screen %d display \"%s\"\n"),
++      meta_warning ("Could not acquire window manager selection on screen %d display \"%s\"\n",
+                     number, display->name);
+ 
+       XDestroyWindow (xdisplay, new_wm_sn_owner);
+@@ -924,7 +924,7 @@ meta_screen_new (MetaDisplay *display,
+                 ExposureMask | attr.your_event_mask);
+   if (meta_error_trap_pop_with_return (display) != Success)
+     {
+-      meta_warning (_("Screen %d on display \"%s\" already has a window manager\n"),
++      meta_warning ("Screen %d on display \"%s\" already has a window manager\n",
+                     number, display->name);
+ 
+       XDestroyWindow (xdisplay, new_wm_sn_owner);
+@@ -1108,7 +1108,7 @@ meta_screen_free (MetaScreen *screen,
+   meta_error_trap_push_with_return (screen->display);
+   XSelectInput (screen->display->xdisplay, screen->xroot, 0);
+   if (meta_error_trap_pop_with_return (screen->display) != Success)
+-    meta_warning (_("Could not release screen %d on display \"%s\"\n"),
++    meta_warning ("Could not release screen %d on display \"%s\"\n",
+                   screen->number, screen->display->name);
+ 
+   unset_wm_check_hint (screen);
+diff --git a/src/core/session.c b/src/core/session.c
+index f45e1a63..bc4cb793 100644
+--- a/src/core/session.c
++++ b/src/core/session.c
+@@ -842,14 +842,14 @@ save_state (void)
+   if (mkdir (muffin_dir, 0700) < 0 &&
+       errno != EEXIST)
+     {
+-      meta_warning (_("Could not create directory '%s': %s\n"),
++      meta_warning ("Could not create directory '%s': %s\n",
+                     muffin_dir, g_strerror (errno));
+     }
+ 
+   if (mkdir (session_dir, 0700) < 0 &&
+       errno != EEXIST)
+     {
+-      meta_warning (_("Could not create directory '%s': %s\n"),
++      meta_warning ("Could not create directory '%s': %s\n",
+                     session_dir, g_strerror (errno));
+     }
+ 
+@@ -859,7 +859,7 @@ save_state (void)
+ 
+   if (outfile == NULL)
+     {
+-      meta_warning (_("Could not open session file '%s' for writing: %s\n"),
++      meta_warning ("Could not open session file '%s' for writing: %s\n",
+                     full_save_file (), g_strerror (errno));
+       goto out;
+     }
+@@ -1000,12 +1000,12 @@ save_state (void)
+       /* FIXME need a dialog for this */
+       if (ferror (outfile))
+         {
+-          meta_warning (_("Error writing session file '%s': %s\n"),
++          meta_warning ("Error writing session file '%s': %s\n",
+                         full_save_file (), g_strerror (errno));
+         }
+       if (fclose (outfile))
+         {
+-          meta_warning (_("Error closing session file '%s': %s\n"),
++          meta_warning ("Error closing session file '%s': %s\n",
+                         full_save_file (), g_strerror (errno));
+         }
+     }
+@@ -1135,7 +1135,7 @@ load_state (const char *previous_save_file)
+ 
+  error:
+ 
+-  meta_warning (_("Failed to parse saved session file: %s\n"),
++  meta_warning ("Failed to parse saved session file: %s\n",
+                 error->message);
+   g_error_free (error);
+ 
+@@ -1184,7 +1184,7 @@ start_element_handler  (GMarkupParseContext *context,
+               g_set_error (error,
+                            G_MARKUP_ERROR,
+                        G_MARKUP_ERROR_PARSE,
+-                           _("<muffin_session> attribute seen but we already have the session ID"));
++                           "<muffin_session> attribute seen but we already have the session ID");
+               return;
+             }
+ 
+@@ -1197,7 +1197,7 @@ start_element_handler  (GMarkupParseContext *context,
+               g_set_error (error,
+                            G_MARKUP_ERROR,
+                            G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE,
+-                           _("Unknown attribute %s on <%s> element"),
++                           "Unknown attribute %s on <%s> element",
+                            name, "muffin_session");
+               return;
+             }
+@@ -1214,7 +1214,7 @@ start_element_handler  (GMarkupParseContext *context,
+           g_set_error (error,
+                        G_MARKUP_ERROR,
+                        G_MARKUP_ERROR_PARSE,
+-                       _("nested <window> tag"));
++                       "nested <window> tag");
+           return;
+         }
+ 
+@@ -1272,7 +1272,7 @@ start_element_handler  (GMarkupParseContext *context,
+               g_set_error (error,
+                            G_MARKUP_ERROR,
+                            G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE,
+-                           _("Unknown attribute %s on <%s> element"),
++                           "Unknown attribute %s on <%s> element",
+                            name, "window");
+               session_info_free (pd->info);
+               pd->info = NULL;
+@@ -1304,7 +1304,7 @@ start_element_handler  (GMarkupParseContext *context,
+               g_set_error (error,
+                            G_MARKUP_ERROR,
+                            G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE,
+-                           _("Unknown attribute %s on <%s> element"),
++                           "Unknown attribute %s on <%s> element",
+                            name, "window");
+               session_info_free (pd->info);
+               pd->info = NULL;
+@@ -1376,7 +1376,7 @@ start_element_handler  (GMarkupParseContext *context,
+               g_set_error (error,
+                            G_MARKUP_ERROR,
+                            G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE,
+-                           _("Unknown attribute %s on <%s> element"),
++                           "Unknown attribute %s on <%s> element",
+                            name, "maximized");
+               return;
+             }
+@@ -1437,7 +1437,7 @@ start_element_handler  (GMarkupParseContext *context,
+               g_set_error (error,
+                            G_MARKUP_ERROR,
+                            G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE,
+-                           _("Unknown attribute %s on <%s> element"),
++                           "Unknown attribute %s on <%s> element",
+                            name, "geometry");
+               return;
+             }
+@@ -1457,7 +1457,7 @@ start_element_handler  (GMarkupParseContext *context,
+       g_set_error (error,
+                    G_MARKUP_ERROR,
+                    G_MARKUP_ERROR_UNKNOWN_ELEMENT,
+-                   _("Unknown element %s"),
++                   "Unknown element %s",
+                    element_name);
+       return;
+     }
+@@ -1809,9 +1809,9 @@ warn_about_lame_clients_and_finish_interact (gboolean shutdown)
+   g_slist_free (lame);
+ 
+   pid = meta_show_dialog("--list",
+-                         _("These windows do not support &quot;save current setup&quot; "
++                         "These windows do not support &quot;save current setup&quot; "
+                            "and will have to be restarted manually next time "
+-                           "you log in."),
++                           "you log in.",
+                          "240",
+                          meta_get_display()->active_screen->screen_name,
+                          NULL, NULL,
+diff --git a/src/core/util.c b/src/core/util.c
+index 896c7195..53a1fb34 100644
+--- a/src/core/util.c
++++ b/src/core/util.c
+@@ -122,7 +122,7 @@ ensure_logfile (void)
+ 
+       if (err != NULL)
+         {
+-          meta_warning (_("Failed to open debug log: %s\n"),
++          meta_warning ("Failed to open debug log: %s\n",
+                         err->message);
+           g_error_free (err);
+           return;
+@@ -132,13 +132,13 @@ ensure_logfile (void)
+ 
+       if (logfile == NULL)
+         {
+-          meta_warning (_("Failed to fdopen() log file %s: %s\n"),
++          meta_warning ("Failed to fdopen() log file %s: %s\n",
+                         filename, strerror (errno));
+           close (fd);
+         }
+       else
+         {
+-          g_printerr (_("Opened log file %s\n"), filename);
++          g_printerr ("Opened log file %s\n"), filename;
+         }
+ 
+       free (filename);
+@@ -157,7 +157,7 @@ meta_set_verbose (gboolean setting)
+ {
+ #ifndef WITH_VERBOSE_MODE
+   if (setting)
+-    meta_fatal (_("Muffin was compiled without support for verbose mode\n"));
++    meta_fatal ("Muffin was compiled without support for verbose mode\n");
+ #else
+   if (setting)
+     ensure_logfile ();
+diff --git a/src/core/window-props.c b/src/core/window-props.c
+index e5306838..133f2f47 100644
+--- a/src/core/window-props.c
++++ b/src/core/window-props.c
+@@ -445,7 +445,7 @@ reload_net_wm_pid (MetaWindow    *window,
+       gulong cardinal = (int) value->v.cardinal;
+ 
+       if (cardinal <= 0)
+-        meta_warning (_("Application set a bogus _NET_WM_PID %lu\n"),
++        meta_warning ("Application set a bogus _NET_WM_PID %lu\n",
+                       cardinal);
+       else
+         {
+@@ -1832,8 +1832,8 @@ reload_transient_for (MetaWindow    *window,
+             }
+           else
+             {
+-              meta_warning (_("Invalid WM_TRANSIENT_FOR window 0x%lx specified "
+-                              "for %s.\n"),
++              meta_warning ("Invalid WM_TRANSIENT_FOR window 0x%lx specified "
++                              "for %s.\n",
+                             transient_for, window->desc);
+               transient_for = None;
+             }
+@@ -1844,8 +1844,8 @@ reload_transient_for (MetaWindow    *window,
+         {
+           if (parent == window)
+             {
+-              meta_warning (_("WM_TRANSIENT_FOR window 0x%lx for %s "
+-                              "would create loop.\n"),
++              meta_warning ("WM_TRANSIENT_FOR window 0x%lx for %s "
++                              "would create loop.\n",
+                             transient_for, window->desc);
+               transient_for = None;
+               break;
+diff --git a/src/core/window.c b/src/core/window.c
+index 1a080887..3324c1b9 100644
+--- a/src/core/window.c
++++ b/src/core/window.c
+@@ -7885,7 +7885,7 @@ update_sm_hints (MetaWindow *window)
+                                            &str))
+             {
+               if (window->sm_client_id == NULL) /* first time through */
+-                meta_warning (_("Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER window as specified in the ICCCM.\n"),
++                meta_warning ("Window %s sets SM_CLIENT_ID on itself, instead of on the WM_CLIENT_LEADER window as specified in the ICCCM.\n",
+                               window->desc);
+ 
+               window->sm_client_id = g_strdup (str);
+@@ -8521,7 +8521,7 @@ recalc_window_features (MetaWindow *window)
+        * about these apps but make them work.
+        */
+ 
+-      meta_warning (_("Window %s sets an MWM hint indicating it isn't resizable, but sets min size %d x %d and max size %d x %d; this doesn't make much sense.\n"),
++      meta_warning ("Window %s sets an MWM hint indicating it isn't resizable, but sets min size %d x %d and max size %d x %d; this doesn't make much sense.\n",
+                     window->desc,
+                     window->size_hints.min_width,
+                     window->size_hints.min_height,
+diff --git a/src/core/xprops.c b/src/core/xprops.c
+index bcf11f21..52d75287 100644
+--- a/src/core/xprops.c
++++ b/src/core/xprops.c
+@@ -152,7 +152,7 @@ validate_or_free_results (GetPropertyResults *results,
+   if (res_name == NULL)
+     res_name = "unknown";
+ 
+-  meta_warning (_("Window 0x%lx has property %s\nthat was expected to have type %s format %d\nand actually has type %s format %d n_items %d.\nThis is most likely an application bug, not a window manager bug.\nThe window has title=\"%s\" class=\"%s\" name=\"%s\"\n"),
++  meta_warning ("Window 0x%lx has property %s\nthat was expected to have type %s format %d\nand actually has type %s format %d n_items %d.\nThis is most likely an application bug, not a window manager bug.\nThe window has title=\"%s\" class=\"%s\" name=\"%s\"\n",
+                 results->xwindow,
+                 prop_name ? prop_name : "(bad atom)",
+                 expected_name ? expected_name : "(bad atom)",
+@@ -408,7 +408,7 @@ utf8_string_from_results (GetPropertyResults *results,
+       char *name;
+ 
+       name = XGetAtomName (results->display->xdisplay, results->xatom);
+-      meta_warning (_("Property %s on window 0x%lx contained invalid UTF-8\n"),
++      meta_warning ("Property %s on window 0x%lx contained invalid UTF-8\n",
+                     name, results->xwindow);
+       meta_XFree (name);
+       XFree (results->prop);
+@@ -491,7 +491,7 @@ utf8_list_from_results (GetPropertyResults *results,
+           meta_error_trap_push (results->display);
+           name = XGetAtomName (results->display->xdisplay, results->xatom);
+           meta_error_trap_pop (results->display);
+-          meta_warning (_("Property %s on window 0x%lx contained invalid UTF-8 for item %d in the list\n"),
++          meta_warning ("Property %s on window 0x%lx contained invalid UTF-8 for item %d in the list\n",
+                         name, results->xwindow, i);
+           meta_XFree (name);
+           meta_XFree (results->prop);
+diff --git a/src/meta/util.h b/src/meta/util.h
+index ea10f16a..be9a33a1 100644
+--- a/src/meta/util.h
++++ b/src/meta/util.h
+@@ -91,9 +91,6 @@ void meta_print_backtrace (void);
+ const char* meta_frame_type_to_string (MetaFrameType type);
+ const char* meta_gravity_to_string (int gravity);
+ 
+-#include <libintl.h>
+-#define _(x) dgettext (GETTEXT_PACKAGE, x)
+-
+ char* meta_g_utf8_strndup (const gchar *src, gsize n);
+ 
+ void  meta_free_gslist_and_elements (GSList *list_to_deep_free);
+diff --git a/src/tools/muffin-message.c b/src/tools/muffin-message.c
+index a0b6fdec..9cb4a442 100644
+--- a/src/tools/muffin-message.c
++++ b/src/tools/muffin-message.c
+@@ -25,9 +25,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ 
+-#include <libintl.h>
+-#define _(x) dgettext (GETTEXT_PACKAGE, x)
+-#define N_(x) x
++#include <glib/gi18n.h>
+ 
+ static Display *display;
+ 
+diff --git a/src/ui/theme-viewer.c b/src/ui/theme-viewer.c
+index 1aa42292..d39e4bf9 100644
+--- a/src/ui/theme-viewer.c
++++ b/src/ui/theme-viewer.c
+@@ -30,10 +30,7 @@
+ #include <time.h>
+ #include <stdlib.h>
+ #include <string.h>
+-
+-#include <libintl.h>
+-#define _(x) dgettext (GETTEXT_PACKAGE, x)
+-#define N_(x) x
++#include <glib/gi18n.h>
+ 
+ /* We need to compute all different button arrangements
+  * in terms of button location. We don't care about

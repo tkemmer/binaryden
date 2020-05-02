@@ -59,8 +59,15 @@ RDEPEND="${COMMON_DEPEND}
 	!x11-misc/expocity
 "
 
+PATCHES=(
+	"${FILESDIR}/${PN}-4.0-clutter-configure.patch"
+	"${FILESDIR}/${PN}-4.0-cogl-configure.patch"
+	"${FILESDIR}/${PN}-4.4-fix-glib-gettext.patch"
+	"${FILESDIR}/${PN}-4.4-fix-log-warnings.patch"
+	"${FILESDIR}/${PN}-4.4-fix-meta-display-get-atom.patch"
+)
+
 src_prepare() {
-	eapply "${FILESDIR}"/muffin-4.0-{cogl,clutter}-configure.patch
 	eautoreconf
 	gnome2_src_prepare
 }
