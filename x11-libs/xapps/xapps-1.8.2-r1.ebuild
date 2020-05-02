@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -20,13 +20,14 @@ RDEPEND="
 	dev-libs/gobject-introspection:0=
 	gnome-base/libgnomekbd
 	gnome-base/gnome-common
-	x11-libs/cairo
+	x11-libs/cairo[glib]
 	>=x11-libs/gdk-pixbuf-2.22.0:2[introspection?]
 	>=x11-libs/gtk+-3.3.16:3[introspection?]
 	x11-libs/libxkbfile
 "
 DEPEND="${RDEPEND}
 	sys-devel/gettext
+	dev-libs/libdbusmenu[gtk3,introspection?]
 	dev-util/gtk-doc
 	dev-util/gtk-doc-am
 	$(vala_depend)
