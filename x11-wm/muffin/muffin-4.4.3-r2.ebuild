@@ -82,6 +82,7 @@ src_configure() {
 		--enable-xsync \
 		--enable-verbose-mode \
 		--with-libcanberra \
+		--enable-wayland-egl-server=no \
 		$(use_enable introspection) \
 		$(use_enable xinerama)
 }
