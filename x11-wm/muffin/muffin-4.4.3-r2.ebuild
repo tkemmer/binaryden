@@ -60,8 +60,6 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 PATCHES=(
-	"${FILESDIR}/${PN}-4.0-clutter-configure.patch"
-	"${FILESDIR}/${PN}-4.0-cogl-configure.patch"
 	"${FILESDIR}/${PN}-4.4-fix-glib-gettext.patch"
 	"${FILESDIR}/${PN}-4.4-fix-log-warnings.patch"
 	"${FILESDIR}/${PN}-4.4-fix-meta-display-get-atom.patch"
@@ -76,6 +74,8 @@ src_configure() {
 	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README* *.txt doc/*.txt"
 	gnome2_src_configure \
 		--disable-static \
+		--disable-wayland-egl-platform \
+		--disable-wayland-egl-server \
 		--enable-shape \
 		--enable-sm \
 		--enable-startup-notification \
