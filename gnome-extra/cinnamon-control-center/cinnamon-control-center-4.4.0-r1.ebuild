@@ -12,7 +12,7 @@ SRC_URI="https://github.com/linuxmint/cinnamon-control-center/archive/${PV}.tar.
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE="+colord +cups debug input_devices_wacom systemd"
+IUSE="+colord +cups debug gnome-online-accounts input_devices_wacom systemd"
 KEYWORDS="~amd64 ~x86"
 
 # False positives caused by nested configure scripts
@@ -40,6 +40,7 @@ COMMON_DEPEND="
 	x11-libs/libxklavier
 	colord? ( >=x11-misc/colord-0.1.14:0= )
 	cups? ( >=net-print/cups-1.4[dbus] )
+	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.18.0 )
 	input_devices_wacom? (
 		>=dev-libs/libwacom-0.7
 		>=x11-libs/gtk+-3.8:3
@@ -80,10 +81,10 @@ src_configure() {
 	gnome2_src_configure \
 		--disable-static \
 		--enable-documentation \
-		--disable-onlineaccounts \
 		$(use_enable colord color) \
 		$(use_enable cups) \
 		$(usex debug --enable-debug=yes ' ') \
+		$(use_enable gnome-online-accounts onlineaccounts) \
 		$(use_enable input_devices_wacom wacom) \
 		$(use_enable systemd)
 }
