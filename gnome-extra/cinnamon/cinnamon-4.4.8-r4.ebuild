@@ -93,6 +93,7 @@ RDEPEND="${COMMON_DEPEND}
 	dev-python/pytz[${PYTHON_USEDEP}]
 	dev-python/pillow[${PYTHON_USEDEP}]
 	dev-python/tinycss[${PYTHON_USEDEP}]
+	>=dev-python/xapp-1.8[${PYTHON_USEDEP}]
 
 	x11-themes/gnome-themes-standard
 	x11-themes/adwaita-icon-theme
