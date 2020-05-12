@@ -8,6 +8,3 @@
 <dev-python/jupyter_console-6.1   amd64
 <dev-python/nbconvert-5.6         amd64
 
-# Fix for https://bugs.gentoo.org/630294
-<sci-libs/scikits_learn-0.21      amd64
-
