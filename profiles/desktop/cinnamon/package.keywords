@@ -1,23 +1,23 @@
 ################
-# Cinnamon 4.4 #
+# Cinnamon 4.6 #
 ################
 <dev-python/python-pam-1.9                  amd64
-<dev-python/xapp-1.9                        amd64
-<gnome-extra/cinnamon-4.5                   amd64
-<gnome-extra/cinnamon-control-center-4.5    amd64
-<gnome-extra/cinnamon-desktop-4.5           amd64
-<gnome-extra/cinnamon-menus-4.5             amd64
-<gnome-extra/cinnamon-screensaver-4.5       amd64
-<gnome-extra/cinnamon-session-4.5           amd64
-<gnome-extra/cinnamon-settings-daemon-4.5   amd64
-<gnome-extra/cinnamon-translations-4.5      amd64
-<gnome-extra/cjs-4.5                        amd64
-<gnome-extra/nemo-4.5                       amd64
+<dev-python/xapp-2.1                        amd64
+<gnome-extra/cinnamon-4.7                   amd64
+<gnome-extra/cinnamon-control-center-4.7    amd64
+<gnome-extra/cinnamon-desktop-4.7           amd64
+<gnome-extra/cinnamon-menus-4.7             amd64
+<gnome-extra/cinnamon-screensaver-4.7       amd64
+<gnome-extra/cinnamon-session-4.7           amd64
+<gnome-extra/cinnamon-settings-daemon-4.7   amd64
+<gnome-extra/cinnamon-translations-4.7      amd64
+<gnome-extra/cjs-4.7                        amd64
+<gnome-extra/nemo-4.7                       amd64
 <gnome-extra/timezonemap-0.5                amd64
-<x11-libs/xapps-1.7                         amd64
-<x11-wm/muffin-4.5                          amd64
+<x11-libs/xapps-1.9                         amd64
+<x11-wm/muffin-4.7                          amd64
 
-<x11-misc/slick-greeter-1.4                 amd64
+<x11-misc/slick-greeter-1.5                 amd64
 <x11-terms/guake-3.8                        amd64
 <x11-themes/elementary-xfce-icon-theme-1    amd64
 
