@@ -1,6 +1,0 @@
-# Thomas Kemmer <thomas@binaryden.de> (2020-01-07)
-# In contrast to the comment in base use.stable.mask,
-# python 3.7 _is_ stable now on amd64.
--python_single_target_python3_7
--python_targets_python3_7
-
