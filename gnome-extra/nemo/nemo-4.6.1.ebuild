@@ -53,6 +53,7 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/gdbus-codegen-2.31.0
 	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40.1
+	dev-util/itstool
 	sys-devel/gettext
 	virtual/pkgconfig
 	x11-base/xorg-proto
