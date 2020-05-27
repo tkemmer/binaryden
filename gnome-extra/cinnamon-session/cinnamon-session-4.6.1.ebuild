@@ -52,8 +52,6 @@ DEPEND="${COMMON_DEPEND}
 "
 
 src_prepare() {
-	eapply "${FILESDIR}/${PN}-3.8.0-elogind.patch" \
-		   "${FILESDIR}/${PN}-3.8.0-elogind2.patch"
 	gnome2_src_prepare
 }
 
