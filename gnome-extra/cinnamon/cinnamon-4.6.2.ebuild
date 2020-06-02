@@ -71,13 +71,13 @@ COMMON_DEPEND="${PYTHON_DEPS}
 # 12. polkit-gnome - explicitly autostarted by us
 # TODO(lxnay): fix error: libgnome-desktop/gnome-rr-labeler.h: No such file or directory
 RDEPEND="${COMMON_DEPEND}
+	dev-libs/libtimezonemap
 	>=gnome-base/dconf-0.4.1
 	>=gnome-base/libgnomekbd-2.91.4[introspection]
 	sys-power/upower[introspection]
 
 	>=gnome-extra/cinnamon-session-4.6
 	>=gnome-extra/cinnamon-settings-daemon-4.6
-	gnome-extra/timezonemap
 
 	>=app-accessibility/caribou-0.3
 
