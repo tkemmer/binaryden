@@ -7,13 +7,11 @@ inherit autotools gnome2
 
 DESCRIPTION="A GTK+3 timezone map widget"
 HOMEPAGE="https://launchpad.net/timezonemap"
-SRC_URI="https://launchpad.net/${PN}/trunk/${PV}/+download/lib${P}.tar.xz -> ${P}.tar.xz"
+SRC_URI="https://launchpad.net/timezonemap/trunk/${PV}/+download/${P}.tar.xz -> ${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-
-S="${WORKDIR}/lib${P}"
 
 COMMON_DEPEND="
 	dev-libs/glib:2
