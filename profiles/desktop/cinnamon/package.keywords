@@ -1,6 +1,7 @@
 ################
 # Cinnamon 4.6 #
 ################
+<dev-libs/libtimezonemap-0.5                amd64
 <dev-python/python-pam-1.9                  amd64
 <dev-python/xapp-2.1                        amd64
 <gnome-extra/cinnamon-4.7                   amd64
@@ -13,7 +14,6 @@
 <gnome-extra/cinnamon-translations-4.7      amd64
 <gnome-extra/cjs-4.7                        amd64
 <gnome-extra/nemo-4.7                       amd64
-<gnome-extra/timezonemap-0.5                amd64
 <x11-libs/xapps-1.9                         amd64
 <x11-wm/muffin-4.7                          amd64
 
