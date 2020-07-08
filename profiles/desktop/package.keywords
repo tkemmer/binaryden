@@ -3,7 +3,5 @@
 x11-themes/flat-remix   amd64
 
 # enable py3 support
-<dev-python/matplotlib-3.2     amd64
 <dev-python/wxpython-4.1:4.0   amd64
-<media-libs/aubio-0.5          amd64
 
