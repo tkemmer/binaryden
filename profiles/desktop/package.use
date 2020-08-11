@@ -1,4 +1,5 @@
 # profile
+app-arch/p7zip                        -wxwidgets
 dev-python/matplotlib                 wxwidgets
 dev-vcs/git                           tk
 media-plugins/deadbeef-plugins-meta   mpris
