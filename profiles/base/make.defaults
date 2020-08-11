@@ -8,7 +8,7 @@ PORT_LOGDIR="/var/log/portage"
 ACCEPT_LICENSE="-* @BINARY-REDISTRIBUTABLE"
 
 # USE flags
-USE="acl acpi bzip2 gdbm -geolocation -gnome -gtk -gtk2 -gtk3 ipv6 -kde ncurses nls -qt5 udisks unicode vim-syntax -webkit -X"
+USE="acl acpi bzip2 gdbm -geolocation -gnome -gtk -gtk2 -gtk3 ipv6 -kde ncurses nls -qt5 udisks unicode vim-syntax -webkit -wxwidgets -X"
 
 L10N="-* en-US en"
 PHP_TARGETS="-* php7-4"

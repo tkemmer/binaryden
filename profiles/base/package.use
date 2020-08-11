@@ -3,8 +3,7 @@ app-admin/sudo    offensive
 dev-lang/python   sqlite
 
 # py2-only flags
-dev-python/matplotlib   -wxwidgets
-dev-vcs/git             -python
+dev-vcs/git       -python
 
 # dev-python/ipython-7
 net-libs/zeromq   drafts
