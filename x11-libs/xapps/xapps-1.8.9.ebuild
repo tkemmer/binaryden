@@ -6,11 +6,13 @@ EAPI=6
 inherit meson gnome2-utils vala xdg-utils
 
 DESCRIPTION="Cross-desktop libraries and common resources"
-HOMEPAGE="https://github.com/linuxmint/xapps/"
+HOMEPAGE="https://github.com/linuxmint/xapp/"
 LICENSE="GPL-3"
 
-SRC_URI="https://github.com/linuxmint/xapps/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/linuxmint/xapp/archive/${PV}.tar.gz -> ${P}.tar.gz"
 KEYWORDS="~amd64 ~x86"
+
+S="${WORKDIR}/xapp-${PV}"
 
 SLOT="0"
 IUSE="introspection static-libs"
