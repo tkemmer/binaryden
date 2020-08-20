@@ -21,4 +21,4 @@
 <x11-themes/elementary-xfce-icon-theme-1    amd64
 
 # enable py3 support
-<app-crypt/gcr-3.35                         amd64
+<app-crypt/gcr-3.37                         amd64
