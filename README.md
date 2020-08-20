@@ -10,9 +10,11 @@ bumps and patches for several other Gentoo packages.
    Apache Arrow/Parquet for C++
  * [`dev-cpp/clipp`](https://github.com/muellan/clipp):
    Expressive command line argument parsing for modern C++
- * [`dev-libs/thrift`](https://github.com/apache/thrift)
+ * [`dev-libs/thrift`](https://github.com/apache/thrift):
    Apache Thrift
- * [`dev-python/python-pam`](https://github.com/FirefighterBlu3/python-pam)
+ * [`dev-python/pulsectl`](https://github.com/mk-fg/python-pulse-control):
+   Python high-level interface and ctypes-based bindings for PulseAudio
+ * [`dev-python/python-pam`](https://github.com/FirefighterBlu3/python-pam):
    Python module for simple PAM authentications
  * [`sys-apps/piper`](https://github.com/libratbag/piper):
    GTK application to configure gaming mice
