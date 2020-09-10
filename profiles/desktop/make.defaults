@@ -1,4 +1,4 @@
-USE="a52 aac alsa -bluetooth branding cairo cdda -cdr colord cups dbus dts dvd exif flac fontconfig gif gpm gstreamer icu jpeg lcms ldap libnotify mp3 mp4 mpeg ogg opengl pdf png policykit pulseaudio qt5 sdl -spell svg theora tiff truetype usb vorbis X x264 xcb xinerama xml xv xvid xvmc"
+USE="a52 aac alsa -bluetooth branding cairo cdda -cdr colord cups dbus dts dvd exif flac fontconfig gif gpm gstreamer icu jpeg lcms -ldap libnotify mp3 mp4 mpeg ogg opengl pdf png policykit pulseaudio qt5 sdl -spell svg theora tiff truetype usb vorbis X x264 xcb xinerama xml xv xvid xvmc"
 
 # additionally enable py3.7 in desktop profiles (for now)
 PYTHON_TARGETS="python3_7"
