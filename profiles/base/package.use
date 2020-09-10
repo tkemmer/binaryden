@@ -2,9 +2,6 @@
 app-admin/sudo    offensive
 dev-lang/python   sqlite
 
-# py2-only flags
-dev-vcs/git       -python
-
 # dev-python/ipython-7
 net-libs/zeromq   drafts
 
