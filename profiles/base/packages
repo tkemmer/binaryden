@@ -15,5 +15,6 @@ sys-apps/exa
 sys-apps/lshw
 sys-apps/pciutils
 sys-apps/the_silver_searcher
+sys-fs/ncdu
 sys-process/htop
 sys-process/lsof
