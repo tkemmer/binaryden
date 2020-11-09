@@ -9,6 +9,7 @@ app-portage/gentoolkit
 app-shells/gentoo-zsh-completions
 app-shells/zsh
 app-shells/zsh-completions
+app-shells/zsh-syntax-highlighting
 dev-vcs/tig
 sys-apps/bat
 sys-apps/exa
