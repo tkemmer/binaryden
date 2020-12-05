@@ -53,7 +53,8 @@ BDEPEND="
 	dev-util/glib-utils
 	sys-devel/gettext
 	dev-util/gtk-doc
-	dev-util/gtk-doc-am
+	|| ( <dev-util/gtk-doc-am-1.33
+		=dev-util/gtk-doc-am-1.33.1-r1 )
 	>=dev-util/intltool-0.35
 	virtual/pkgconfig
 "
