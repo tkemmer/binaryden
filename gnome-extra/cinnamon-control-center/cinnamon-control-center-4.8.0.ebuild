@@ -11,7 +11,11 @@ SRC_URI="https://github.com/linuxmint/cinnamon-control-center/archive/${PV}.tar.
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE="+colord gnome-online-accounts input_devices_wacom +networkmanager +modemmanager systemd"
-REQUIRED_USE="modemmanager? ( networkmanager )"
+# Until fixed, require both modemmanager and networkmanager (or none). See
+# - https://github.com/tkemmer/binaryden/issues/8
+# - https://github.com/linuxmint/cinnamon-control-center/issues/254
+#REQUIRED_USE="modemmanager? ( networkmanager )"
+REQUIRED_USE="|| ( ( modemmanager networkmanager ) ( !modemmanager !networkmanager ) )"
 KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="
