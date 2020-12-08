@@ -19,17 +19,17 @@ RESTRICT=test
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
-	>=dev-libs/glib-2.37.3:2[dbus]
+	>=dev-libs/glib-2.45.7:2[dbus]
 	>=dev-libs/gobject-introspection-0.6.4:=
 	>=gnome-extra/cinnamon-desktop-4.8:0=
 	>=x11-libs/pango-1.40
-	>=x11-libs/gtk+-3.9.10:3[introspection]
+	>=x11-libs/gtk+-3.10:3[introspection]
 	>=dev-libs/libxml2-2.7.8:2
 
 	gnome-base/dconf:0=
 	>=x11-libs/libnotify-0.7:=
 	x11-libs/libX11
-	>=x11-libs/xapps-1.9.0
+	>=x11-libs/xapps-2.0.0
 
 	exif? ( >=media-libs/libexif-0.6.20:= )
 	tracker? ( >=app-misc/tracker-2.0:= )
