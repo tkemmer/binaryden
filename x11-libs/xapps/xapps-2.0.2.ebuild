@@ -21,12 +21,12 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
 	${PYTHON_DEPS}
-	>=dev-libs/glib-2.37.3:2
+	>=dev-libs/glib-2.44:2
 	dev-libs/gobject-introspection:0=
 	gnome-base/libgnomekbd
 	x11-libs/cairo
 	>=x11-libs/gdk-pixbuf-2.22.0:2[introspection?]
-	>=x11-libs/gtk+-3.3.16:3[introspection?]
+	>=x11-libs/gtk+-3.16:3[introspection?]
 	x11-libs/libxkbfile
 	dev-libs/libdbusmenu[gtk3]
 "
