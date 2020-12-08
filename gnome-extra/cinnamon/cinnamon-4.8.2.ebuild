@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 COMMON_DEPEND="${PYTHON_DEPS}
 	app-accessibility/at-spi2-atk:2
 	app-misc/ca-certificates
-	>=dev-libs/glib-2.35.0:2[dbus]
+	>=dev-libs/glib-2.52.0:2[dbus]
 	>=dev-libs/gobject-introspection-1.29.15:=
 	dev-libs/libxml2:2
 	>=gnome-extra/cinnamon-desktop-4.8:0=
