@@ -19,7 +19,7 @@ REQUIRED_USE="|| ( ( modemmanager networkmanager ) ( !modemmanager !networkmanag
 KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="
-	>=dev-libs/glib-2.31:2
+	>=dev-libs/glib-2.44:2
 	dev-libs/libxml2:2
 	>=gnome-base/libgnomekbd-3:0=
 	>=gnome-extra/cinnamon-desktop-4.8:0=
@@ -32,7 +32,7 @@ COMMON_DEPEND="
 	)
 	>=sys-auth/polkit-0.103
 	>=x11-libs/gdk-pixbuf-2.23.0:2
-	>=x11-libs/gtk+-3.8:3
+	>=x11-libs/gtk+-3.16:3
 	>=x11-libs/libnotify-0.7.3:0=
 	x11-libs/libX11
 	>=x11-libs/libxklavier-5.1
