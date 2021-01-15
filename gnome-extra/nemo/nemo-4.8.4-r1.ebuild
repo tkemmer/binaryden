@@ -40,7 +40,6 @@ RDEPEND="${COMMON_DEPEND}
 	x11-themes/adwaita-icon-theme
 	nls? ( >=gnome-extra/cinnamon-translations-4.8 )
 	$(python_gen_cond_dep '
-		dev-python/polib[${PYTHON_USEDEP}]
 		dev-python/pygobject:3[${PYTHON_USEDEP}]
 	')
 "
