@@ -1,14 +1,14 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6,7,8} )
+PYTHON_COMPAT=( python3_{8,9} )
 
 inherit distutils-r1
 
 MY_PN="python-pulse-control"
-COMMIT="471428cd7d03356f0641fe93a8156b799d57ce02"
+COMMIT="6661f2c8c58d7145d2e7274a71477bb1f60850c0"
 S="${WORKDIR}/${MY_PN}-${COMMIT}"
 
 DESCRIPTION="Python high-level interface and ctypes-based bindings for PulseAudio"
@@ -21,5 +21,5 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 python_test() {
-	"${EPYTHON}" -m unittest -v pulsectl.tests.all
+	"${EPYTHON}" -m unittest discover
 }
