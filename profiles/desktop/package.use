@@ -17,3 +17,7 @@ dev-libs/xmlsec   nss
 # media-video/vlc
 media-libs/freetype   harfbuzz
 sys-libs/zlib         minizip
+
+# net-print/hplip
+net-dns/avahi   python
+
