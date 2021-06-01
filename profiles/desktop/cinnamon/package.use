@@ -7,5 +7,3 @@ sys-apps/lshw                         -gtk
 # x11-misc/slick-greeter
 x11-misc/lightdm   vala
 
-# missing Python 3.8 support
-x11-terms/guake    python_single_target_python3_7 -python_single_target_python3_8
