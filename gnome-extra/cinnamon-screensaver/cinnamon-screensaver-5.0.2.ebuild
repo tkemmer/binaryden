@@ -53,10 +53,6 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-5.0.1-fix-session-reg.patch
-)
-
 src_prepare() {
 	xdg_src_prepare
 	python_fix_shebang src
