@@ -16,8 +16,6 @@ bumps and patches for several other Gentoo packages.
    Python high-level interface and ctypes-based bindings for PulseAudio
  * [`dev-python/python-pam`](https://github.com/FirefighterBlu3/python-pam):
    Python module for simple PAM authentications
- * [`sys-apps/piper`](https://github.com/libratbag/piper):
-   GTK application to configure gaming mice
  * [`sys-process/nvtop`](https://github.com/syllo/nvtop):
    NVIDIA GPUs htop like monitoring tool
  * [`x11-misc/slick-greeter`](https://github.com/linuxmint/slick-greeter):
