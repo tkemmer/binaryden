@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7,8,9} )
+PYTHON_COMPAT=( python3_{8,9} )
 inherit python-any-r1 unpacker xdg-utils
 
 DESCRIPTION="A hackable text editor for the 21st Century"
