@@ -1,5 +1,5 @@
-# BinaryDen portage overlay
-This portage overlay primarily aims at providing packages for the most current versions of
+# BinaryDen Portage overlay
+This Portage overlay primarily aims at providing packages for the most current versions of
 the [**Cinnamon**](https://github.com/linuxmint) desktop environment as well as version
 bumps and patches for several other Gentoo packages.
 
@@ -21,7 +21,7 @@ bumps and patches for several other Gentoo packages.
  * [`x11-themes/flat-remix`](https://github.com/daniruiz/flat-remix):
    Pretty simple Linux icon theme inspired by material design
 
-## Installation using layman
+## Installation using `app-portage/layman`
 This overlay can be added to your system via
 ```sh
 layman -Sa binaryden
