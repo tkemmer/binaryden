@@ -107,6 +107,10 @@ PATCHES=(
 	# Use wheel group instead of sudo (from Fedora/Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3576
 	"${FILESDIR}"/${PN}-3.6.6-wheel-sudo.patch
+
+	# Disable gir install via list to pacify meson >= 0.60.2
+	# https://github.com/linuxmint/cinnamon/pull/10489
+	"${FILESDIR}"/${PN}-5.0.5-meson-60.2-fix.patch
 )
 
 src_prepare() {

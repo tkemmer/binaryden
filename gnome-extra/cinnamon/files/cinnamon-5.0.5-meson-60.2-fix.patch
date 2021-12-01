@@ -1,0 +1,39 @@
+From 8fc2df08b40aa3e1958ed2fde853c50676d8cf48 Mon Sep 17 00:00:00 2001
+From: Jan Beich <jbeich@FreeBSD.org>
+Date: Sun, 28 Nov 2021 20:25:25 +0000
+Subject: [PATCH] build: disable gir install via list to pacify meson >= 0.60.2
+ (#10489)
+
+src/meson.build:187:0: ERROR: "install_dir" must be specified when installing a target
+src/st/meson.build:204:0: ERROR: "install_dir" must be specified when installing a target
+---
+ src/meson.build    | 2 +-
+ src/st/meson.build | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/meson.build b/src/meson.build
+index 34b130d50f..7999c0a67b 100644
+--- a/src/meson.build
++++ b/src/meson.build
+@@ -196,7 +196,7 @@ cinnamon_gir = gnome.generate_gir(
+     includes: cinnamon_gir_includes,
+     install: true,
+     install_dir_typelib: pkglibdir,
+-    install_dir_gir: false,
++    install_dir_gir: [false],
+     extra_args: [
+         '-DST_COMPILATION',
+         '--quiet',
+diff --git a/src/st/meson.build b/src/st/meson.build
+index ec7d7b30a1..d299727d06 100644
+--- a/src/st/meson.build
++++ b/src/st/meson.build
+@@ -213,7 +213,7 @@ st_gir = gnome.generate_gir(
+     includes: st_gir_includes,
+     install: true,
+     install_dir_typelib: pkglibdir,
+-    install_dir_gir: false,
++    install_dir_gir: [false],
+     extra_args: [
+         '-DST_COMPILATION',
+         '--quiet',
