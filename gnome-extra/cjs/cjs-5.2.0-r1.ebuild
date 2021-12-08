@@ -39,6 +39,12 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
+PATCHES=(
+	# Disable gir install via list to pacify meson >= 0.60.2
+	# https://github.com/linuxmint/cjs/pull/98
+	"${FILESDIR}"/${PN}-5.2.0-meson-0.60.2-fix.patch
+)
+
 src_prepare() {
 	default
 	python_fix_shebang build
