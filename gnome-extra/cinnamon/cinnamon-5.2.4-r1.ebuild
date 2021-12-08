@@ -107,6 +107,11 @@ PATCHES=(
 	# Use wheel group instead of sudo (from Fedora/Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3576
 	"${FILESDIR}"/${PN}-3.6.6-wheel-sudo.patch
+
+	# Remove gnome-online-accounts (GOA) dependency from
+	# calendar applet. Should be included in Cinnamon starting 
+	# from version 5.2.5.
+	"${FILESDIR}"/${PN}-5.2.4-calendar-remove-goa-dep.patch
 )
 
 src_prepare() {
