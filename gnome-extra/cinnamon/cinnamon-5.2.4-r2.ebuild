@@ -121,6 +121,9 @@ src_prepare() {
 	# https://github.com/linuxmint/Cinnamon/issues/3579
 	sed -i "s/'REQUIRED', '/&polkit-cinnamon-authentication-agent-1;/" meson.build || die
 
+	# Fix libexec path for cinnamon-calendar-server
+	sed -i "s/\/usr\/libexec\/cinnamon/\/usr\/libexec/" calendar-server/cinnamon-calendar-server.in || die
+
 	# shebang fixing craziness
 	local p
 	for p in $(grep -rl '#!.*python3' || die); do
