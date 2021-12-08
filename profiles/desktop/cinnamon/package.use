@@ -1,5 +1,6 @@
 # profile
 gnome-base/gvfs                       fuse http mtp nfs
+gnome-extra/evolution-data-server     -weather
 media-plugins/deadbeef-plugins-meta   gnome-mmkeys
 net-misc/networkmanager               -wext
 sys-apps/lshw                         -gtk
