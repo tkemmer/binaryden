@@ -112,6 +112,10 @@ PATCHES=(
 	# calendar applet. Should be included in Cinnamon starting 
 	# from version 5.2.5.
 	"${FILESDIR}"/${PN}-5.2.4-calendar-remove-goa-dep.patch
+
+	# Fix missing prefix in bindir path for the D-Bus servive
+	# of cinnamon-calendar-server
+	"${FILESDIR}"/${PN}-5.2.4-calendar-fix-dbus-bindir.patch
 )
 
 src_prepare() {

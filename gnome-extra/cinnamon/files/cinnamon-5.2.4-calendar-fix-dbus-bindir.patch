@@ -1,0 +1,32 @@
+From a1471e5440258c5888e7df8b83c47979f78c6f11 Mon Sep 17 00:00:00 2001
+From: Thomas Kemmer <thomas@binaryden.de>
+Date: Wed, 8 Dec 2021 14:24:20 +0100
+Subject: [PATCH] calendar: Fix missing prefix in bindir path for D-Bus service
+
+---
+ calendar-server/meson.build                            | 2 +-
+ calendar-server/org.cinnamon.CalendarServer.service.in | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/calendar-server/meson.build b/calendar-server/meson.build
+index 5dc4d2b8eb..05bebabf43 100644
+--- a/calendar-server/meson.build
++++ b/calendar-server/meson.build
+@@ -12,7 +12,7 @@ launcher = configure_file(
+ )
+ 
+ service_conf = configuration_data()
+-service_conf.set('BINDIR', bindir)
++service_conf.set('BINDIR', join_paths(prefix, bindir))
+ 
+ launcher = configure_file(
+     input: 'org.cinnamon.CalendarServer.service.in',
+diff --git a/calendar-server/org.cinnamon.CalendarServer.service.in b/calendar-server/org.cinnamon.CalendarServer.service.in
+index 1b7029f2a0..5f991252ce 100644
+--- a/calendar-server/org.cinnamon.CalendarServer.service.in
++++ b/calendar-server/org.cinnamon.CalendarServer.service.in
+@@ -1,3 +1,3 @@
+ [D-BUS Service]
+ Name=org.cinnamon.CalendarServer
+-Exec=/@BINDIR@/cinnamon-calendar-server
++Exec=@BINDIR@/cinnamon-calendar-server
