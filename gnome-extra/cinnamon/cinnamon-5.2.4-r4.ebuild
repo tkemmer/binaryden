@@ -14,7 +14,7 @@ SRC_URI="https://github.com/linuxmint/cinnamon/archive/${PV}.tar.gz -> ${P}.tar.
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE="+gstreamer gtk-doc +nls +networkmanager"
+IUSE="gnome-online-accounts +gstreamer gtk-doc +nls +networkmanager"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 KEYWORDS="~amd64 ~arm64 ~x86"
 
@@ -77,6 +77,7 @@ RDEPEND="
 	>=gnome-extra/cinnamon-screensaver-5.2
 	>=gnome-extra/cinnamon-session-5.2
 	>=gnome-extra/cinnamon-settings-daemon-5.2
+	gnome-extra/evolution-data-server[gnome-online-accounts?]
 	>=gnome-extra/nemo-5.2
 	gnome-extra/polkit-gnome
 	net-misc/wget
