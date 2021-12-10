@@ -79,7 +79,7 @@ their associated file types searchable.
 Image metadata           - media-gfx/exif
 MP3 tags                 - media-sound/id3
 Microsoft Office .doc    - app-text/catdoc
-Microsoft Office .xls    - dev-libs/libxls
+Microsoft Office .xls    - dev-python/xlrd
 OpenDocument/LibreOffice - app-text/odt2txt or app-office/unoconv
 PDF                      - app-text/poppler[utils]
 PostScript               - app-text/ghostscript-gpl
