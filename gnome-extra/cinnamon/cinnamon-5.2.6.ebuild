@@ -108,10 +108,6 @@ PATCHES=(
 	# Use wheel group instead of sudo (from Fedora/Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3576
 	"${FILESDIR}"/${PN}-3.6.6-wheel-sudo.patch
-
-	# Fix missing prefix in bindir path for the D-Bus servive
-	# of cinnamon-calendar-server
-	"${FILESDIR}"/${PN}-5.2.4-calendar-fix-dbus-bindir.patch
 )
 
 src_prepare() {
@@ -120,9 +116,6 @@ src_prepare() {
 	# Add polkit agent to required components
 	# https://github.com/linuxmint/Cinnamon/issues/3579
 	sed -i "s/'REQUIRED', '/&polkit-cinnamon-authentication-agent-1;/" meson.build || die
-
-	# Fix libexec path for cinnamon-calendar-server
-	sed -i "s/\/usr\/libexec\/cinnamon/\/usr\/libexec/" calendar-server/cinnamon-calendar-server.in || die
 
 	# shebang fixing craziness
 	local p
