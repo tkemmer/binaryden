@@ -12,7 +12,7 @@
 <gnome-extra/cinnamon-translations-5.3      amd64
 <gnome-extra/cjs-5.3                        amd64
 <gnome-extra/nemo-5.3                       amd64
-<x11-libs/xapps-2.3                         amd64
+<x11-libs/xapp-2.3                          amd64
 <x11-wm/muffin-5.3                          amd64
 
 <x11-misc/slick-greeter-1.6                 amd64

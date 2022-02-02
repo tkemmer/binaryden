@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -32,7 +32,7 @@ COMMON_DEPEND="
 	>=x11-libs/libnotify-0.7:=
 	x11-libs/libX11
 	>=x11-libs/pango-1.40.0
-	>=x11-libs/xapps-2.2.0
+	>=x11-libs/xapp-2.2.0
 
 	exif? ( >=media-libs/libexif-0.6.20:= )
 	selinux? ( sys-libs/libselinux )
