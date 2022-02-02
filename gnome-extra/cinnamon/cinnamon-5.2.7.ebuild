@@ -65,10 +65,10 @@ RDEPEND="
 		dev-python/pygobject:3[${PYTHON_USEDEP}]
 		dev-python/pyinotify[${PYTHON_USEDEP}]
 		dev-python/pypam[${PYTHON_USEDEP}]
+		>=dev-python/python3-xapp-2.2.0[${PYTHON_USEDEP}]
 		dev-python/pytz[${PYTHON_USEDEP}]
 		dev-python/setproctitle[${PYTHON_USEDEP}]
 		dev-python/tinycss2[${PYTHON_USEDEP}]
-		>=dev-python/xapp-2.2.0[${PYTHON_USEDEP}]
 	')
 	>=gnome-base/dconf-0.4.1
 	>=gnome-base/gsettings-desktop-schemas-2.91.91

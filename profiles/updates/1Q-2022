@@ -1,1 +1,2 @@
+move dev-python/xapp dev-python/python3-xapp
 move x11-libs/xapps x11-libs/xapp
