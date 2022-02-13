@@ -19,10 +19,10 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
 	$(python_gen_cond_dep '
-		dev-python/dbus-python[${PYTHON_MULTI_USEDEP}]
-		dev-python/pygobject:3[${PYTHON_MULTI_USEDEP}]
-		dev-python/python3-xapp[${PYTHON_MULTI_USEDEP}]
-		dev-python/setproctitle[${PYTHON_MULTI_USEDEP}]
+		dev-python/dbus-python[${PYTHON_USEDEP}]
+		dev-python/pygobject:3[${PYTHON_USEDEP}]
+		dev-python/python3-xapp[${PYTHON_USEDEP}]
+		dev-python/setproctitle[${PYTHON_USEDEP}]
 	')
 	>=net-wireless/gnome-bluetooth-3.14[introspection]
 	net-wireless/bluez[obex]
