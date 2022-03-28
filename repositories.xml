@@ -8,7 +8,7 @@
 		<owner>
 			<email>thomas@binaryden.de</email>
 		</owner>
-		<source type="git">git://github.com/tkemmer/binaryden.git</source>
+		<source type="git">https://github.com/tkemmer/binaryden.git</source>
 	</repo>
 </repositories>
 
