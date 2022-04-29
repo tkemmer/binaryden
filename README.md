@@ -1,17 +1,13 @@
 # BinaryDen Portage overlay
-This Portage overlay primarily aims at providing packages for the most current versions of
+This Portage overlay primarily aims at providing packages for the most recent versions of
 the [**Cinnamon**](https://github.com/linuxmint) desktop environment as well as version
 bumps and patches for several other Gentoo packages.
 
 ## Notable additions to ::gentoo
  * [`app-editors/atom-bin`](https://github.com/atom/atom):
    The hackable text editor
- * [`dev-cpp/arrow`](https://github.com/apache/arrow):
-   Apache Arrow/Parquet for C++
  * [`dev-cpp/clipp`](https://github.com/muellan/clipp):
    Expressive command line argument parsing for modern C++
- * [`dev-libs/thrift`](https://github.com/apache/thrift):
-   Apache Thrift
  * [`dev-python/python-pam`](https://github.com/FirefighterBlu3/python-pam):
    Python module for simple PAM authentications
  * [`sys-process/nvtop`](https://github.com/syllo/nvtop):
