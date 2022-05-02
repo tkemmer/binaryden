@@ -1,6 +1,7 @@
 ################
 # Cinnamon 5.2 #
 ################
+<dev-python/python-pam-2.1                  amd64
 <dev-python/python3-xapp-2.3                amd64
 <gnome-extra/cinnamon-5.3                   amd64
 <gnome-extra/cinnamon-control-center-5.3    amd64
