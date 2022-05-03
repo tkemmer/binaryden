@@ -67,6 +67,9 @@ BDEPEND="
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 "
+PATCHES=(
+	"${FILESDIR}"/${PN}-5.2.1-libnma-fix.patch
+)
 
 src_prepare() {
 	default
