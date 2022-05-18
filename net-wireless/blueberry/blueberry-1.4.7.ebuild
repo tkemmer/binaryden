@@ -24,7 +24,7 @@ RDEPEND="${PYTHON_DEPS}
 		dev-python/python3-xapp[${PYTHON_USEDEP}]
 		dev-python/setproctitle[${PYTHON_USEDEP}]
 	')
-	>=net-wireless/gnome-bluetooth-3.14[introspection]
+	>=net-wireless/gnome-bluetooth-3.14:2[introspection]
 	net-wireless/bluez[obex]
 	net-wireless/bluez-tools
 	|| (
