@@ -7,7 +7,7 @@ inherit autotools gnome2 vala
 
 DESCRIPTION="A slick-looking LightDM greeter"
 HOMEPAGE="https://github.com/linuxmint/slick-greeter"
-SRC_URI="https://github.com/linuxmint/${PN}/archive/${PV}.tar.gz"
+SRC_URI="https://github.com/linuxmint/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
