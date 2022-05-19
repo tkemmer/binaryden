@@ -2,13 +2,10 @@
 app-arch/p7zip                        -wxwidgets
 dev-python/matplotlib                 wxwidgets
 dev-vcs/git                           tk
-media-plugins/deadbeef-plugins-meta   mpris
-media-sound/deadbeef                  cover curl lastfm
 media-video/vlc                       bidi ffmpeg libass live lua matroska 
 net-nds/openldap                      minimal
 net-print/cups                        -usb
 net-print/hplip                       snmp
-sys-block/gparted                     fat ntfs
 x11-themes/flat-remix                 -blue -red -yellow
 
 # app-office/libreoffice{,-bin}
