@@ -13,6 +13,7 @@ app-shells/zsh-syntax-highlighting
 dev-vcs/tig
 sys-apps/bat
 sys-apps/exa
+sys-apps/fd
 sys-apps/lshw
 sys-apps/pciutils
 sys-apps/the_silver_searcher
