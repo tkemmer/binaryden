@@ -7,6 +7,7 @@ app-misc/neofetch
 app-misc/ranger
 app-portage/eix
 app-portage/gentoolkit
+app-portage/portage-utils
 app-shells/gentoo-zsh-completions
 app-shells/zsh
 app-shells/zsh-completions
