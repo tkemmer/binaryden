@@ -15,7 +15,19 @@ bumps and patches for several other Gentoo packages.
  * [`x11-themes/flat-remix`](https://github.com/daniruiz/flat-remix):
    Pretty simple Linux icon theme inspired by material design
 
-## Installation using `app-portage/layman`
+## Setup 
+
+### Option 1: `app-eselect/eselect-repository`
+To enable this repository on your system, simply execute
+```sh
+eselect repository enable binaryden
+```
+To disable this overlay and remove its contents from your system, execute
+```sh
+eselect repository remove binaryden
+```
+
+### Option 2: `app-portage/layman`
 This overlay can be added to your system via
 ```sh
 layman -Sa binaryden
