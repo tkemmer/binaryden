@@ -3,6 +3,7 @@ app-admin/sudo
 app-editors/vim
 app-misc/byobu
 app-misc/icdiff
+app-misc/neofetch
 app-misc/ranger
 app-portage/eix
 app-portage/gentoolkit
