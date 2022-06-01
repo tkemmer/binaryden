@@ -1,6 +1,7 @@
 app-admin/logrotate
 app-admin/sudo
 app-editors/vim
+app-eselect/eselect-repository
 app-misc/byobu
 app-misc/icdiff
 app-misc/neofetch
