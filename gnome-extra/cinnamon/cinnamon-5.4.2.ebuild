@@ -81,6 +81,7 @@ RDEPEND="
 	gnome-extra/evolution-data-server[gnome-online-accounts?]
 	>=gnome-extra/nemo-5.4
 	gnome-extra/polkit-gnome
+	media-libs/gsound
 	net-misc/wget
 	sys-apps/accountsservice[introspection]
 	sys-power/upower[introspection]
