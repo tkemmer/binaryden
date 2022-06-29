@@ -8,8 +8,6 @@ bumps and patches for several other Gentoo packages.
    The hackable text editor
  * [`dev-cpp/clipp`](https://github.com/muellan/clipp):
    Expressive command line argument parsing for modern C++
- * [`sys-process/nvtop`](https://github.com/syllo/nvtop):
-   NVIDIA GPUs htop like monitoring tool
  * [`x11-misc/slick-greeter`](https://github.com/linuxmint/slick-greeter):
    A slick-looking LightDM greeter
  * [`x11-themes/flat-remix`](https://github.com/daniruiz/flat-remix):
