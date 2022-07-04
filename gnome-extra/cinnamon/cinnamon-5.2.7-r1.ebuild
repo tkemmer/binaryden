@@ -64,7 +64,7 @@ RDEPEND="
 		dev-python/pycairo[${PYTHON_USEDEP}]
 		dev-python/pygobject:3[${PYTHON_USEDEP}]
 		dev-python/pyinotify[${PYTHON_USEDEP}]
-		dev-python/pypam[${PYTHON_USEDEP}]
+		dev-python/python-pam[${PYTHON_USEDEP}]
 		>=dev-python/python3-xapp-2.2.0[${PYTHON_USEDEP}]
 		dev-python/pytz[${PYTHON_USEDEP}]
 		dev-python/setproctitle[${PYTHON_USEDEP}]
