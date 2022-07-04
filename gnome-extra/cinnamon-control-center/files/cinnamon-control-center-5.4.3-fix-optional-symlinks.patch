@@ -1,0 +1,46 @@
+From c4e61b6c4d93f78baa524c8b7fc59d08ef0bd1a2 Mon Sep 17 00:00:00 2001
+From: Eli Schwartz <eschwartz@archlinux.org>
+Date: Sun, 3 Jul 2022 00:02:26 -0400
+Subject: [PATCH] meson: fix regression in installing with some panels disabled
+
+In commit ca95ce7dfc4872ecef88b0074d2bee8f097d0394 some symlink creation
+is handled for all panels, without first checking whether those panels
+are installed.
+
+Make sure to only try installing those symlinks if their accompanying
+options/dependencies are enabled/found.
+
+Fixes #289
+---
+ install-scripts/meson.build | 20 ++++++++++++++------
+ 1 file changed, 14 insertions(+), 6 deletions(-)
+
+diff --git a/install-scripts/meson.build b/install-scripts/meson.build
+index b081521..aa6ffda 100644
+--- a/install-scripts/meson.build
++++ b/install-scripts/meson.build
+@@ -1,10 +1,18 @@
++links = [
++  'cinnamon-display-panel.desktop',
++]
++if colord.found()
++  links += ['cinnamon-color-panel.desktop']
++endif
++if libnm.found()
++  links += ['cinnamon-network-panel.desktop']
++endif
++if libwacom.found()
++  links += ['cinnamon-wacom-panel.desktop']
++endif
++
+ if meson.version().version_compare('>=0.61.0')
+-  foreach link: [
+-    'cinnamon-color-panel.desktop',
+-    'cinnamon-display-panel.desktop',
+-    'cinnamon-network-panel.desktop',
+-    'cinnamon-wacom-panel.desktop',
+-  ]
++  foreach link: links
+     install_symlink(link,
+       install_dir: panel_def_dir,
+       pointing_to: '../../applications' / link

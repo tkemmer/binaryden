@@ -68,6 +68,9 @@ BDEPEND="
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 "
+PATCHES=(
+	"${FILESDIR}"/${PN}-5.4.3-fix-optional-symlinks.patch
+)
 
 src_prepare() {
 	default
