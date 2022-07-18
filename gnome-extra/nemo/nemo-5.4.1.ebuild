@@ -75,7 +75,7 @@ ${PN} search capabilities can be extended through external
 helpers. Install any of the following packages to make
 their associated file types searchable.
 
-EPUB                     - app-text/html2text
+EPUB                     - app-arch/unzip and app-text/html2text
 Image metadata           - media-gfx/exif
 MP3 tags                 - media-sound/id3
 Microsoft Office .doc    - app-text/catdoc
