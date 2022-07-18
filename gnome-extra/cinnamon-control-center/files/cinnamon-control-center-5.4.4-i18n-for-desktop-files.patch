@@ -1,0 +1,188 @@
+From dd0533c36a06166292233f2556ce0f1ed1619cd5 Mon Sep 17 00:00:00 2001
+From: Leigh Scott <leigh123linux@gmail.com>
+Date: Sun, 17 Jul 2022 15:14:04 +0100
+Subject: [PATCH] Use i18n to process desktop file
+
+fix
+---
+ generate_additional_files.py                           | 10 +++++-----
+ ...r-panel.desktop => cinnamon-color-panel.desktop.in} |  0
+ panels/color/meson.build                               |  8 ++++++--
+ ...panel.desktop => cinnamon-display-panel.desktop.in} |  0
+ panels/display/meson.build                             |  8 ++++++--
+ ...panel.desktop => cinnamon-network-panel.desktop.in} |  0
+ panels/network/meson.build                             | 10 +++++++---
+ ...-panel.desktop => cinnamon-region-panel.desktop.in} |  0
+ panels/region/meson.build                              | 10 +++++++---
+ ...m-panel.desktop => cinnamon-wacom-panel.desktop.in} |  0
+ panels/wacom/meson.build                               | 10 +++++++---
+ 11 files changed, 38 insertions(+), 18 deletions(-)
+ rename panels/color/{cinnamon-color-panel.desktop => cinnamon-color-panel.desktop.in} (100%)
+ rename panels/display/{cinnamon-display-panel.desktop => cinnamon-display-panel.desktop.in} (100%)
+ rename panels/network/{cinnamon-network-panel.desktop => cinnamon-network-panel.desktop.in} (100%)
+ rename panels/region/{cinnamon-region-panel.desktop => cinnamon-region-panel.desktop.in} (100%)
+ rename panels/wacom/{cinnamon-wacom-panel.desktop => cinnamon-wacom-panel.desktop.in} (100%)
+
+diff --git a/generate_additional_files.py b/generate_additional_files.py
+index 9b89bb1..bac1c90 100755
+--- a/generate_additional_files.py
++++ b/generate_additional_files.py
+@@ -22,7 +22,7 @@
+ _Keywords=Color;ICC;Profile;Calibrate;Printer;Display;
+ """
+ 
+-additionalfiles.generate(DOMAIN, PATH, "./panels/color/cinnamon-color-panel.desktop", prefix, _("Color"), _("Color management settings"), "")
++additionalfiles.generate(DOMAIN, PATH, "./panels/color/cinnamon-color-panel.desktop.in", prefix, _("Color"), _("Color management settings"), "")
+ 
+ prefix = """[Desktop Entry]
+ Exec=cinnamon-settings region
+@@ -38,7 +38,7 @@
+ NoDisplay=true
+ """
+ 
+-additionalfiles.generate(DOMAIN, PATH, "./panels/region/cinnamon-region-panel.desktop", prefix, _("Region & Language"), _("Change your region and language settings"), "")
++additionalfiles.generate(DOMAIN, PATH, "./panels/region/cinnamon-region-panel.desktop.in", prefix, _("Region & Language"), _("Change your region and language settings"), "")
+ 
+ prefix = """[Desktop Entry]
+ Exec=cinnamon-settings display
+@@ -53,7 +53,7 @@
+ _Keywords=Panel;Projector;xrandr;Screen;Resolution;Refresh;
+ """
+ 
+-additionalfiles.generate(DOMAIN, PATH, "./panels/display/cinnamon-display-panel.desktop", prefix, _("Display"), _("Change resolution and position of monitors and projectors"), "")
++additionalfiles.generate(DOMAIN, PATH, "./panels/display/cinnamon-display-panel.desktop.in", prefix, _("Display"), _("Change resolution and position of monitors and projectors"), "")
+ 
+ prefix = """[Desktop Entry]
+ Exec=cinnamon-settings network
+@@ -68,7 +68,7 @@
+ _Keywords=Network;Wireless;IP;LAN;Proxy;Internet;WiFi;
+ """
+ 
+-additionalfiles.generate(DOMAIN, PATH, "./panels/network/cinnamon-network-panel.desktop", prefix, _("Network"), _("Network settings"), "")
++additionalfiles.generate(DOMAIN, PATH, "./panels/network/cinnamon-network-panel.desktop.in", prefix, _("Network"), _("Network settings"), "")
+ 
+ prefix = """[Desktop Entry]
+ Exec=cinnamon-settings wacom
+@@ -83,4 +83,4 @@
+ _Keywords=Tablet;Wacom;Stylus;Eraser;Mouse;
+ """
+ 
+-additionalfiles.generate(DOMAIN, PATH, "./panels/wacom/cinnamon-wacom-panel.desktop", prefix, _("Graphics Tablet"), _("Set button mappings and adjust stylus sensitivity for graphics tablets"), "")
++additionalfiles.generate(DOMAIN, PATH, "./panels/wacom/cinnamon-wacom-panel.desktop.in", prefix, _("Graphics Tablet"), _("Set button mappings and adjust stylus sensitivity for graphics tablets"), "")
+diff --git a/panels/color/cinnamon-color-panel.desktop b/panels/color/cinnamon-color-panel.desktop.in
+similarity index 100%
+rename from panels/color/cinnamon-color-panel.desktop
+rename to panels/color/cinnamon-color-panel.desktop.in
+diff --git a/panels/color/meson.build b/panels/color/meson.build
+index e29b2e9..a1ac1c6 100644
+--- a/panels/color/meson.build
++++ b/panels/color/meson.build
+@@ -25,7 +25,11 @@ install_data('color.ui',
+   install_dir: ui_dir,
+ )
+ 
+-install_data(
+-  'cinnamon-color-panel.desktop',
++i18n.merge_file(
++  input : 'cinnamon-color-panel.desktop.in',
++  output: 'cinnamon-color-panel.desktop',
++  po_dir: po_dir,
++  type: 'desktop',
++  install: true,
+   install_dir: desktop_dir
+ )
+diff --git a/panels/display/cinnamon-display-panel.desktop b/panels/display/cinnamon-display-panel.desktop.in
+similarity index 100%
+rename from panels/display/cinnamon-display-panel.desktop
+rename to panels/display/cinnamon-display-panel.desktop.in
+diff --git a/panels/display/meson.build b/panels/display/meson.build
+index f462630..9fa92a7 100644
+--- a/panels/display/meson.build
++++ b/panels/display/meson.build
+@@ -47,8 +47,12 @@ panel_display = shared_library(
+   install_dir: panels_dir
+ )
+ 
+-install_data(
+-  'cinnamon-display-panel.desktop',
++i18n.merge_file(
++  input : 'cinnamon-display-panel.desktop.in',
++  output: 'cinnamon-display-panel.desktop',
++  po_dir: po_dir,
++  type: 'desktop',
++  install: true,
+   install_dir: desktop_dir
+ )
+ 
+diff --git a/panels/network/cinnamon-network-panel.desktop b/panels/network/cinnamon-network-panel.desktop.in
+similarity index 100%
+rename from panels/network/cinnamon-network-panel.desktop
+rename to panels/network/cinnamon-network-panel.desktop.in
+diff --git a/panels/network/meson.build b/panels/network/meson.build
+index 37de3bb..8ea44ab 100644
+--- a/panels/network/meson.build
++++ b/panels/network/meson.build
+@@ -52,7 +52,11 @@ install_data('network.ui',
+   install_dir: ui_dir,
+ )
+ 
+-install_data(
+-  'cinnamon-network-panel.desktop',
++i18n.merge_file(
++  input : 'cinnamon-network-panel.desktop.in',
++  output: 'cinnamon-network-panel.desktop',
++  po_dir: po_dir,
++  type: 'desktop',
++  install: true,
+   install_dir: desktop_dir
+-)
+\ No newline at end of file
++)
+diff --git a/panels/region/cinnamon-region-panel.desktop b/panels/region/cinnamon-region-panel.desktop.in
+similarity index 100%
+rename from panels/region/cinnamon-region-panel.desktop
+rename to panels/region/cinnamon-region-panel.desktop.in
+diff --git a/panels/region/meson.build b/panels/region/meson.build
+index 30cd83a..c0f39f9 100644
+--- a/panels/region/meson.build
++++ b/panels/region/meson.build
+@@ -38,7 +38,11 @@ install_data([
+ )
+ 
+ # Region panel is imported as a page of cs_keyboard so no share/applications entry needed.
+-install_data(
+-  'cinnamon-region-panel.desktop',
++i18n.merge_file(
++  input : 'cinnamon-region-panel.desktop.in',
++  output: 'cinnamon-region-panel.desktop',
++  po_dir: po_dir,
++  type: 'desktop',
++  install: true,
+   install_dir: panel_def_dir
+-)
+\ No newline at end of file
++)
+diff --git a/panels/wacom/cinnamon-wacom-panel.desktop b/panels/wacom/cinnamon-wacom-panel.desktop.in
+similarity index 100%
+rename from panels/wacom/cinnamon-wacom-panel.desktop
+rename to panels/wacom/cinnamon-wacom-panel.desktop.in
+diff --git a/panels/wacom/meson.build b/panels/wacom/meson.build
+index 77056a9..e37f21a 100644
+--- a/panels/wacom/meson.build
++++ b/panels/wacom/meson.build
+@@ -44,7 +44,11 @@ panel_wacom = shared_library('wacom-properties',
+ #   install_dir: ui_dir,
+ # )
+ 
+-install_data(
+-  'cinnamon-wacom-panel.desktop',
++i18n.merge_file(
++  input : 'cinnamon-wacom-panel.desktop.in',
++  output: 'cinnamon-wacom-panel.desktop',
++  po_dir: po_dir,
++  type: 'desktop',
++  install: true,
+   install_dir: desktop_dir
+-)
+\ No newline at end of file
++)

@@ -69,7 +69,7 @@ BDEPEND="
 	virtual/pkgconfig
 "
 PATCHES=(
-	"${FILESDIR}"/${PN}-5.4.3-fix-optional-symlinks.patch
+	"${FILESDIR}"/${PN}-5.4.4-i18n-for-desktop-files.patch
 )
 
 src_prepare() {
