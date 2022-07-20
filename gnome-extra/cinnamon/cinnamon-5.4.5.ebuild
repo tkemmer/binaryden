@@ -110,10 +110,6 @@ PATCHES=(
 	# Use wheel group instead of sudo (from Fedora/Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3576
 	"${FILESDIR}"/${PN}-3.6.6-wheel-sudo.patch
-
-	# Fix window freezing after workspace switching
-	# https://github.com/linuxmint/cinnamon/issues/10943
-	"${FILESDIR}"/${PN}-5.4.3-fix-workspace-switching.patch
 )
 
 src_prepare() {
