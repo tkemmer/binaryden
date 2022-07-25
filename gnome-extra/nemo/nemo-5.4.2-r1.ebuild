@@ -14,7 +14,7 @@ SRC_URI="https://github.com/linuxmint/nemo/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2+ LGPL-2+ FDL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~x86"
-IUSE="doc exif +nls selinux test tracker xmp"
+IUSE="doc exif +nls selinux test xmp"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 # https://github.com/linuxmint/nemo/issues/2501
@@ -35,7 +35,6 @@ COMMON_DEPEND="
 
 	exif? ( >=media-libs/libexif-0.6.20:= )
 	selinux? ( sys-libs/libselinux )
-	tracker? ( >=app-misc/tracker-2.0:0= )
 	xmp? ( >=media-libs/exempi-2.2.0:= )
 "
 RDEPEND="
@@ -94,10 +93,10 @@ src_prepare() {
 src_configure() {
 	local emesonargs=(
 		$(meson_use exif)
-		$(meson_use tracker)
 		$(meson_use xmp)
 		$(meson_use selinux)
 		$(meson_use doc gtk_doc)
+		-Dtracker=false
 	)
 	meson_src_configure
 }
