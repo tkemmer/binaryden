@@ -26,7 +26,6 @@ RDEPEND="
 	media-libs/libcanberra:0=[gtk3,pulseaudio]
 	>=media-sound/pulseaudio-0.9.16[glib]
 	>=sys-apps/dbus-1.1.2
-	dev-libs/dbus-glib
 	>=sys-auth/polkit-0.97
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-3.14.0:3
