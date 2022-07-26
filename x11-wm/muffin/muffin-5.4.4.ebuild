@@ -11,7 +11,7 @@ SRC_URI="https://github.com/linuxmint/muffin/archive/${PV}.tar.gz -> ${P}.tar.gz
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE="+introspection test"
+IUSE="input_devices_wacom +introspection sysprof test"
 KEYWORDS="~amd64 ~arm64 ~x86"
 
 RDEPEND="
@@ -44,6 +44,8 @@ RDEPEND="
 	x11-misc/xkeyboard-config
 
 	introspection? ( >=dev-libs/gobject-introspection-0.9.12:= )
+	input_devices_wacom? ( >=dev-libs/libwacom-0.13:= )
+	sysprof? ( dev-util/sysprof-capture:3= )
 "
 DEPEND="
 	${RDEPEND}
@@ -69,9 +71,15 @@ src_prepare() {
 # Wayland is not supported upstream.
 src_configure() {
 	local emesonargs=(
+		-Dcore_tests=false
+		-Dinstalled_tests=false
 		-Dremote_desktop=false
 		-Dsm=true
 		$(meson_use introspection)
+		$(meson_use input_devices_wacom libwacom)
+		$(meson_use test clutter_tests)
+		$(meson_use test cogl_tests)
+		$(meson_use test tests)
 	)
 	meson_src_configure
 }
@@ -83,7 +91,7 @@ src_install() {
 }
 
 src_test() {
-	virtx default
+	virtx meson_src_test
 }
 
 pkg_postinst() {
