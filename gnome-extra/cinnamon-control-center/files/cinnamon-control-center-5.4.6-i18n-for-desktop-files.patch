@@ -1,6 +1,6 @@
-From dd0533c36a06166292233f2556ce0f1ed1619cd5 Mon Sep 17 00:00:00 2001
+From 802d4aef068e44bf3f85d621c6a513277d081f82 Mon Sep 17 00:00:00 2001
 From: Leigh Scott <leigh123linux@gmail.com>
-Date: Sun, 17 Jul 2022 15:14:04 +0100
+Date: Tue, 2 Aug 2022 15:29:47 +0100
 Subject: [PATCH] Use i18n to process desktop file
 
 fix
@@ -15,8 +15,8 @@ fix
  ...-panel.desktop => cinnamon-region-panel.desktop.in} |  0
  panels/region/meson.build                              | 10 +++++++---
  ...m-panel.desktop => cinnamon-wacom-panel.desktop.in} |  0
- panels/wacom/meson.build                               | 10 +++++++---
- 11 files changed, 38 insertions(+), 18 deletions(-)
+ panels/wacom/meson.build                               |  8 ++++++--
+ 11 files changed, 37 insertions(+), 17 deletions(-)
  rename panels/color/{cinnamon-color-panel.desktop => cinnamon-color-panel.desktop.in} (100%)
  rename panels/display/{cinnamon-display-panel.desktop => cinnamon-display-panel.desktop.in} (100%)
  rename panels/network/{cinnamon-network-panel.desktop => cinnamon-network-panel.desktop.in} (100%)
@@ -167,12 +167,12 @@ similarity index 100%
 rename from panels/wacom/cinnamon-wacom-panel.desktop
 rename to panels/wacom/cinnamon-wacom-panel.desktop.in
 diff --git a/panels/wacom/meson.build b/panels/wacom/meson.build
-index 77056a9..e37f21a 100644
+index cb0bf63..d5710a8 100644
 --- a/panels/wacom/meson.build
 +++ b/panels/wacom/meson.build
-@@ -44,7 +44,11 @@ panel_wacom = shared_library('wacom-properties',
- #   install_dir: ui_dir,
- # )
+@@ -25,8 +25,12 @@ wacom_gresource = gnome.compile_resources(
+ 
+ subdir('calibrator')
  
 -install_data(
 -  'cinnamon-wacom-panel.desktop',
@@ -183,6 +183,5 @@ index 77056a9..e37f21a 100644
 +  type: 'desktop',
 +  install: true,
    install_dir: desktop_dir
--)
-\ No newline at end of file
-+)
+ )
+ 

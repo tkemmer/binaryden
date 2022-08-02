@@ -20,6 +20,7 @@ RESTRICT="test"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.44.0:2
+	>=dev-libs/libgudev-232:=
 	>=gnome-base/libgnomekbd-3.0.0:0=
 	>=gnome-extra/cinnamon-desktop-5.4:0=
 	>=gnome-extra/cinnamon-menus-5.4:0=
@@ -69,7 +70,7 @@ BDEPEND="
 	virtual/pkgconfig
 "
 PATCHES=(
-	"${FILESDIR}"/${PN}-5.4.4-i18n-for-desktop-files.patch
+	"${FILESDIR}"/${PN}-5.4.6-i18n-for-desktop-files.patch
 )
 
 src_prepare() {
