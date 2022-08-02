@@ -35,6 +35,7 @@ RDEPEND="
 	x11-libs/libXfixes
 	x11-libs/libXi
 	>=x11-libs/libxklavier-5.0
+	x11-libs/pango
 	>=sys-power/upower-0.9.11
 
 	colord? ( >=x11-misc/colord-0.1.27:= )
