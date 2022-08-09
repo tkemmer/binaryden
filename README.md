@@ -8,6 +8,8 @@ bumps and patches for several other Gentoo packages.
    The hackable text editor
  * [`dev-cpp/clipp`](https://github.com/muellan/clipp):
    Expressive command line argument parsing for modern C++
+ * [`media-libs/elgato-streamdeck`](https://github.com/abcminiuser/python-elgato-streamdeck):
+   Python library to control the Elgato Stream Deck
  * [`sys-apps/hexyl`](https://github.com/sharkdp/hexyl):
    A command-line hex viewer
  * [`x11-misc/slick-greeter`](https://github.com/linuxmint/slick-greeter):
