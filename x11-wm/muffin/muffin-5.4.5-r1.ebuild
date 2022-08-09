@@ -11,7 +11,7 @@ SRC_URI="https://github.com/linuxmint/muffin/archive/${PV}.tar.gz -> ${P}.tar.gz
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE="input_devices_wacom +introspection sysprof test"
+IUSE="input_devices_wacom +introspection screencast sysprof test"
 KEYWORDS="~amd64 ~arm64 ~x86"
 
 RDEPEND="
@@ -45,6 +45,7 @@ RDEPEND="
 
 	introspection? ( >=dev-libs/gobject-introspection-0.9.12:= )
 	input_devices_wacom? ( >=dev-libs/libwacom-0.13:= )
+	screencast? ( media-video/pipewire:= )
 	sysprof? ( dev-util/sysprof-capture:3= )
 "
 DEPEND="
@@ -73,10 +74,10 @@ src_configure() {
 	local emesonargs=(
 		-Dcore_tests=false
 		-Dinstalled_tests=false
-		-Dremote_desktop=false
 		-Dsm=true
 		$(meson_use introspection)
 		$(meson_use input_devices_wacom libwacom)
+		$(meson_use screencast remote_desktop)
 		$(meson_use test clutter_tests)
 		$(meson_use test cogl_tests)
 		$(meson_use test tests)
