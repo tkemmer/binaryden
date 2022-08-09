@@ -8,6 +8,8 @@ bumps and patches for several other Gentoo packages.
    The hackable text editor
  * [`dev-cpp/clipp`](https://github.com/muellan/clipp):
    Expressive command line argument parsing for modern C++
+ * [`dev-python/tasklib`](https://github.com/GothenburgBitFactory/tasklib):
+   A Python library for interacting with taskwarrior databases
  * [`media-libs/elgato-streamdeck`](https://github.com/abcminiuser/python-elgato-streamdeck):
    Python library to control the Elgato Stream Deck
  * [`sys-apps/hexyl`](https://github.com/sharkdp/hexyl):
