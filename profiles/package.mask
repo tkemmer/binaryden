@@ -1,4 +1,0 @@
-# Thomas Kemmer <thomas@binaryden.de> (2022-07-04)
-# Unmask ::gentoo packages maintained here
--media-libs/elgato-streamdeck
-
