@@ -1,6 +1,7 @@
 # portage options
 EMERGE_DEFAULT_OPTS="--quiet-build=y --read-news=y"
 FEATURES="splitdebug clean-logs"
+PORTAGE_ELOG_SYSTEM="save:* echo"
 PORTAGE_LOGDIR="/var/log/portage"
 PORTAGE_TMPDIR="/tmp"
 
