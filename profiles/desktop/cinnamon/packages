@@ -8,7 +8,6 @@ dev-util/meld
 gnome-extra/cinnamon
 media-gfx/gnome-screenshot
 media-gfx/gthumb
-media-sound/pavucontrol
 sys-block/gparted
 x11-misc/redshift
 x11-misc/slick-greeter
