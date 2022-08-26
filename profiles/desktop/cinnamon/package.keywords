@@ -15,6 +15,7 @@
 <x11-libs/xapp-2.3                          amd64
 <x11-wm/muffin-5.5                          amd64
 
+<app-misc/bulky-3                           amd64
 <x11-misc/slick-greeter-1.6                 amd64
 <x11-themes/elementary-xfce-icon-theme-1    amd64
 

@@ -1,6 +1,7 @@
 app-arch/file-roller
 app-editors/gummi
 app-editors/gvim
+app-misc/bulky
 app-text/evince
 dev-util/geany
 dev-util/meld
