@@ -4,6 +4,8 @@ the [**Cinnamon**](https://github.com/linuxmint) desktop environment as well as 
 bumps and patches for several other Gentoo packages.
 
 ## Notable additions to ::gentoo
+ * [`app-misc/bulky`](https://github.com/linuxmint/bulky):
+   Bulk renamer
  * [`dev-cpp/clipp`](https://github.com/muellan/clipp):
    Expressive command line argument parsing for modern C++
  * [`dev-python/tasklib`](https://github.com/GothenburgBitFactory/tasklib):
