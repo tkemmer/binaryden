@@ -14,6 +14,7 @@ app-shells/gentoo-zsh-completions
 app-shells/zsh
 app-shells/zsh-completions
 app-shells/zsh-syntax-highlighting
+app-vim/airline
 dev-vcs/tig
 sys-apps/bat
 sys-apps/exa
