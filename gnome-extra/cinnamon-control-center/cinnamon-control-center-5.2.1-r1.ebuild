@@ -68,6 +68,7 @@ BDEPEND="
 	virtual/pkgconfig
 "
 PATCHES=(
+	"${FILESDIR}"/${PN}-5.2.1-libgnomekbd-3.28-fix.patch
 	"${FILESDIR}"/${PN}-5.2.1-libnma-fix.patch
 )
 
