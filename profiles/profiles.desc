@@ -1,6 +1,9 @@
-amd64   binaryden/17.1/base               dev
-amd64   binaryden/17.1/desktop            dev
-amd64   binaryden/17.1/desktop/cinnamon   dev
-amd64   binaryden/17.0/base               dev
-amd64   binaryden/17.0/desktop            dev
-amd64   binaryden/17.0/desktop/cinnamon   dev
+amd64   binaryden/17.1-merged-usr/base               dev
+amd64   binaryden/17.1-merged-usr/desktop            dev
+amd64   binaryden/17.1-merged-usr/desktop/cinnamon   dev
+amd64   binaryden/17.1/base                          dev
+amd64   binaryden/17.1/desktop                       dev
+amd64   binaryden/17.1/desktop/cinnamon              dev
+amd64   binaryden/17.0/base                          dev
+amd64   binaryden/17.0/desktop                       dev
+amd64   binaryden/17.0/desktop/cinnamon              dev
