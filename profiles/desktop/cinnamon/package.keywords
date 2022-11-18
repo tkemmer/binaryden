@@ -12,6 +12,7 @@
 <gnome-extra/cinnamon-translations-5.5      amd64
 <gnome-extra/cjs-5.5                        amd64
 <gnome-extra/nemo-5.5                       amd64
+<gnome-extra/nemo-fileroller-5.5            amd64
 <x11-libs/xapp-2.3                          amd64
 <x11-wm/muffin-5.5                          amd64
 

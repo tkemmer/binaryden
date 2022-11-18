@@ -1,4 +1,3 @@
-app-arch/file-roller
 app-editors/gummi
 app-editors/gvim
 app-misc/bulky
@@ -6,6 +5,7 @@ app-text/evince
 dev-util/geany
 dev-util/meld
 gnome-extra/cinnamon
+gnome-extra/nemo-fileroller
 media-gfx/gnome-screenshot
 media-gfx/gthumb
 sys-block/gparted
