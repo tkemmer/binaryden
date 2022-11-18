@@ -16,12 +16,13 @@ SRC_URI="
 		elibc_glibc? ( ${BASE_SRC_URI}/linux/x64/${MY_PV}/${MY_P}-linux-x86_64.tar.gz )
 		elibc_musl? ( ${BASE_SRC_URI}/musl/x64/${MY_PV}/${MY_P}-musl-x86_64.tar.gz )
 	)
+	arm64? ( ${BASE_SRC_URI}/linux/aarch64/${MY_PV}/${MY_P}-linux-aarch64.tar.gz )
 "
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="MIT"
 SLOT="${MY_PV}"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~arm64 ~x86"
 RESTRICT="strip"
 
 RDEPEND="app-arch/p7zip"
