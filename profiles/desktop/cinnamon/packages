@@ -8,7 +8,6 @@ gnome-extra/cinnamon
 gnome-extra/nemo-fileroller
 media-gfx/gnome-screenshot
 media-gfx/gthumb
-sys-block/gparted
 x11-misc/redshift
 x11-misc/slick-greeter
 x11-terms/gnome-terminal

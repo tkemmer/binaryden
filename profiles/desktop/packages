@@ -8,15 +8,11 @@ dev-texlive/texlive-langenglish
 dev-texlive/texlive-langgerman
 dev-texlive/texlive-mathscience
 dev-texlive/texlive-publishers
-mail-client/thunderbird-bin
 media-fonts/droid
 media-fonts/noto
 media-fonts/open-sans
-media-fonts/ubuntu-font-family
 media-sound/alsa-utils
-media-sound/pulseaudio
 media-video/vlc
-www-client/google-chrome
 x11-base/xorg-server
 x11-misc/albert
 x11-misc/lightdm
