@@ -1,0 +1,25 @@
+From d078c742a655e8250342f30366b3777d74d8449a Mon Sep 17 00:00:00 2001
+From: Michael Webster <miketwebster@gmail.com>
+Date: Thu, 1 Dec 2022 15:47:12 -0500
+Subject: [PATCH] nemo-fileroller: Use NemoFileInfo's activation uri
+
+On the desktop, its actual uri starts with 'x-nemo-desktop:///....'.
+
+Fixes #468
+---
+ nemo-fileroller/src/nemo-fileroller.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/nemo-fileroller.c b/src/nemo-fileroller.c
+index a4835bed..b8b5edd0 100644
+--- a/src/nemo-fileroller.c
++++ b/src/nemo-fileroller.c
+@@ -134,7 +134,7 @@ add_callback (NemoMenuItem *item,
+ 	for (scan = files; scan; scan = scan->next) {
+ 		NemoFileInfo *file = scan->data;
+ 
+-		uri = nemo_file_info_get_uri (file);
++		uri = nemo_file_info_get_activation_uri (file);
+ 		quoted_uri = g_shell_quote (uri);
+ 		g_string_append_printf (cmd, " %s", quoted_uri);
+ 		g_free (uri);
