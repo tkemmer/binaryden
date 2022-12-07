@@ -5,4 +5,7 @@
 		<email>thomas@binaryden.de</email>
 		<name>Thomas Kemmer</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">linuxmint/bulky</remote-id>
+	</upstream>
 </pkgmetadata>
