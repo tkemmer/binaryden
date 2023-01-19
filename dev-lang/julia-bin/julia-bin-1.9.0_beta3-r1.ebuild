@@ -25,7 +25,10 @@ SLOT="${MY_PV}"
 KEYWORDS="-* ~amd64 ~arm64 ~x86"
 RESTRICT="strip"
 
-RDEPEND="app-arch/p7zip"
+RDEPEND="
+	app-arch/p7zip
+	sys-devel/lld
+"
 DEPEND="${RDEPEND}"
 
 QA_PREBUILT="*"
