@@ -1,7 +1,7 @@
 # Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 PYTHON_COMPAT=( python3_{9..10} )
 
@@ -27,10 +27,7 @@ RDEPEND="${PYTHON_DEPS}
 	>=net-wireless/gnome-bluetooth-3.14:2[introspection]
 	net-wireless/bluez[obex]
 	net-wireless/bluez-tools
-	|| (
-		>=sys-apps/util-linux-2.31_rc1
-		net-wireless/rfkill
-	)
+	>=sys-apps/util-linux-2.37
 	x11-libs/libnotify[introspection]
 	x11-misc/wmctrl"
 DEPEND="${RDEPEND}"
