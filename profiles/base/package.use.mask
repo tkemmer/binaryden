@@ -1,6 +1,0 @@
-# Thomas Kemmer <thomas@binaryden.de> (2019-10-16)
-# Unmask openjdk for use as system/user java-vm
-# via eselect.
-dev-java/openjdk     -gentoo-vm
-dev-java/openjdk-bin -gentoo-vm
-
