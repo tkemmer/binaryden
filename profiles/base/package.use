@@ -3,6 +3,3 @@ app-admin/sudo     offensive
 dev-lang/python    sqlite
 sys-apps/systemd   elfutils
 
-# dev-python/ipython-7
-net-libs/zeromq   drafts
-
