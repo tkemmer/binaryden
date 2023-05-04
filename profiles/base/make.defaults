@@ -13,5 +13,5 @@ USE="acl acpi bzip2 gdbm -geolocation -gnome -gtk -gtk2 -gtk3 ipv6 -kde ncurses 
 
 L10N="-* en-US en"
 PHP_TARGETS="-* php8-0"
-PYTHON_SINGLE_TARGET="-* python3_10"
-PYTHON_TARGETS="-* python3_10"
+PYTHON_SINGLE_TARGET="-* python3_11"
+PYTHON_TARGETS="-* python3_11"
