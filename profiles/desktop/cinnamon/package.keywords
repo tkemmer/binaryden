@@ -16,6 +16,7 @@
 <x11-libs/xapp-2.5                          amd64
 <x11-wm/muffin-5.7                          amd64
 
+=app-accessibility/caribou-0.4.21-r6        amd64
 <app-misc/bulky-3                           amd64
 <x11-misc/slick-greeter-1.7                 amd64
 <x11-terms/guake-3.10                       amd64
