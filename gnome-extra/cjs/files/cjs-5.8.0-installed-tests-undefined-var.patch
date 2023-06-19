@@ -1,0 +1,25 @@
+From d9a28d24df1d1e0cb622f9091d1f5ace607e0d2b Mon Sep 17 00:00:00 2001
+From: Thomas Kemmer <thomas@binaryden.de>
+Date: Mon, 19 Jun 2023 16:58:59 +0200
+Subject: [PATCH] Fix have_gtk4 var usage when tests are disabled
+
+---
+ installed-tests/js/meson.build | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/installed-tests/js/meson.build b/installed-tests/js/meson.build
+index 62a935d1..3ae7c0cb 100644
+--- a/installed-tests/js/meson.build
++++ b/installed-tests/js/meson.build
+@@ -203,7 +203,7 @@ endif
+ # during build should be run using dbus-run-session
+ 
+ dbus_tests = ['GDBus']
+-if have_gtk4 and not get_option('skip_gtk_tests')
++if not get_option('skip_gtk_tests') and have_gtk4
+     # FIXME: find out why GTK4 tries to acquire a message bus
+     dbus_tests += 'Gtk4'
+ endif
+-- 
+2.39.3
+
