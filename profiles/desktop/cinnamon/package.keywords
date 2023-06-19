@@ -1,24 +1,25 @@
 ################
-# Cinnamon 5.6 #
+# Cinnamon 5.8 #
 ################
 <dev-python/python3-xapp-2.5                amd64
-<gnome-extra/cinnamon-5.7                   amd64
-<gnome-extra/cinnamon-control-center-5.7    amd64
-<gnome-extra/cinnamon-desktop-5.7           amd64
-<gnome-extra/cinnamon-menus-5.7             amd64
-<gnome-extra/cinnamon-screensaver-5.7       amd64
-<gnome-extra/cinnamon-session-5.7           amd64
-<gnome-extra/cinnamon-settings-daemon-5.7   amd64
-<gnome-extra/cinnamon-translations-5.7      amd64
-<gnome-extra/cjs-5.7                        amd64
-<gnome-extra/nemo-5.7                       amd64
-<gnome-extra/nemo-fileroller-5.7            amd64
-<x11-libs/xapp-2.5                          amd64
-<x11-wm/muffin-5.7                          amd64
+<gnome-extra/cinnamon-5.9                   amd64
+<gnome-extra/cinnamon-control-center-5.9    amd64
+<gnome-extra/cinnamon-desktop-5.9           amd64
+<gnome-extra/cinnamon-menus-5.9             amd64
+<gnome-extra/cinnamon-screensaver-5.9       amd64
+<gnome-extra/cinnamon-session-5.9           amd64
+<gnome-extra/cinnamon-settings-daemon-5.9   amd64
+<gnome-extra/cinnamon-translations-5.9      amd64
+<gnome-extra/cjs-5.9                        amd64
+<gnome-extra/nemo-5.9                       amd64
+<gnome-extra/nemo-fileroller-5.9            amd64
+<sys-apps/xdg-desktop-portal-xapp-1.1       amd64
+<x11-libs/xapp-2.7                          amd64
+<x11-wm/muffin-5.9                          amd64
 
 =app-accessibility/caribou-0.4.21-r6        amd64
 <app-misc/bulky-3                           amd64
-<x11-misc/slick-greeter-1.7                 amd64
+<x11-misc/slick-greeter-1.9                 amd64
 <x11-terms/guake-3.10                       amd64
 <x11-themes/elementary-xfce-icon-theme-1    amd64
 
