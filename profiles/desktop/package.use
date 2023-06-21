@@ -1,5 +1,6 @@
 # profile
 app-arch/p7zip          -wxwidgets
+dev-libs/qtkeychain     keyring
 dev-python/matplotlib   wxwidgets
 media-video/vlc         bidi ffmpeg libass live lua matroska 
 net-nds/openldap        minimal
