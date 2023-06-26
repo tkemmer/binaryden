@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit meson systemd
+inherit meson systemd xdg
 
 DESCRIPTION="Xapp-based backend implementation for xdg-desktop-portal"
 HOMEPAGE="https://github.com/linuxmint/xdg-desktop-portal-xapp"
@@ -15,11 +15,22 @@ KEYWORDS="~amd64 ~arm64 ~riscv ~x86"
 
 DEPEND="
 	>=dev-libs/glib-2.44:2[dbus]
-	>=sys-apps/xdg-desktop-portal-1.5
+	>=sys-apps/xdg-desktop-portal-1.7
 	>=x11-libs/gtk+-3.24.0:3[introspection]
 "
-RDEPEND="${DEPEND}"
-BDEPEND=""
+RDEPEND="
+	${DEPEND}
+	sys-apps/xdg-desktop-portal-gtk
+	>=x11-libs/xapp-2.5
+	|| (
+		sys-apps/dbus[systemd]
+		sys-apps/dbus[X]
+	)
+"
+BDEPEND="
+	dev-util/gdbus-codegen
+	virtual/pkgconfig
+"
 
 src_configure() {
 	local emesonargs=(
