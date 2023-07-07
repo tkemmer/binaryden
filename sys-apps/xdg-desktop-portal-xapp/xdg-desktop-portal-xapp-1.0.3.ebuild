@@ -16,7 +16,6 @@ KEYWORDS="~amd64 ~arm64 ~riscv ~x86"
 DEPEND="
 	>=dev-libs/glib-2.44:2[dbus]
 	>=sys-apps/xdg-desktop-portal-1.7
-	>=x11-libs/gtk+-3.24.0:3[introspection]
 "
 RDEPEND="
 	${DEPEND}
