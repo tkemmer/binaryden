@@ -19,22 +19,12 @@ bumps and patches for several other Gentoo packages.
 
 ## Setup 
 
-### Option 1: `app-eselect/eselect-repository`
-To enable this repository on your system, simply execute
+### `app-eselect/eselect-repository`
+To enable this repository on your system, install `app-eselect/eselect-repository` and then use the following command:
 ```sh
 eselect repository enable binaryden
 ```
 To disable this overlay and remove its contents from your system, execute
 ```sh
 eselect repository remove binaryden
-```
-
-### Option 2: `app-portage/layman`
-This overlay can be added to your system via
-```sh
-layman -Sa binaryden
-```
-Similarly, you can remove this overlay at any time via
-```sh
-layman -d binaryden
 ```
