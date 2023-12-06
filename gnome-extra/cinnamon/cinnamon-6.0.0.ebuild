@@ -14,7 +14,7 @@ SRC_URI="https://github.com/linuxmint/cinnamon/archive/${PV}.tar.gz -> ${P}.tar.
 
 LICENSE="BSD GPL-2+ GPL-3+ GPL-3-with-openssl-exception LGPL-2+ LGPL-2.1 LGPL-2.1+ MIT"
 SLOT="0"
-IUSE="+eds gnome-online-accounts +gstreamer gtk-doc +nls +networkmanager"
+IUSE="+eds gnome-online-accounts +gstreamer gtk-doc +nls +networkmanager wayland"
 REQUIRED_USE="${PYTHON_REQUIRED_USE} gnome-online-accounts? ( eds )"
 KEYWORDS="~amd64 ~arm64 ~loong ~riscv ~x86"
 
@@ -38,7 +38,7 @@ DEPEND="
 	>=x11-libs/libXfixes-5.0
 	x11-libs/pango[introspection]
 	>=x11-libs/xapp-2.8[introspection]
-	>=x11-wm/muffin-6.0[introspection]
+	>=x11-wm/muffin-6.0[introspection,wayland?]
 
 	eds? (
 		gnome-extra/evolution-data-server[gnome-online-accounts?]
@@ -77,11 +77,11 @@ RDEPEND="
 	>=gnome-base/dconf-0.4.1
 	>=gnome-base/gsettings-desktop-schemas-2.91.91
 	>=gnome-base/libgnomekbd-2.91.4
-	>=gnome-extra/cinnamon-control-center-6.0[networkmanager=]
+	>=gnome-extra/cinnamon-control-center-6.0[networkmanager=,wayland?]
 	>=gnome-extra/cinnamon-screensaver-6.0
 	>=gnome-extra/cinnamon-session-6.0
 	>=gnome-extra/cinnamon-settings-daemon-6.0
-	>=gnome-extra/nemo-6.0
+	>=gnome-extra/nemo-6.0[wayland?]
 	gnome-extra/polkit-gnome
 	media-libs/gsound
 	net-libs/libsoup:2.4[introspection]
