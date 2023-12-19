@@ -62,6 +62,7 @@ COMDEPEND="
 	wayland? (
 		dev-libs/wayland:=
 		gui-libs/egl-wayland:=
+		x11-base/xwayland
 	)
 "
 RDEPEND="${COMDEPEND}
@@ -90,6 +91,8 @@ src_configure() {
 		-Dglx=true
 		$(meson_use wayland)
 		$(meson_use screencast remote_desktop)
+		$(meson_use wayland egl_device)
+		$(meson_use wayland wayland_eglstream)
 		$(meson_use udev)
 		$(meson_use input_devices_wacom libwacom)
 		-Dpango_ft2=true
