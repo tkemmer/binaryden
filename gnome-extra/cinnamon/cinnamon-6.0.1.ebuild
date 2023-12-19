@@ -90,6 +90,7 @@ RDEPEND="
 	sys-apps/coreutils
 	sys-apps/pciutils
 	sys-apps/util-linux
+	sys-apps/xdg-desktop-portal-gtk
 	sys-apps/xdg-desktop-portal-xapp
 	sys-power/upower[introspection]
 	x11-misc/xdg-utils
