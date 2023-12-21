@@ -86,10 +86,11 @@ src_configure() {
 		-Dopengl=true
 		#opengl_libname
 		#gles2_libname
-		-Dgles2=true
+		$(meson_use wayland gles2)
 		-Degl=true
 		-Dglx=true
 		$(meson_use wayland)
+		$(meson_use wayland native_backend)
 		$(meson_use screencast remote_desktop)
 		$(meson_use wayland egl_device)
 		$(meson_use wayland wayland_eglstream)
@@ -101,7 +102,7 @@ src_configure() {
 		$(meson_use introspection)
 		$(meson_use test cogl_tests)
 		$(meson_use test clutter_tests)
-		$(meson_use wayland core_tests)
+		-Dcore_tests=false
 		$(meson_use test tests)
 		$(meson_use sysprof profiler)
 		-Dinstalled_tests=false
