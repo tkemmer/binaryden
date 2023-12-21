@@ -61,7 +61,6 @@ COMDEPEND="
 	)
 	wayland? (
 		dev-libs/wayland:=
-		gui-libs/egl-wayland:=
 		x11-base/xwayland
 	)
 "
