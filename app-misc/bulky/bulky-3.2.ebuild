@@ -1,9 +1,9 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-PLOCALES="aa am ar az be bg bn ca ca@valencia cs cy da de el en_CA en_GB eo es et eu fa fi fr fr_CA he hi hr hu ia id ie is it ja ka kab kk ko ku la lt ms nb nds nl nn oc pa pl pt pt_BR ro ru rue sk sl so sr sr@ijekavian sr@latin sv ta tr tt uk uz vi zh_CN zh_HK zh_TW"
+PLOCALES="aa am ar az be bg bn ca ca@valencia cs cy da de el en_CA en_GB eo es et eu fa fi fr fr_CA he hi hr hu ia id ie is it ja ka kab kk ko ku la lt ms nb nds nl nn oc pa pl pt pt_BR ro ru rue sk sl so sr sr@ijekavian sr@latin sv szl ta tr tt uk uz vi zh_CN zh_HK zh_TW"
 PYTHON_COMPAT=( python3_{10..11} )
 
 inherit python-single-r1 gnome2-utils plocale
