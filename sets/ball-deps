@@ -6,7 +6,7 @@ dev-qt/qtcore:5
 dev-qt/qtnetwork:5
 dev-qt/qtxml:5
 dev-libs/boost
-dev-util/cmake
+dev-build/cmake
 sys-devel/bison
 sys-devel/flex
 
