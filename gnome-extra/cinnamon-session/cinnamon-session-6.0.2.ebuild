@@ -1,11 +1,11 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 PYTHON_COMPAT=( python3_{9..11} )
 
-inherit meson gnome2-utils python-any-r1 xdg-utils
+inherit meson gnome2-utils python-single-r1
 
 DESCRIPTION="Cinnamon session manager"
 HOMEPAGE="https://projects.linuxmint.com/cinnamon/ https://github.com/linuxmint/cinnamon-session"
@@ -15,6 +15,7 @@ LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~loong ~ppc64 ~riscv ~x86"
 IUSE="systemd"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.37.3:2
@@ -22,7 +23,7 @@ COMMON_DEPEND="
 	virtual/opengl
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
-	>=x11-libs/gtk+-3:3
+	>=x11-libs/gtk+-3:3[introspection]
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
@@ -32,7 +33,7 @@ COMMON_DEPEND="
 	x11-libs/libXrender
 	x11-libs/libXtst
 	x11-libs/pango[X]
-	>=x11-libs/xapp-2.8
+	>=x11-libs/xapp-2.8[introspection]
 
 	systemd? ( >=sys-apps/systemd-183 )
 	!systemd? ( sys-auth/elogind[policykit] )
@@ -43,6 +44,10 @@ DEPEND="
 "
 RDEPEND="
 	${COMMON_DEPEND}
+	${PYTHON_DEPS}
+	$(python_gen_cond_dep '
+		dev-python/setproctitle[${PYTHON_USEDEP}]
+	')
 	>=gnome-extra/cinnamon-desktop-6.0:0=
 "
 BDEPEND="
