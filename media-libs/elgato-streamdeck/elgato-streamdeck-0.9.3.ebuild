@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -11,13 +11,12 @@ inherit distutils-r1
 DESCRIPTION="Python library to control the Elgato Stream Deck"
 HOMEPAGE="https://github.com/abcminiuser/python-elgato-streamdeck"
 SRC_URI="https://github.com/abcminiuser/python-elgato-streamdeck/archive/${PV}.tar.gz -> ${P}.gh.tar.gz"
-KEYWORDS="~amd64 ~x86"
 
 S="${WORKDIR}/python-${P}"
 
 LICENSE="MIT"
 SLOT="0"
-IUSE=""
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="dev-python/pillow[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}
