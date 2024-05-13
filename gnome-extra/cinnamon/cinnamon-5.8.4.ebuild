@@ -14,9 +14,9 @@ SRC_URI="https://github.com/linuxmint/cinnamon/archive/${PV}.tar.gz -> ${P}.tar.
 
 LICENSE="BSD GPL-2+ GPL-3+ GPL-3-with-openssl-exception LGPL-2+ LGPL-2.1 LGPL-2.1+ MIT"
 SLOT="0"
+KEYWORDS="~amd64 ~arm64 ~riscv ~x86"
 IUSE="+eds gnome-online-accounts +gstreamer gtk-doc +nls +networkmanager"
 REQUIRED_USE="${PYTHON_REQUIRED_USE} gnome-online-accounts? ( eds )"
-KEYWORDS="~amd64 ~arm64 ~riscv ~x86"
 
 DEPEND="
 	${PYTHON_DEPS}
