@@ -14,9 +14,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+blue +green +red +yellow"
 REQUIRED_USE="|| ( blue green red yellow )"
 
-RDEPEND=""
-DEPEND=""
-
 src_install() {
 	insinto /usr/share/icons/
 	use blue   && doins -r Flat-Remix-Blue*
