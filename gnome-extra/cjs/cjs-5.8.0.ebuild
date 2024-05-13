@@ -13,8 +13,8 @@ SRC_URI="https://github.com/linuxmint/cjs/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD CC0-1.0 MIT MPL-2.0 || ( MPL-1.1 GPL-2+ LGPL-2.1+ )"
 SLOT="0"
-IUSE="+cairo examples readline sysprof test"
 KEYWORDS="~amd64 ~arm64 ~ppc64 ~riscv ~x86"
+IUSE="+cairo examples readline sysprof test"
 
 RDEPEND="
 	dev-lang/spidermonkey:102
