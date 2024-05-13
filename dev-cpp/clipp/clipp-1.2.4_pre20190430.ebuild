@@ -10,16 +10,13 @@ DESCRIPTION="Easy to use, powerful & expressive command line argument parsing fo
 HOMEPAGE="https://github.com/muellan/clipp"
 SRC_URI="https://github.com/muellan/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
+S="${WORKDIR}"/${PN}-${COMMIT}
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 RESTRICT="!test? ( test )"
-
-DEPEND=""
-RDEPEND=""
-
-S="${WORKDIR}"/${PN}-${COMMIT}
 
 src_configure() {
 	local mycmakeargs=(
