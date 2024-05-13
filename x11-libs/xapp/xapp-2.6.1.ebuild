@@ -10,12 +10,11 @@ inherit gnome2-utils vala meson python-r1
 
 DESCRIPTION="Cross-desktop libraries and common resources"
 HOMEPAGE="https://github.com/linuxmint/xapp/"
-LICENSE="LGPL-3+"
-
 SRC_URI="https://github.com/linuxmint/xapp/archive/${PV}.tar.gz -> ${P}.tar.gz"
-KEYWORDS="~amd64 ~arm64 ~ppc64 ~riscv ~x86"
 
+LICENSE="LGPL-3+"
 SLOT="0"
+KEYWORDS="~amd64 ~arm64 ~ppc64 ~riscv ~x86"
 IUSE="gtk-doc introspection mate"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
