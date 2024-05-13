@@ -11,8 +11,8 @@ SRC_URI="https://github.com/linuxmint/muffin/archive/${PV}.tar.gz -> ${P}.tar.gz
 
 LICENSE="BSD GPL-2+ LGPL-2+ LGPL-2.1+ MIT SGI-B-2.0"
 SLOT="0"
-IUSE="input_devices_wacom +introspection screencast sysprof test udev"
 KEYWORDS="~amd64 ~arm64 ~ppc64 ~riscv ~x86"
+IUSE="input_devices_wacom +introspection screencast sysprof test udev"
 
 # Dependencies listed in meson order
 COMDEPEND="
