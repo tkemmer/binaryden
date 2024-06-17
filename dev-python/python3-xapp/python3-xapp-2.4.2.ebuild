@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -25,16 +25,10 @@ RDEPEND="
 	dev-python/psutil[${PYTHON_USEDEP}]
 "
 
-src_prepare() {
-	echo "option('python', type: 'string', value: 'python3')" >> meson_options.txt || die
-	sed -i "s/find_installation('python3')/find_installation(get_option('python'))/" meson.build || die
-	default
-}
-
 src_configure() {
 	configuring() {
 		meson_src_configure \
-			-Dpython="${EPYTHON}"
+			-Dpython_target="${EPYTHON}"
 	}
 	python_foreach_impl configuring
 }
