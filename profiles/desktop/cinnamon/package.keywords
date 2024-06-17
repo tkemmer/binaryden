@@ -1,21 +1,21 @@
 ################
-# Cinnamon 6.0 #
+# Cinnamon 6.2 #
 ################
 <dev-python/python3-xapp-2.5                amd64
-<gnome-extra/cinnamon-6.1                   amd64
-<gnome-extra/cinnamon-control-center-6.1    amd64
-<gnome-extra/cinnamon-desktop-6.1           amd64
-<gnome-extra/cinnamon-menus-6.1             amd64
-<gnome-extra/cinnamon-screensaver-6.1       amd64
-<gnome-extra/cinnamon-session-6.1           amd64
-<gnome-extra/cinnamon-settings-daemon-6.1   amd64
-<gnome-extra/cinnamon-translations-6.1      amd64
-<gnome-extra/cjs-6.1                        amd64
-<gnome-extra/nemo-6.1                       amd64
-<gnome-extra/nemo-fileroller-6.1            amd64
+<gnome-extra/cinnamon-6.3                   amd64
+<gnome-extra/cinnamon-control-center-6.3    amd64
+<gnome-extra/cinnamon-desktop-6.3           amd64
+<gnome-extra/cinnamon-menus-6.3             amd64
+<gnome-extra/cinnamon-screensaver-6.3       amd64
+<gnome-extra/cinnamon-session-6.3           amd64
+<gnome-extra/cinnamon-settings-daemon-6.3   amd64
+<gnome-extra/cinnamon-translations-6.3      amd64
+<gnome-extra/cjs-6.3                        amd64
+<gnome-extra/nemo-6.3                       amd64
+<gnome-extra/nemo-fileroller-6.3            amd64
 <sys-apps/xdg-desktop-portal-xapp-1.1       amd64
 <x11-libs/xapp-2.9                          amd64
-<x11-wm/muffin-6.1                          amd64
+<x11-wm/muffin-6.3                          amd64
 
 <app-misc/bulky-4                           amd64
 <x11-misc/slick-greeter-2.1                 amd64
