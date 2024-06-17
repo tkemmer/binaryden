@@ -12,13 +12,13 @@ DESCRIPTION="Cross-desktop libraries and common resources"
 HOMEPAGE="https://github.com/linuxmint/xapp/"
 SRC_URI="https://github.com/linuxmint/xapp/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="LGPL-3"
+LICENSE="LGPL-3 xfce? ( GPL-3 )"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~loong ~ppc64 ~riscv ~x86"
-IUSE="gtk-doc introspection mate"
+IUSE="gtk-doc introspection mate xfce"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-RDEPEND="
+DEPEND="
 	>=dev-libs/glib-2.44.0:2
 	dev-libs/libdbusmenu[gtk3]
 	gnome-base/libgnomekbd:=
@@ -28,14 +28,11 @@ RDEPEND="
 	x11-libs/libxkbfile
 	x11-libs/libX11
 	x11-libs/pango
-
-	mate? (
-		${PYTHON_DEPS}
-		dev-python/pygobject:3[${PYTHON_USEDEP}]
-	)
 "
-DEPEND="
-	${RDEPEND}
+RDEPEND="
+	${PYTHON_DEPS}
+	${DEPEND}
+	dev-python/pygobject:3[${PYTHON_USEDEP}]
 "
 BDEPEND="
 	${PYTHON_DEPS}
@@ -46,20 +43,19 @@ BDEPEND="
 	sys-apps/dbus
 	sys-devel/gettext
 
-	gtk-doc? ( dev-util/gtk-doc )
+	gtk-doc? (
+		dev-util/gtk-doc
+	)
 "
+
+PATCHES=(
+	# don't install pastebin upload wrapper
+	"${FILESDIR}"/0001-don-t-install-pastebin-upload-wrapper.patch
+)
 
 src_prepare() {
 	vala_src_prepare
 	default
-
-	# don't install distro specific tools
-	sed -i "s/subdir('scripts')/#&/" meson.build || die
-
-	# make mate integrations optional
-	if ! use mate; then
-		sed -i "s/subdir('mate')/#&/" status-applets/meson.build || die
-	fi
 
 	# Fix meson helpers
 	python_setup
@@ -69,6 +65,8 @@ src_prepare() {
 src_configure() {
 	local emesonargs=(
 		$(meson_use gtk-doc docs)
+		$(meson_use mate)
+		$(meson_use xfce)
 		-Dpy-overrides-dir="/pygobject"
 	)
 	meson_src_configure
