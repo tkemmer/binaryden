@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PLOCALES="aa am ar az be bg bn ca ca@valencia ckb cs cy da de el en_CA en_GB eo es et eu fa fi fr fr_CA gu he hi hr hu ia id ie is it ja ka kab kk ko ku la lt ms nb nds nl nn oc pa pl pt pt_BR ro ru rue sk sl so sr sr@ijekavian sr@latin sv szl ta th tr tt uk uz vi zh_CN zh_HK zh_TW"
+PLOCALES="aa am ar ast az be bg bn br ca ca@valencia ckb cs cy da de el en_CA en_GB eo es et eu fa fi fr fr_CA gu he hi hr hu ia id ie is it ja ka kab kk ko ku la lt ms nb nds nl nn oc pa pl pt pt_BR ro ru rue sk sl so sr sr@ijekavian sr@latin sv szl ta th tr tt uk uz vi zh_CN zh_HK zh_TW"
 PYTHON_COMPAT=( python3_{10..12} )
 
 inherit python-single-r1 gnome2-utils plocale
