@@ -8,6 +8,8 @@ bumps and patches for several other Gentoo packages.
    Bulk renamer
  * [`dev-cpp/clipp`](https://github.com/muellan/clipp):
    Expressive command line argument parsing for modern C++
+ * [`media-gfx/xviewer`](https://github.com/linuxmint/xviewer):
+   A generic Image viewer
  * [`media-libs/elgato-streamdeck`](https://github.com/abcminiuser/python-elgato-streamdeck):
    Python library to control the Elgato Stream Deck
  * [`sys-apps/hexyl`](https://github.com/sharkdp/hexyl):
