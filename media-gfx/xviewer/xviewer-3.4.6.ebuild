@@ -16,7 +16,7 @@ IUSE="gtk-doc exif jpeg lcms svg xmp"
 
 DEPEND="
 	dev-libs/glib:2
-	dev-libs/libpeas[gtk]
+	dev-libs/libpeas:0[gtk]
 	gnome-extra/cinnamon-desktop:=
 	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:3[X]
