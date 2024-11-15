@@ -4,7 +4,7 @@
 EAPI=7
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit distutils-r1
 
@@ -24,5 +24,5 @@ RDEPEND="${DEPEND}
 "
 
 python_test() {
-	"${EPYTHON}" src/test.py || die "Tests fail with ${EPYTHON}"
+	"${EPYTHON}" test/test.py || die "Tests fail with ${EPYTHON}"
 }
