@@ -27,7 +27,6 @@ RESTRICT="strip"
 
 RDEPEND="
 	app-arch/p7zip
-	sys-devel/lld
 "
 DEPEND="${RDEPEND}"
 
@@ -44,6 +43,9 @@ src_install() {
 	exeinto "/usr/$(get_libdir)/${MY_P}/bin"
 	doexe "bin/${MY_PN}"
 	dosym "../$(get_libdir)/${MY_P}/bin/${MY_PN}" "/usr/bin/${MY_PN}${SLOT}"
+
+	exeinto "/usr/$(get_libdir)/${MY_P}/libexec/${MY_PN}/"
+	doexe "libexec/${MY_PN}/lld"
 
 	local revord=$(( 9999 - $(ver_cut 1) * 100 - $(ver_cut 2) )) # 1.6 -> 106
 	newenvd - 99${MY_PN}${revord} <<-EOF
