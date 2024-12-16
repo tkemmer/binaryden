@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit meson gnome2-utils strip-linguas
+inherit meson gnome2-utils readme.gentoo-r1 strip-linguas
 
 DESCRIPTION="A generic image viewer"
 HOMEPAGE="https://github.com/linuxmint/xviewer"
@@ -50,6 +50,23 @@ BDEPEND="
 	)
 "
 
+DISABLE_AUTOFORMATTING="yes"
+FORCE_PRINT_ELOG="yes"
+DOC_CONTENTS="
+${PN} can support additional image formats by installing the following
+packages:
+
+AVIF/HEIF - media-libs/libheif[gdk-pixbuf]
+WebP      - gui-libs/gdk-pixbuf-loader-webp
+
+In some cases you may need to run
+
+	gdk-pixbuf-query-loaders --update-cache
+
+manually after installing GDK pixbuf-based packages for XViewer to recognize
+the new formats.
+"
+
 src_prepare() {
 	default
 
@@ -70,12 +87,20 @@ src_configure() {
 	meson_src_configure
 }
 
+src_install() {
+	meson_src_install
+	readme.gentoo_create_doc
+}
+
 pkg_postinst() {
 	xdg_icon_cache_update
+	xdg_desktop_database_update
 	gnome2_schemas_update
+	readme.gentoo_print_elog
 }
 
 pkg_postrm() {
 	xdg_icon_cache_update
+	xdg_desktop_database_update
 	gnome2_schemas_update
 }
