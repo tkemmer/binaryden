@@ -106,9 +106,7 @@ RDEPEND="
 	)
 "
 BDEPEND="
-	$(python_gen_cond_dep '
-		dev-python/libsass[${PYTHON_USEDEP}]
-	')
+	dev-lang/sassc
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
@@ -124,6 +122,10 @@ PATCHES=(
 	# Use wheel group instead of sudo (from Fedora/Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3576
 	"${FILESDIR}/${PN}-3.6.6-wheel-sudo.patch"
+
+	# Prefer dev-lang/sassc over dev-python/libsass to allow
+	# ~riscv and ~loong support
+	"${FILESDIR}/${PN}-6.4.0-alternate-sassc.patch"
 )
 
 src_prepare() {
