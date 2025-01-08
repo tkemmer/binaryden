@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -74,10 +74,7 @@ COMDEPEND="
 		>=dev-libs/libinput-1.7:=
 		>=dev-libs/wayland-1.13.0
 		>=dev-libs/wayland-protocols-1.19
-		|| (
-			>=media-libs/mesa-24.1.0_rc1[opengl]
-			<media-libs/mesa-24.1.0_rc1[gbm(+),gles2]
-		)
+		>=media-libs/mesa-24.1.0_rc1[opengl]
 		x11-base/xwayland
 		x11-libs/libdrm
 
