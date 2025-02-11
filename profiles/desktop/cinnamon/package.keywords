@@ -1,7 +1,6 @@
 ################
 # Cinnamon 6.4 #
 ################
-<dev-python/python3-xapp-2.5                amd64
 <gnome-extra/cinnamon-6.5                   amd64
 <gnome-extra/cinnamon-control-center-6.5    amd64
 <gnome-extra/cinnamon-desktop-6.5           amd64
@@ -13,7 +12,6 @@
 <gnome-extra/cjs-6.5                        amd64
 <gnome-extra/nemo-6.5                       amd64
 <gnome-extra/nemo-fileroller-6.5            amd64
-<sys-apps/xdg-desktop-portal-xapp-1.1       amd64
 <x11-libs/xapp-2.9                          amd64
 <x11-wm/muffin-6.5                          amd64
 
