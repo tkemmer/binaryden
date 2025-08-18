@@ -12,6 +12,6 @@ ACCEPT_LICENSE="-* @BINARY-REDISTRIBUTABLE"
 USE="acl acpi bzip2 gdbm -geolocation -gnome -gtk -gtk2 -gtk3 ipv6 -kde ncurses nls -qt5 udisks unicode vim-syntax -webkit -wxwidgets -X"
 
 L10N="-* en-US en"
-PHP_TARGETS="-* php8-2"
+PHP_TARGETS="-* php8-3"
 PYTHON_SINGLE_TARGET="-* python3_13"
 PYTHON_TARGETS="-* python3_13"
