@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..13} )
+PYTHON_COMPAT=( python3_{11..13} )
 
 inherit meson flag-o-matic gnome2-utils python-single-r1 readme.gentoo-r1 virtualx xdg
 
