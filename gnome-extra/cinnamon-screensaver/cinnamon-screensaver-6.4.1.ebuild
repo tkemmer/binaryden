@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -22,7 +22,7 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.37.3:2[dbus]
 	>=gnome-extra/cinnamon-desktop-6.4
 	sys-libs/pam
-	>=x11-libs/gtk+-3.22:3[introspection]
+	>=x11-libs/gtk+-3.22:3[introspection,X]
 	x11-libs/cairo
 	x11-libs/libX11
 	x11-libs/libXext
