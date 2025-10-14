@@ -1,5 +1,5 @@
 # BinaryDen Portage overlay
-This Portage overlay primarily aims at providing packages for the most recent versions of
+This Portage overlay primarily aims at providing ebuilds for the most recent versions of
 the [**Cinnamon**](https://github.com/linuxmint) desktop environment as well as version
 bumps and patches for several other Gentoo packages.
 
