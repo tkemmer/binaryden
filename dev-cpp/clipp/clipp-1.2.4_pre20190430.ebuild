@@ -1,7 +1,7 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 COMMIT=2c32b2f1f7cc530b1ec1f62c92f698643bb368db
 
 inherit cmake
