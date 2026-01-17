@@ -27,7 +27,7 @@ DEPEND="
 	dev-libs/libxml2:2=
 	>=gnome-extra/cinnamon-desktop-6.6:0=
 	>=gnome-extra/cinnamon-menus-6.6
-	>=gnome-extra/cjs-6.6[cairo(+)]
+	>=gnome-extra/cjs-128[cairo(+)]
 	media-libs/graphene[introspection]
 	sys-apps/dbus
 	>=sys-auth/polkit-0.100[introspection]
