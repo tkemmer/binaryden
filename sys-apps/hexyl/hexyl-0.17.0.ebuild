@@ -1,7 +1,9 @@
-# Copyright 2025 Gentoo Authors
+# Copyright 2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
+
+RUST_MIN_VER="1.88"
 
 CRATES="
 	aho-corasick@1.1.3
@@ -11,12 +13,13 @@ CRATES="
 	anstyle-wincon@3.0.6
 	anstyle@1.0.9
 	anyhow@1.0.91
-	assert_cmd@2.0.16
+	assert_cmd@2.1.2
 	autocfg@1.4.0
 	bitflags@2.6.0
 	bstr@1.10.0
 	clap@4.5.20
 	clap_builder@4.5.20
+	clap_complete@4.5.55
 	clap_derive@4.5.18
 	clap_lex@0.7.2
 	colorchoice@1.0.3
@@ -24,7 +27,6 @@ CRATES="
 	const_format_proc_macros@0.2.33
 	diff@0.1.13
 	difflib@0.4.0
-	doc-comment@0.3.3
 	errno@0.3.9
 	float-cmp@0.9.0
 	heck@0.5.0
