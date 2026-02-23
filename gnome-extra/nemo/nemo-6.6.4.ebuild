@@ -54,6 +54,7 @@ RDEPEND="
 	$(python_gen_cond_dep '
 		dev-python/pygobject:3[${PYTHON_USEDEP}]
 	')
+	x11-libs/xapp-symbolic-icons
 	x11-themes/adwaita-icon-theme
 
 	nls? (
