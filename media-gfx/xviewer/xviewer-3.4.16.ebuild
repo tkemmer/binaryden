@@ -40,7 +40,7 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
-	x11-libs/xapp-symbolic-icons
+	x11-themes/xapp-symbolic-icon-theme
 "
 BDEPEND="
 	dev-util/intltool

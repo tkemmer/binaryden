@@ -34,7 +34,7 @@ RDEPEND="
 	${PYTHON_DEPS}
 	${DEPEND}
 	sys-power/switcheroo-control
-	x11-libs/xapp-symbolic-icons
+	x11-themes/xapp-symbolic-icon-theme
 
 	introspection? (
 		dev-python/pygobject:3[${PYTHON_USEDEP}]

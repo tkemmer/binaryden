@@ -15,7 +15,7 @@
 <gnome-extra/nemo-fileroller-6.7            amd64
 <sys-apps/xdg-desktop-portal-xapp-1.2       amd64
 <x11-libs/xapp-3.3                          amd64
-<x11-libs/xapp-symbolic-icons-1.1           amd64
+<x11-themes/xapp-symbolic-icon-theme-1.1    amd64
 <x11-wm/muffin-6.7                          amd64
 
 <app-misc/bulky-5                           amd64

@@ -40,7 +40,7 @@ DEPEND="
 	>=x11-libs/libXfixes-5.0
 	x11-libs/pango[introspection]
 	>=x11-libs/xapp-2.8.8[introspection]
-	x11-libs/xapp-symbolic-icons
+	x11-themes/xapp-symbolic-icon-theme
 	>=x11-wm/muffin-6.6[introspection,wayland?]
 
 	eds? (

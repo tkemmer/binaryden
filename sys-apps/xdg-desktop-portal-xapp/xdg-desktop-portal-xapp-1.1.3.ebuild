@@ -22,7 +22,7 @@ RDEPEND="
 	${DEPEND}
 	sys-apps/xdg-desktop-portal-gtk
 	>=x11-libs/xapp-2.8.9
-	x11-libs/xapp-symbolic-icons
+	x11-themes/xapp-symbolic-icon-theme
 "
 BDEPEND="
 	dev-util/gdbus-codegen

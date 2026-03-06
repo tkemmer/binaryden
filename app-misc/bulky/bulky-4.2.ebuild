@@ -28,7 +28,7 @@ BDEPEND="
 "
 RDEPEND="
 	${PYTHON_DEPS}
-	x11-libs/xapp-symbolic-icons
+	x11-themes/xapp-symbolic-icon-theme
 
 	$(python_gen_cond_dep '
 		dev-python/pygobject[${PYTHON_USEDEP}]
