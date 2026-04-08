@@ -6,7 +6,7 @@ EAPI=8
 PYTHON_COMPAT=( python3_{11..14} )
 PYTHON_REQ_USE="xml(+)"
 
-inherit meson gnome2-utils pax-utils python-single-r1 xdg
+inherit meson gnome2-utils optfeature pax-utils python-single-r1 xdg
 
 DESCRIPTION="A fork of GNOME Shell with layout similar to GNOME 2"
 HOMEPAGE="https://projects.linuxmint.com/cinnamon/ https://github.com/linuxmint/cinnamon"
@@ -15,20 +15,19 @@ SRC_URI="https://github.com/linuxmint/cinnamon/archive/${PV}.tar.gz -> ${P}.tar.
 LICENSE="BSD GPL-2+ GPL-3+ GPL-3-with-openssl-exception LGPL-2+ LGPL-2.1 LGPL-2.1+ MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~loong ~riscv ~x86"
-IUSE="+eds +gstreamer gtk-doc +networkmanager +nls wayland"
+IUSE="+eds +gstreamer gtk-doc +nls +networkmanager wayland"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="
 	${PYTHON_DEPS}
 	>=app-accessibility/at-spi2-core-2.46.0:2
 	>=app-crypt/gcr-3.7.5:0/1
-	>=dev-libs/glib-2.52.0:2[dbus]
+	>=dev-libs/glib-2.79.2:2[dbus]
 	>=dev-libs/gobject-introspection-1.82.0-r2:=
 	dev-libs/libxml2:2=
 	>=gnome-extra/cinnamon-desktop-6.6:0=
 	>=gnome-extra/cinnamon-menus-6.6
 	>=gnome-extra/cjs-128[cairo(+)]
-	media-libs/graphene[introspection]
 	sys-apps/dbus
 	>=sys-auth/polkit-0.100[introspection]
 	virtual/opengl
@@ -39,8 +38,7 @@ DEPEND="
 	x11-libs/libX11
 	>=x11-libs/libXfixes-5.0
 	x11-libs/pango[introspection]
-	>=x11-libs/xapp-2.8.8[introspection]
-	x11-themes/xapp-symbolic-icon-theme
+	>=x11-libs/xapp-3.2.2[introspection]
 	>=x11-wm/muffin-6.6[introspection,wayland?]
 
 	eds? (
@@ -75,7 +73,7 @@ RDEPEND="
 		dev-python/requests[${PYTHON_USEDEP}]
 		dev-python/setproctitle[${PYTHON_USEDEP}]
 		dev-python/tinycss2[${PYTHON_USEDEP}]
-		>=dev-python/python3-xapp-2.4.2[${PYTHON_USEDEP}]
+		>=dev-python/python3-xapp-3.0.2[${PYTHON_USEDEP}]
 	')
 	>=gnome-base/dconf-0.4.1
 	>=gnome-base/gsettings-desktop-schemas-2.91.91
@@ -85,6 +83,7 @@ RDEPEND="
 	>=gnome-extra/cinnamon-session-6.6
 	>=gnome-extra/cinnamon-settings-daemon-6.6[wayland?]
 	>=gnome-extra/nemo-6.6[wayland?]
+	media-libs/graphene[introspection]
 	media-libs/gsound
 	net-libs/libsoup:3.0[introspection]
 	net-misc/wget
@@ -98,9 +97,14 @@ RDEPEND="
 	x11-misc/xdg-utils
 	x11-themes/adwaita-icon-theme
 	x11-themes/gnome-themes-standard
+	x11-themes/xapp-symbolic-icon-theme
 
 	nls? (
 		>=gnome-extra/cinnamon-translations-6.6
+	)
+
+	networkmanager? (
+		net-libs/libnma[introspection]
 	)
 "
 BDEPEND="
@@ -119,6 +123,10 @@ PATCHES=(
 	# Use wheel group instead of sudo (from Fedora/Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3576
 	"${FILESDIR}/${PN}-3.6.6-wheel-sudo.patch"
+
+	# Fix crash when networkmanager is not present.
+	# https://github.com/linuxmint/cinnamon/pull/13651
+	"${FILESDIR}/${PN}-6.6.7-fix-disable-networkmanager.patch"
 )
 
 src_prepare() {
@@ -136,7 +144,6 @@ src_configure() {
 		$(meson_use gstreamer build_recorder)
 		$(meson_use gtk-doc docs)
 		$(meson_use wayland)
-
 		-Dnm_agent=$(usex networkmanager internal disabled)
 		-Dpy3modules_dir="$(python_get_sitedir)"
 	)
@@ -172,6 +179,9 @@ pkg_postinst() {
 		ewarn "Cinnamon's built-in screen recording utility is not installed"
 		ewarn "because gstreamer support is disabled."
 	fi
+
+	optfeature "Thunderbolt security management in System Settings" sys-apps/bolt
+	optfeature "additional hardware information in System Settings" sys-apps/inxi
 }
 
 pkg_postrm() {
