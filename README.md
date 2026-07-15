@@ -1,9 +1,9 @@
 # BinaryDen Portage overlay
-This Portage overlay primarily aims at providing ebuilds for the most recent versions of
-the [**Cinnamon**](https://github.com/linuxmint) desktop environment as well as version
-bumps and patches for several other Gentoo packages.
+This Portage overlay primarily serves as a staging area for early [**Cinnamon**](https://github.com/linuxmint)
+ebuilds before they reach `::gentoo`, while also providing version bumps, patches, and various additional
+packages for Gentoo.
 
-## Notable additions to ::gentoo
+## Notable packages not in `::gentoo`
  * [`app-misc/bulky`](https://github.com/linuxmint/bulky):
    Bulk renamer
  * [`dev-cpp/clipp`](https://github.com/muellan/clipp):
@@ -19,7 +19,7 @@ bumps and patches for several other Gentoo packages.
  * [`x11-themes/flat-remix`](https://github.com/daniruiz/flat-remix):
    Pretty simple Linux icon theme inspired by material design
 
-## Setup 
+## Setup
 
 ### `app-eselect/eselect-repository`
 To enable this repository on your system, install `app-eselect/eselect-repository` and then use the following command:
