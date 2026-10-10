@@ -10,7 +10,7 @@
 <gnome-extra/cinnamon-session-6.7           amd64
 <gnome-extra/cinnamon-settings-daemon-6.7   amd64
 <gnome-extra/cinnamon-translations-6.7      amd64
-<gnome-extra/cjs-129                        amd64
+<gnome-extra/cjs-141                        amd64
 <gnome-extra/nemo-6.7                       amd64
 <gnome-extra/nemo-fileroller-6.7            amd64
 <sys-apps/xdg-desktop-portal-xapp-1.2       amd64
